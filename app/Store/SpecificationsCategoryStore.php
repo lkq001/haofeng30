@@ -41,9 +41,9 @@ class SpecificationsCategoryStore
     public function getAll($where = '')
     {
         if (empty($where)) {
-            return self::$specificationsCategory->get();
+            return self::$specificationsCategory->orderBy('order_by', 'DESC')->get();
         }
-        return self::$specificationsCategory->where($where)->get();
+        return self::$specificationsCategory->where($where)->orderBy('order_by', 'DESC')->get();
     }
 
     // 获取指定条件数量

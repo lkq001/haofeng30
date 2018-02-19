@@ -161,12 +161,12 @@ class SpecificationsCategoryController extends Controller
 
         // 获取指定数据
         // 判断数据是否存在
-        $info = self::$productGroupService->getOneInfo(['id' => $request->id]);
+        $info = self::$specificationsCategoryStore->getOneInfo(['id' => $request->id]);
         if (count($info) < 1) {
             return response()->json(['code' => 'SN201', 'message' => '数据不存在!']);
         }
         // 执行修改数据
-        $updateStatus = self::$productGroupService->update($request->id, $request->except('id', '_token'));
+        $updateStatus = self::$specificationsCategoryStore->update($request->id, $request->except('id', '_token'));
         if ($updateStatus) {
             return response()->json(['code' => 'SN200', 'message' => '修改数据成功']);
         }
@@ -197,13 +197,13 @@ class SpecificationsCategoryController extends Controller
         }
 
         // 验证数据是否存在
-        $infoCount = self::$productGroupService->getOneStatus(['id' => $request->id]);
+        $infoCount = self::$specificationsCategoryStore->getOneInfoCount(['id' => $request->id]);
         if ($infoCount != 1) {
             return response()->json(['code' => 'SN201', 'message' => '数据不存在']);
         }
 
         // 指定添加
-        $dataStatus = self::$productGroupService->update($request->id, $request->except('id', '_token'));
+        $dataStatus = self::$specificationsCategoryStore->update($request->id, $request->except('id', '_token'));
 
         if ($dataStatus) {
             return response()->json(['code' => 'SN200', 'message' => '栏目修改成功!']);

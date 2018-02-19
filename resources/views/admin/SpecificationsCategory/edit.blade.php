@@ -3,17 +3,17 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">修改产品组目</h4>
+                <h4 class="modal-title" id="myModalLabel">修改规格分类</h4>
             </div>
 
 
             <form method="post" class="form form-horizontal" id="form-edit"
-                  action="{{ route('admin.product.group.update') }}">
+                  action="{{ route('admin.specifications.category.update') }}">
                 {{ csrf_field() }}
                 <input type="hidden" name="id" value="" />
                 <div class="modal-body">
                     <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>产品组名称：</label>
+                        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>分类名称：</label>
                         <div class="formControls col-xs-8 col-sm-8">
                             <input type="text" class="input-text" value="" placeholder="" id="name" name="name">
                         </div>

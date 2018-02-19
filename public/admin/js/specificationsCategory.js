@@ -63,12 +63,13 @@ $(function () {
         // 获取提交路径
         var url = that.attr('data-url');
         // 获取提交路径
-        var order = that.attr('data-order');
+        var order = parseInt(that.attr('data-order'));
+
         // 获取修改信息
         inputOrderBy(id, url, that, order);
     })
 
-    // 执行修改状态
+    // 执行修改排序
     $('body').on('blur', '#changeOrder', function (i) {
         // 赋值
         var that = $(this);
@@ -77,8 +78,8 @@ $(function () {
         // 获取提交路径
         var url = that.attr('data-url');
         // 获取提交路径
-        var order = $('#changeOrder').val();
-
+        var order = parseInt($('#changeOrder').val());
+        console.log(order);
         // 获取修改信息
         changeOrderBy(id, url, that, order);
     })
