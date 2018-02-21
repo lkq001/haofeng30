@@ -11,8 +11,7 @@ class SpecificationsStore
 
     public function __construct(
         Specifications $specifications
-    )
-    {
+    ){
         self::$specifications = $specifications;
     }
 
@@ -29,6 +28,30 @@ class SpecificationsStore
             return false;
         }
 
+        return self::$specifications->where($where)->count();
+    }
+
+    /**
+     * 获取指定条件所有数据
+     *
+     * @param string $where
+     * @return mixed
+     * author 李克勤
+     */
+    public function getAll($where = '')
+    {
+        if (empty($where)) {
+            return self::$specifications->orderBy('order_by', 'DESC')->get();
+        }
+        return self::$specifications->where($where)->orderBy('order_by', 'DESC')->get();
+    }
+
+    // 获取指定条件数量
+    public function count($where= '')
+    {
+        if (empty($where)) {
+            return self::$specifications->count();
+        }
         return self::$specifications->where($where)->count();
     }
 
@@ -103,26 +126,11 @@ class SpecificationsStore
         return self::$specifications->where('id', $id)->delete();
     }
 
-    // 批量执行删除
+    // 批量删除
     public function destroys($ids)
     {
         return self::$specifications->whereIn('id', $ids)->delete();
     }
 
-    // 获取全部列表
-    public function getAll()
-    {
-        return self::$specifications->orderBy('order_by', 'desc')->get();
-    }
-
-    // 获取个数
-
-    /**
-     * @return |null
-     */
-    public static function count()
-    {
-        return self::$specifications->count();
-    }
 
 }

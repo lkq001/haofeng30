@@ -126,5 +126,11 @@ class SpecificationsCategoryStore
         return self::$specificationsCategory->where('id', $id)->delete();
     }
 
+    // 批量删除
+    public function destroys($ids)
+    {
+        return self::$specificationsCategory->whereIn('id', $ids)->delete();
+    }
+
 
 }

@@ -65,7 +65,7 @@
                                 @elseif($v->status == 2)
                                     <button id="changeStatus" class="btn btn-secondary size-S radius"
                                             data-id="{{ $v->id }}"
-                                            data-url="{{ route('admin.category.status') }}"
+                                            data-url="{{ route('admin.product.group.status') }}"
                                             data-status="{{ $v->status }}">启用
                                     </button>
                                 @endif

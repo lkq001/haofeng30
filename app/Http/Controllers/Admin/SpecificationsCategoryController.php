@@ -268,7 +268,7 @@ class SpecificationsCategoryController extends Controller
         }
 
         // 执行删除操作
-        $destroyStatus = self::$productGroupService->destroys($request->ids);
+        $destroyStatus = self::$specificationsCategoryStore->destroys($request->ids);
 
         if ($destroyStatus) {
             return response()->json(['code' => 'SN200', 'message' => '删除数据成功!']);
