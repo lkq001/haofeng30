@@ -99,7 +99,25 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
     // 修改排序
     Route::post('/specifications/order', 'SpecificationsController@order')->name('admin.specifications.order');
 
-
+    /**
+     * 产品管理-总库
+     */
+    // 数据列表
+    Route::get('/total/warehouse/index', 'TotalWarehouseController@index')->name('admin.total.warehouse.index');
+    // 添加数据
+    Route::post('/total/warehouse/store', 'TotalWarehouseController@store')->name('admin.total.warehouse.store');
+    // 查询指定ID数据(id)
+    Route::get('/total/warehouse/edit', 'TotalWarehouseController@edit')->name('admin.total.warehouse.edit');
+    // 修改数据(id)
+    Route::post('/total/warehouse/update', 'TotalWarehouseController@update')->name('admin.total.warehouse.update');
+    // 删除数据(id)
+    Route::delete('/total/warehouse/destroy', 'TotalWarehouseController@destroy')->name('admin.total.warehouse.destroy');
+    // 批量删除
+    Route::delete('/total/warehouse/destroys', 'TotalWarehouseController@destroys')->name('admin.total.warehouse.destroys');
+    // 修改状态
+    Route::post('/total/warehouse/status', 'TotalWarehouseController@status')->name('admin.total.warehouse.status');
+    // 修改排序
+    Route::post('/total/warehouse/order', 'TotalWarehouseController@order')->name('admin.total.warehouse.order');
 
     Route::get('/role/index', 'RoleController@index')->name('admin.role.index');
 

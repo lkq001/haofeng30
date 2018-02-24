@@ -4,18 +4,24 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Store\SpecificationsCategoryStore;
-use Validator;
+use App\Store\SpecificationsStore;
 use Illuminate\Http\Request;
+use Validator;
 
 class SpecificationsCategoryController extends Controller
 {
     // 静态方法
     private static $specificationsCategoryStore = null;
+    private static $specificationsStore = null;
 
     // 防注入
-    public function __construct(SpecificationsCategoryStore $specificationsCategoryStore)
+    public function __construct(
+        SpecificationsCategoryStore $specificationsCategoryStore,
+        SpecificationsStore $specificationsStore
+    )
     {
         self::$specificationsCategoryStore = $specificationsCategoryStore;
+        self::$specificationsStore = $specificationsStore;
     }
 
     /**
@@ -95,6 +101,11 @@ class SpecificationsCategoryController extends Controller
         }
 
         if ($request->status == 1) {
+            // 查询栏目下面是否存在有效子类
+            $destroyInfos = self::$specificationsStore->getOneInfo(['pid' => $request->id, 'status' => 1 ]);
+            if (count($destroyInfos) > 0) {
+                return response()->json(['code' => 'SN202', 'message' => '分类下面存在数据,禁止禁用!']);
+            }
             $status = 2;
         } else {
             $status = 1;
@@ -236,6 +247,12 @@ class SpecificationsCategoryController extends Controller
         $info = self::$specificationsCategoryStore->getOneInfo(['id' => $request->id]);
         if (count($info) < 1) {
             return response()->json(['code' => 'SN202', 'message' => '数据不存在!']);
+        }
+
+        // 查询栏目下面是否存在有效子类
+        $destroyInfos = self::$specificationsStore->getOneInfo(['pid' => $request->id]);
+        if (count($destroyInfos) > 0) {
+            return response()->json(['code' => 'SN202', 'message' => '分类下面存在数据,禁止删除!']);
         }
 
         // 执行删除操作
