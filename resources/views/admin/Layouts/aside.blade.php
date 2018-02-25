@@ -10,17 +10,17 @@
                         </dt>
                         @if(isset(session('global_nav')[$v->id]))
 
-                                <dd>
-                                    <ul>
-                                        @foreach(session('global_nav')[$v->id] as $key => $val)
+                            <dd>
+                                <ul>
+                                    @foreach(session('global_nav')[$v->id] as $key => $val)
                                         <li @if( Request::path() == $val->route) id="open" @endif>
                                             <a href="{{ route( $val->route_alias ) }}"
                                                data-title="{{ $val->name }}">{{ $val->name }}</a>
                                         </li>
 
-                                        @endforeach
-                                    </ul>
-                                </dd>
+                                    @endforeach
+                                </ul>
+                            </dd>
 
                         @endif
                     </dl>
@@ -36,5 +36,6 @@
         $('#open').parent().parent().css('display', 'block');
         $('#open').parent().parent().prev().addClass('selected');
     }
+
     window.onload = openAside;
 </script>

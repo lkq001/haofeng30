@@ -132,23 +132,23 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
     /**
      * 产品管理-总库
      */
-    Route::group(['prefix' => '/total/warehouse'], function () {
+    Route::group(['prefix' => '/product/warehouse'], function () {
         // 数据列表
-        Route::get('/index', 'TotalWarehouseController@index')->name('admin.total.warehouse.index');
+        Route::get('/index', 'ProductWarehouseController@index')->name('admin.product.warehouse.index');
         // 添加数据
-        Route::post('/store', 'TotalWarehouseController@store')->name('admin.total.warehouse.store');
+        Route::post('/store', 'ProductWarehouseController@store')->name('admin.product.warehouse.store');
         // 查询指定ID数据(id)
-        Route::get('/edit', 'TotalWarehouseController@edit')->name('admin.total.warehouse.edit');
+        Route::get('/edit', 'ProductWarehouseController@edit')->name('admin.product.warehouse.edit');
         // 修改数据(id)
-        Route::post('/update', 'TotalWarehouseController@update')->name('admin.total.warehouse.update');
+        Route::post('/update', 'ProductWarehouseController@update')->name('admin.product.warehouse.update');
         // 删除数据(id)
-        Route::delete('/destroy', 'TotalWarehouseController@destroy')->name('admin.total.warehouse.destroy');
+        Route::delete('/destroy', 'ProductWarehouseController@destroy')->name('admin.product.warehouse.destroy');
         // 批量删除
-        Route::delete('/destroys', 'TotalWarehouseController@destroys')->name('admin.total.warehouse.destroys');
+        Route::delete('/destroys', 'ProductWarehouseController@destroys')->name('admin.product.warehouse.destroys');
         // 修改状态
-        Route::post('/status', 'TotalWarehouseController@status')->name('admin.total.warehouse.status');
+        Route::post('/status', 'ProductWarehouseController@status')->name('admin.product.warehouse.status');
         // 修改排序
-        Route::post('/order', 'TotalWarehouseController@order')->name('admin.total.warehouse.order');
+        Route::post('/order', 'ProductWarehouseController@order')->name('admin.product.warehouse.order');
 
     });
 

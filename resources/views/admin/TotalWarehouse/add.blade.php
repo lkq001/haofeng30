@@ -1,4 +1,4 @@
-<div class="modal fade"  id="addModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="addModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content modal-lg">
             <div class="modal-header">
@@ -7,14 +7,30 @@
             </div>
 
             <form method="post" class="form form-horizontal" id="form-add"
-                  action="{{ route('admin.total.warehouse.store') }}">
+                  action="{{ route('admin.product.warehouse.store') }}">
                 {{ csrf_field() }}
                 <div class="modal-body">
 
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>产品分类：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" class="input-text" value="" placeholder="" id="name" name="name">
+                            <span class="select-box">
+                                <select name="pid" class="select">
+
+                                    @if($productCategoryLists[0])
+                                        @foreach($productCategoryLists[0] as $key => $value)
+                                            <option value="{{ $value->id }}">{{ $value->name }}</option>
+                                            @if(isset($productCategoryLists[$value->id]))
+                                                @foreach($productCategoryLists[$value->id] as $key => $val)
+                                                    <option value="{{ $val->id }}">|--{{ $val->name }}</option>
+                                                @endforeach
+                                            @endif
+                                        @endforeach
+                                    @else
+                                        <option value="0">暂无分类,请添加分类!</option>
+                                    @endif
+                                </select>
+                            </span>
                         </div>
                     </div>
 
@@ -44,7 +60,8 @@
                                     </div>
                                 </div>
                                 <div class="statusBar" style="display:none;">
-                                    <div class="progress"> <span class="text">0%</span> <span class="percentage"></span> </div>
+                                    <div class="progress"><span class="text">0%</span> <span class="percentage"></span>
+                                    </div>
                                     <div class="info"></div>
                                     <div class="btns">
                                         <div id="filePicker2"></div>
