@@ -1,6 +1,6 @@
-<div class="modal fade" id="addModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade"  id="addModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content modal-lg">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h4 class="modal-title" id="myModalLabel">添加产品</h4>
@@ -11,26 +11,47 @@
                 {{ csrf_field() }}
                 <div class="modal-body">
 
-
                     <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>产品分类：</label>
-                        <div class="formControls col-xs-8 col-sm-8">
+                        <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>产品分类：</label>
+                        <div class="formControls col-xs-8 col-sm-9">
                             <input type="text" class="input-text" value="" placeholder="" id="name" name="name">
                         </div>
                     </div>
 
                     <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>产品名称：</label>
-                        <div class="formControls col-xs-8 col-sm-8">
+                        <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>产品名称：</label>
+                        <div class="formControls col-xs-8 col-sm-9">
                             <input type="text" class="input-text" value="" placeholder="" id="name" name="name">
                         </div>
                     </div>
 
 
                     <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>产品图片：</label>
-                        <div class="formControls col-xs-8 col-sm-8">
+                        <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>产品图片：</label>
+                        <div class="formControls col-xs-8 col-sm-9">
                             <input type="text" class="input-text" value="0" placeholder="" id="" name="parameter">
+                        </div>
+                    </div>
+
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-2">图片上传：</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <div class="uploader-list-container">
+                                <div class="queueList">
+                                    <div id="dndArea" class="placeholder">
+                                        <div id="filePicker-2"></div>
+                                        <p>或将照片拖到这里，单次最多可选300张</p>
+                                    </div>
+                                </div>
+                                <div class="statusBar" style="display:none;">
+                                    <div class="progress"> <span class="text">0%</span> <span class="percentage"></span> </div>
+                                    <div class="info"></div>
+                                    <div class="btns">
+                                        <div id="filePicker2"></div>
+                                        <div class="uploadBtn">开始上传</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
