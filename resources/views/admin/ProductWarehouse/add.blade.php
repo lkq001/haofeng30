@@ -7,13 +7,13 @@
             </div>
 
             <form method="post" class="form form-horizontal" id="form-add"
-                  action="{{ route('admin.product.warehouse.store') }}">
+                  action="{{ route('admin.product.warehouse.store') }}" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="modal-body">
 
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>产品分类：</label>
-                        <div class="formControls col-xs-8 col-sm-9">
+                        <div class="formControls col-xs-8 col-sm-4">
                             <span class="select-box">
                                 <select name="pid" class="select">
 
@@ -45,32 +45,11 @@
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>产品图片：</label>
                         <div class="formControls col-xs-8 col-sm-9">
-                            <input type="text" class="input-text" value="0" placeholder="" id="" name="parameter">
+                            <input type="file" name="img[]" multiple />
                         </div>
                     </div>
 
-                    <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-2">图片上传：</label>
-                        <div class="formControls col-xs-8 col-sm-9">
-                            <div class="uploader-list-container">
-                                <div class="queueList">
-                                    <div id="dndArea" class="placeholder">
-                                        <div id="filePicker-2"></div>
-                                        <p>或将照片拖到这里，单次最多可选300张</p>
-                                    </div>
-                                </div>
-                                <div class="statusBar" style="display:none;">
-                                    <div class="progress"><span class="text">0%</span> <span class="percentage"></span>
-                                    </div>
-                                    <div class="info"></div>
-                                    <div class="btns">
-                                        <div id="filePicker2"></div>
-                                        <div class="uploadBtn">开始上传</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+{{--                    {!! Form::file('images[]', ['id'=>'images_id']) !!}--}}
 
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-3">规格排序：</label>

@@ -15,13 +15,11 @@ $(function () {
         //遍历得到的图片文件
         var numUp = imgContainer.find(".up-section").length;
         var totalNum = numUp + fileList.length;  //总的数量
-
-        if (fileList.length > 99 || totalNum > 99) {
-            alert("上传图片数目不可以超过99个，请重新选择");  //一次选择上传超过99个 或者是已经上传和这次上传的到的总数也不可以超过99个
+        if (fileList.length > 5 || totalNum > 5) {
+            alert("上传图片数目不可以超过5个，请重新选择");  //一次选择上传超过5个 或者是已经上传和这次上传的到的总数也不可以超过5个
         }
-        else if (numUp < 99) {
+        else if (numUp < 5) {
             fileList = validateUp(fileList);
-            console.log();
             for (var i = 0; i < fileList.length; i++) {
                 var imgUrl = window.URL.createObjectURL(fileList[i]);
                 imgArr.push(imgUrl);
@@ -33,19 +31,19 @@ $(function () {
                 var $img0 = $("<img class='close-upimg'>").on("click", function (event) {
                     event.preventDefault();
                     event.stopPropagation();
-
+                    $(".works-mask").show();
                     delParent = $(this).parent();
-                    var numUp = delParent.siblings().length;
-                    if (numUp < 6) {
-                        delParent.parent().find(".z_file").show();
-                    }
-                    delParent.remove();
                 });
-
-                $img0.attr("src", "/admin/lib/uploadImg/img/a7.png").appendTo($section);
+                $img0.attr("src", "img/a7.png").appendTo($section);
                 var $img = $("<img class='up-img up-opcity'>");
                 $img.attr("src", imgArr[i]);
                 $img.appendTo($section);
+                var $p = $("<p class='img-name-p'>");
+                $p.html(fileList[i].name).appendTo($section);
+                var $input = $("<input id='taglocation' name='taglocation' value='' type='hidden'>");
+                $input.appendTo($section);
+                var $input2 = $("<input id='tags' name='tags' value='' type='hidden'/>");
+                $input2.appendTo($section);
 
             }
         }
@@ -54,11 +52,10 @@ $(function () {
             $(".up-img").removeClass("up-opcity");
         }, 450);
         numUp = imgContainer.find(".up-section").length;
-        if (numUp >= 99) {
+        if (numUp >= 5) {
             $(this).parent().hide();
         }
     });
-
 
     $(".z_photo").delegate(".close-upimg", "click", function () {
         $(".works-mask").show();
@@ -79,7 +76,6 @@ $(function () {
     });
 
     function validateUp(files) {
-
         var arrFiles = [];//替换的文件数组
         for (var i = 0, file; file = files[i]; i++) {
             //获取文件上传的后缀名
@@ -107,4 +103,4 @@ $(function () {
     }
 
 
-});
+})

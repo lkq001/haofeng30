@@ -30,8 +30,14 @@ class ProductWarehouseController extends Controller
         // 产品分类
         $productCategoryLists = self::$productWarehouseService->getProductCategory();
 
-        return view('admin.totalWarehouse.index', [
+        return view('admin.productWarehouse.index', [
             'productCategoryLists' => $productCategoryLists
         ]);
+    }
+
+    public function store(Request $request)
+    {
+        dd($request->file('img'));
+        return $request->all();
     }
 }
