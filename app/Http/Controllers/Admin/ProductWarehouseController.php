@@ -40,4 +40,9 @@ class ProductWarehouseController extends Controller
         dd($request->file('img'));
         return $request->all();
     }
+
+    public function upload()
+    {
+        dd(123);
+    }
 }

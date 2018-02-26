@@ -1,8 +1,7 @@
 @extends('admin.layouts.master')
 @section('title', '总库产品')
 @section('css')
-    <link rel="stylesheet" type="text/css" href="{{ asset('/admin/lib/uploadImg/css/common.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ asset('/admin/lib/uploadImg/css/index.css') }}" />
+    <link href="{{ asset('/admin/lib/webuploader/0.1.5/webuploader.css') }}" rel="stylesheet" type="text/css" />
 @endsection
 @section('content')
     @include('admin.ProductWarehouse.add')
@@ -89,6 +88,7 @@
 @endsection
 @section('javascript')
 
+    <script type="text/javascript" src="{{ asset('/admin/lib/webuploader/0.1.5/webuploader.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/admin/js/productWarehouse.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/admin/js/uploads.js') }}"></script>
 

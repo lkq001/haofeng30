@@ -14,9 +14,10 @@ class ComposerStaticInit49c855445f51d97dbe1f6fec6ba7575d
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        'f960e77410032f236cef8c56617b313e' => __DIR__ . '/..' . '/overtrue/laravel-lang/src/helpers.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
-        'f960e77410032f236cef8c56617b313e' => __DIR__ . '/..' . '/overtrue/laravel-lang/src/helpers.php',
+        'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -107,6 +108,7 @@ class ComposerStaticInit49c855445f51d97dbe1f6fec6ba7575d
         'C' => 
         array (
             'Cron\\' => 5,
+            'Collective\\Html\\' => 16,
             'Carbon\\' => 7,
         ),
         'A' => 
@@ -278,6 +280,10 @@ class ComposerStaticInit49c855445f51d97dbe1f6fec6ba7575d
         array (
             0 => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron',
         ),
+        'Collective\\Html\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravelcollective/html/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -333,7 +339,9 @@ class ComposerStaticInit49c855445f51d97dbe1f6fec6ba7575d
         'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\Admin\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/CategoryController.php',
         'App\\Http\\Controllers\\Admin\\PermissionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PermissionController.php',
+        'App\\Http\\Controllers\\Admin\\ProductCategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ProductCategoryController.php',
         'App\\Http\\Controllers\\Admin\\ProductGroupController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ProductGroupController.php',
+        'App\\Http\\Controllers\\Admin\\ProductWarehouseController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ProductWarehouseController.php',
         'App\\Http\\Controllers\\Admin\\RoleController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/RoleController.php',
         'App\\Http\\Controllers\\Admin\\SpecificationsCategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/SpecificationsCategoryController.php',
         'App\\Http\\Controllers\\Admin\\SpecificationsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/SpecificationsController.php',
@@ -352,7 +360,9 @@ class ComposerStaticInit49c855445f51d97dbe1f6fec6ba7575d
         'App\\Http\\Requests\\CategoryRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CategoryRequest.php',
         'App\\Model\\Category' => __DIR__ . '/../..' . '/app/Model/Category.php',
         'App\\Model\\Permission' => __DIR__ . '/../..' . '/app/Model/Permission.php',
+        'App\\Model\\ProductCategory' => __DIR__ . '/../..' . '/app/Model/ProductCategory.php',
         'App\\Model\\ProductGroup' => __DIR__ . '/../..' . '/app/Model/ProductGroup.php',
+        'App\\Model\\ProductWarehouse' => __DIR__ . '/../..' . '/app/Model/ProductWarehouse.php',
         'App\\Model\\Role' => __DIR__ . '/../..' . '/app/Model/Role.php',
         'App\\Model\\Specifications' => __DIR__ . '/../..' . '/app/Model/Specifications.php',
         'App\\Model\\SpecificationsCategory' => __DIR__ . '/../..' . '/app/Model/SpecificationsCategory.php',
@@ -365,9 +375,12 @@ class ComposerStaticInit49c855445f51d97dbe1f6fec6ba7575d
         'App\\Service\\CategoryService' => __DIR__ . '/../..' . '/app/Service/CategoryService.php',
         'App\\Service\\CommonService' => __DIR__ . '/../..' . '/app/Service/CommonService.php',
         'App\\Service\\ProductGroupService' => __DIR__ . '/../..' . '/app/Service/ProductGroupService.php',
+        'App\\Service\\ProductWarehouseService' => __DIR__ . '/../..' . '/app/Service/ProductWarehouseService.php',
         'App\\Service\\SpecificationsService' => __DIR__ . '/../..' . '/app/Service/SpecificationsService.php',
         'App\\Store\\CategoryStore' => __DIR__ . '/../..' . '/app/Store/CategoryStore.php',
+        'App\\Store\\ProductCategoryStore' => __DIR__ . '/../..' . '/app/Store/ProductCategoryStore.php',
         'App\\Store\\ProductGroupStore' => __DIR__ . '/../..' . '/app/Store/ProductGroupStore.php',
+        'App\\Store\\ProductWarehouseStore' => __DIR__ . '/../..' . '/app/Store/ProductWarehouseStore.php',
         'App\\Store\\SpecificationsCategoryStore' => __DIR__ . '/../..' . '/app/Store/SpecificationsCategoryStore.php',
         'App\\Store\\SpecificationsStore' => __DIR__ . '/../..' . '/app/Store/SpecificationsStore.php',
         'App\\Tools\\Common' => __DIR__ . '/../..' . '/app/Tools/Common.php',
@@ -377,6 +390,13 @@ class ComposerStaticInit49c855445f51d97dbe1f6fec6ba7575d
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
+        'Collective\\Html\\Componentable' => __DIR__ . '/..' . '/laravelcollective/html/src/Componentable.php',
+        'Collective\\Html\\Eloquent\\FormAccessible' => __DIR__ . '/..' . '/laravelcollective/html/src/Eloquent/FormAccessible.php',
+        'Collective\\Html\\FormBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/FormBuilder.php',
+        'Collective\\Html\\FormFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/FormFacade.php',
+        'Collective\\Html\\HtmlBuilder' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlBuilder.php',
+        'Collective\\Html\\HtmlFacade' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlFacade.php',
+        'Collective\\Html\\HtmlServiceProvider' => __DIR__ . '/..' . '/laravelcollective/html/src/HtmlServiceProvider.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/CronExpression.php',
         'Cron\\DayOfMonthField' => __DIR__ . '/..' . '/mtdowling/cron-expression/src/Cron/DayOfMonthField.php',
@@ -2672,6 +2692,7 @@ class ComposerStaticInit49c855445f51d97dbe1f6fec6ba7575d
         'Prophecy\\Doubler\\Generator\\Node\\ClassNode' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/Node/ClassNode.php',
         'Prophecy\\Doubler\\Generator\\Node\\MethodNode' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/Node/MethodNode.php',
         'Prophecy\\Doubler\\Generator\\ReflectionInterface' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/ReflectionInterface.php',
+        'Prophecy\\Doubler\\Generator\\TypeHintReference' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Doubler/Generator/TypeHintReference.php',
         'Prophecy\\Doubler\\LazyDouble' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Doubler/LazyDouble.php',
         'Prophecy\\Doubler\\NameGenerator' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Doubler/NameGenerator.php',
         'Prophecy\\Exception\\Call\\UnexpectedCallException' => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy/Exception/Call/UnexpectedCallException.php',
