@@ -1,9 +1,14 @@
 <?php
+
 namespace App\Service;
 
 use App\Store\ProductCategoryStore;
+use App\Store\ProductContentStore;
+use App\Store\ProductThumbStore;
 use App\Store\ProductWarehouseStore;
+use Illuminate\Support\Facades\DB;
 use Validator;
+
 
 class ProductWarehouseService
 {
@@ -11,21 +16,30 @@ class ProductWarehouseService
     private static $productWarehouseStore = null;
     private static $commonService = null;
     private static $productCategoryStore = null;
+    private static $productThumbStore = null;
+    private static $productContentStore = null;
 
     /**
      * ProductWarehouseService constructor.
      * @param ProductWarehouseStore $productWarehouseStore
      * @param CommonService $commonService
      * @param ProductCategoryStore $productCategoryStore
+     * @param ProductThumbStore $productThumbStore
+     * @param ProductContentStore $productContentStore
      */
     public function __construct(
         ProductWarehouseStore $productWarehouseStore,
         CommonService $commonService,
-        ProductCategoryStore $productCategoryStore
-    ){
+        ProductCategoryStore $productCategoryStore,
+        ProductThumbStore $productThumbStore,
+        ProductContentStore $productContentStore
+    )
+    {
         self::$productWarehouseStore = $productWarehouseStore;
         self::$commonService = $commonService;
         self::$productCategoryStore = $productCategoryStore;
+        self::$productThumbStore = $productThumbStore;
+        self::$productContentStore = $productContentStore;
     }
 
     // 查询产品栏目信息
@@ -87,8 +101,42 @@ class ProductWarehouseService
     {
         $data = self::$commonService->requestToArray($request);
 
-        // 保存数据
-        return self::$productWarehouseStore->store($data);
+        // 保存到产品库中的信息
+        foreach ($data as $k => $v) {
+
+            // 内容转换
+            if ($k == 'editorValue') {
+                $content['content'] = $v;
+                unset($data[$k]);
+            }
+
+            // 图片转换
+            if ($k == 'thumb') {
+                $thumb['thumb'] = $v;
+                unset($data[$k]);
+            }
+
+        }
+
+        DB::beginTransaction();
+        try {
+            $product = self::$productWarehouseStore->store($data);
+
+            // 内容赋值保存
+            $content['product_id'] = $product->id;
+            self::$productContentStore->store($content);
+
+            // 图片赋值保存
+            $thumb['product_id'] = $product->id;
+            self::$productThumbStore->store($thumb);
+
+            DB::commit();
+            return true;
+        } catch (\Exception $e) {
+
+            DB::rollBack();
+            return false;
+        }
 
     }
 
@@ -96,7 +144,7 @@ class ProductWarehouseService
     public function status($id, $status)
     {
         if (intval($id) > 0) {
-           $changeStatus = self::$productWarehouseStore->status($id, $status);
+            $changeStatus = self::$productWarehouseStore->status($id, $status);
             if ($changeStatus) {
                 return $changeStatus;
             }

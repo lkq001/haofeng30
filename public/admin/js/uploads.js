@@ -84,57 +84,7 @@ $(function () {
         // WebUploader实例
         uploader;
 
-    if (!WebUploader.Uploader.support('flash') && WebUploader.browser.ie) {
 
-        // flash 安装了但是版本过低。
-        if (flashVersion) {
-            (function (container) {
-                window['expressinstallcallback'] = function (state) {
-                    switch (state) {
-                        case 'Download.Cancelled':
-                            alert('您取消了更新！')
-                            break;
-
-                        case 'Download.Failed':
-                            alert('安装失败')
-                            break;
-
-                        default:
-                            alert('安装已成功，请刷新！');
-                            break;
-                    }
-                    delete window['expressinstallcallback'];
-                };
-
-                var swf = 'expressInstall.swf';
-                // insert flash object
-                var html = '<object type="application/' +
-                    'x-shockwave-flash" data="' + swf + '" ';
-
-                if (WebUploader.browser.ie) {
-                    html += 'classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" ';
-                }
-
-                html += 'width="100%" height="100%" style="outline:0">' +
-                    '<param name="movie" value="' + swf + '" />' +
-                    '<param name="wmode" value="transparent" />' +
-                    '<param name="allowscriptaccess" value="always" />' +
-                    '</object>';
-
-                container.html(html);
-
-            })($wrap);
-
-            // 压根就没有安转。
-        } else {
-            $wrap.html('<a href="http://www.adobe.com/go/getflashplayer" target="_blank" border="0"><img alt="get flash player" src="http://www.adobe.com/macromedia/style_guide/images/160x41_Get_Flash_Player.jpg" /></a>');
-        }
-
-        return;
-    } else if (!WebUploader.Uploader.support()) {
-        alert('Web Uploader 不支持您的浏览器！');
-        return;
-    }
 
     // 实例化
     uploader = WebUploader.create({
@@ -145,26 +95,26 @@ $(function () {
         formData: {
             uid: 123
         },
-
         dnd: '#dndArea',
         paste: '#uploader',
-        swf: '/admin/lib/webuploader/0.1.5/Uploader.swf',
+        swf: 'lib/webuploader/0.1.5/Uploader.swf',
         chunked: false,
         chunkSize: 512 * 1024,
-        server: '/admin/common/upload',
+        server: '/fileupload.php',
         // runtimeOrder: 'flash',
 
-        // accept: {
-        //     title: 'Images',
-        //     extensions: 'gif,jpg,jpeg,bmp,png',
-        //     mimeTypes: 'image/*'
-        // },
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        },
 
         // 禁掉全局的拖拽功能。这样不会出现图片拖进页面的时候，把图片打开。
         disableGlobalDnd: true,
         fileNumLimit: 300,
         fileSizeLimit: 200 * 1024 * 1024,    // 200 M
         fileSingleSizeLimit: 50 * 1024 * 1024    // 50 M
+
     });
 
     // 拖拽时不接受 js, txt 文件。
@@ -212,6 +162,15 @@ $(function () {
 
     // 当有文件添加进来时执行，负责view的创建
     function addFile(file) {
+        var date = new Date();
+
+        var arr = (file.name).split('.');
+
+        var lastName = arr[arr.length - 1];
+
+
+        file.name = $.md5(file.name +'-'+ date) +'.'+ lastName;
+
         var $li = $('<li id="' + file.id + '">' +
             '<p class="title">' + file.name + '</p>' +
             '<p class="imgWrap"></p>' +
@@ -259,7 +218,7 @@ $(function () {
                     img = $('<img src="' + src + '">');
                     $wrap.empty().append(img);
                 } else {
-                    $.ajax('/admin/lib/webuploader/0.1.5/server/preview.php', {
+                    $.ajax('    ', {
                         method: 'POST',
                         data: src,
                         dataType: 'json'
@@ -279,6 +238,7 @@ $(function () {
         }
 
         file.on('statuschange', function (cur, prev) {
+
             if (prev === 'progress') {
                 $prgress.hide().width(0);
             } else if (prev === 'queued') {
@@ -372,7 +332,6 @@ $(function () {
 
         percent = total ? loaded / total : 0;
 
-
         spans.eq(0).text(Math.round(percent * 100) + '%');
         spans.eq(1).css('width', Math.round(percent * 100) + '%');
         updateStatus();
@@ -449,15 +408,24 @@ $(function () {
                 $upload.text('开始上传');
 
                 stats = uploader.getStats();
-                if (stats.successNum && !stats.uploadFailNum) {
+
+                // if (stats.successNum && !stats.uploadFailNum) {
+                if (stats.successNum) {
                     setState('finish');
                     return;
                 }
                 break;
             case 'finish':
                 stats = uploader.getStats();
+
+                uploaderFile = uploader.getFiles();
+
                 if (stats.successNum) {
-                    alert('上传成功');
+
+                    $.each(uploaderFile, function (k, v) {
+                        $("#form-add").append('<input type="hidden" name="thumb" value="'+ v.name +'" />');
+                    });
+
                 } else {
                     // 没有成功的图片，重设
                     state = 'done';
@@ -524,10 +492,11 @@ $(function () {
     });
 
     uploader.onError = function (code) {
-        alert('Eroor: ' + code);
+        // alert('图片已经存在');
     };
 
     $upload.on('click', function () {
+
         if ($(this).hasClass('disabled')) {
             return false;
         }

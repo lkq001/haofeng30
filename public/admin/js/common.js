@@ -1,10 +1,15 @@
 // 添加
-function storeSubmit(data, url, type) {
+function storeSubmit(data, url, type, isPostData) {
     // 声明数组,存储提交数据
     var typeData = {};
-    $.each(data, function (k, v) {
-        typeData[this.name] = this.value
-    });
+
+    if (isPostData == "undefined") {
+        $.each(data, function (k, v) {
+            typeData[this.name] = this.value
+        });
+    } else {
+        typeData = data;
+    }
 
     $.ajaxSetup({
         headers: {

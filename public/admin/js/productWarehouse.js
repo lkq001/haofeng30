@@ -1,22 +1,26 @@
 $(function () {
     $("#form-add").validate({
-        rules: {
-            // name: {
-            //     required: true,
-            //     minlength: 1,
-            //     maxlength: 200
-            // },
-            // pid: {
-            //     required: true,
-            //     minlength: 1,
-            //     maxlength: 200
-            // },
-            // parameter: {
-            //     required: true,
-            //     minlength: 1,
-            //     maxlength: 200
-            // },
-        },
+        // rules: {
+        //     name: {
+        //         required: true,
+        //         minlength: 2,
+        //         maxlength: 200
+        //     },
+        //     pid: {
+        //         required: true,
+        //         minlength: 1,
+        //         maxlength: 200
+        //     },
+        //     description: {
+        //         required: true,
+        //         minlength: 2,
+        //         maxlength: 255
+        //     },
+        //     thumb: {
+        //         required: true,
+        //     }
+        //
+        // },
         onkeyup: false,
         focusCleanup: true,
         success: "valid",
@@ -24,16 +28,28 @@ $(function () {
 
             // 获取提交数据
             var data = $(form).serializeArray();
-            console.log(data);
-            var pic = $('form')[0].files[0];
 
-            return false;
+            var postData = {};
+            var thumb = [];
+
+            $.each(data, function (k, v) {
+               if (v.name == 'thumb') {
+                   console.log(this.value)
+                   thumb[k] = this.value;
+               } else {
+                   postData[this.name] = this.value;
+               }
+            });
+
+            postData['thumb'] = thumb;
+
             // 获取提交路径
             var url = $(form).attr('action');
             // 获取提交方式
             var type = $(form).attr('method');
+
             // ajax 提交
-            storeSubmit(data, url, type);
+            storeSubmit(postData, url, type, 'true');
         }
     });
 
@@ -149,7 +165,7 @@ $(function () {
         var rows = [];
         // 声明一个数组,存储删除的ID
         var ids = [];
-        $("input[name='check']:checked").each(function() {
+        $("input[name='check']:checked").each(function () {
             rows.push($(this).parents("tr").index());
             ids.push($(this).val());
         });

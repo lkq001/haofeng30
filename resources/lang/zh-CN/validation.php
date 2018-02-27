@@ -241,6 +241,7 @@ return [
         'route_alias'           =>  '路由别名',
         'route'                 =>  '路由',
         'pid'                   =>  '上级栏目',
-        'order_by'              =>  '排序值'
+        'order_by'              =>  '排序值',
+        'thumb'                 =>  '图片'
     ],
 ];

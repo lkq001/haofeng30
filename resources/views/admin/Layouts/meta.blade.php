@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/admin/static/h-ui.admin/skin/default/skin.css') }}" id="skin" />
     <link rel="stylesheet" type="text/css" href="{{ asset('/admin/static/h-ui.admin/css/style.css') }}" />
     <link rel="stylesheet" type="text/css" href="{{ asset('/admin/css/sweetAlert.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/common.css') }}" />
     <!--[if IE 6]>
     <script type="text/javascript" src="{{ asset('/admin/lib/DD_belatedPNG_0.0.8a-min.js') }}" ></script>
     <script>DD_belatedPNG.fix('*');</script>

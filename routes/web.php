@@ -154,5 +154,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
 
 
     Route::get('/role/index', 'RoleController@index')->name('admin.role.index');
-    Route::get('/common/upload', 'CommonController@upload')->name('admin.common.upload');
+
 });
+

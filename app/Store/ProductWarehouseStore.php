@@ -2,17 +2,20 @@
 
 namespace App\Store;
 
-use App\Model\Specifications;
+use App\Model\ProductWarehouse;
+
+use Illuminate\Support\Facades\DB;
 
 class ProductWarehouseStore
 {
     // 静态方法
-    private static $specifications = null;
+    private static $productWarehouse = null;
 
     public function __construct(
-        Specifications $specifications
-    ){
-        self::$specifications = $specifications;
+        ProductWarehouse $productWarehouse
+    )
+    {
+        self::$productWarehouse = $productWarehouse;
     }
 
     /**
@@ -28,7 +31,7 @@ class ProductWarehouseStore
             return false;
         }
 
-        return self::$specifications->where($where)->count();
+        return self::$productWarehouse->where($where)->count();
     }
 
     /**
@@ -41,18 +44,18 @@ class ProductWarehouseStore
     public function getAll($where = '')
     {
         if (empty($where)) {
-            return self::$specifications->orderBy('order_by', 'DESC')->get();
+            return self::$productWarehouse->orderBy('order_by', 'DESC')->get();
         }
-        return self::$specifications->where($where)->orderBy('order_by', 'DESC')->get();
+        return self::$productWarehouse->where($where)->orderBy('order_by', 'DESC')->get();
     }
 
     // 获取指定条件数量
-    public function count($where= '')
+    public function count($where = '')
     {
         if (empty($where)) {
-            return self::$specifications->count();
+            return self::$productWarehouse->count();
         }
-        return self::$specifications->where($where)->count();
+        return self::$productWarehouse->where($where)->count();
     }
 
     /**
@@ -68,7 +71,7 @@ class ProductWarehouseStore
             return false;
         }
 
-        return self::$specifications->where($where)->first();
+        return self::$productWarehouse->where($where)->first();
     }
 
     /**
@@ -81,14 +84,19 @@ class ProductWarehouseStore
     public function store($data)
     {
         foreach ($data as $k => $v) {
-            self::$specifications->$k = $v;
+            self::$productWarehouse->$k = $v;
         }
-        return self::$specifications->save();
+
+        if (self::$productWarehouse->save()) {
+            return self::$productWarehouse;
+        }
+
+        return false;
     }
 
     public function status($id, $status)
     {
-        $oneInfo = self::$specifications->where('id', $id)->first();
+        $oneInfo = self::$productWarehouse->where('id', $id)->first();
         $oneInfo->status = $status;
         return $oneInfo->save();
     }
@@ -97,12 +105,12 @@ class ProductWarehouseStore
     public function update($id, $data)
     {
         // 查询数据
-        $specifications = self::$specifications->find($id);
+        $productWarehouse = self::$productWarehouse->find($id);
 
         foreach ($data as $k => $v) {
-            $specifications->$k = $v;
+            $productWarehouse->$k = $v;
         }
-        return $specifications->save();
+        return $productWarehouse->save();
     }
 
     // 获取子栏目数据
@@ -110,10 +118,10 @@ class ProductWarehouseStore
     {
         if ($status) {
             // 查询数据
-            $childCount = self::$specifications->where('pid', $id)->where('status', $status)->count();
+            $childCount = self::$productWarehouse->where('pid', $id)->where('status', $status)->count();
         } else {
             // 查询数据
-            $childCount = self::$specifications->where('pid', $id)->count();
+            $childCount = self::$productWarehouse->where('pid', $id)->count();
         }
 
 
@@ -123,13 +131,13 @@ class ProductWarehouseStore
     // 执行删除
     public function destroy($id)
     {
-        return self::$specifications->where('id', $id)->delete();
+        return self::$productWarehouse->where('id', $id)->delete();
     }
 
     // 批量删除
     public function destroys($ids)
     {
-        return self::$specifications->whereIn('id', $ids)->delete();
+        return self::$productWarehouse->whereIn('id', $ids)->delete();
     }
 
 
