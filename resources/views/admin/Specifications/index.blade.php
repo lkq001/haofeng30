@@ -33,7 +33,7 @@
                     <th>规格参数</th>
                     <th width="80">排序</th>
                     <th width="80">状态</th>
-                    <th width="200">操作</th>
+                    <th width="150">操作</th>
                 </tr>
                 </thead>
                 <tbody id="checked-box">

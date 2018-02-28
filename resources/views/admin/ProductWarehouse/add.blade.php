@@ -44,11 +44,26 @@
                     </div>
 
                     <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>商品价格：</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <input type="text" class="input-text w25" value="" placeholder="" id="" name="price">
+                            <span class="suggest">价格必须为数字</span>
+                        </div>
+                    </div>
+
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-2">商品描述：</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <input type="text" class="input-text" value="" placeholder="" id="" name="description">
+                        </div>
+                    </div>
+
+                    <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-2">规格排序：</label>
                         <div class="formControls col-xs-8 col-sm-9">
                             <input type="text" class="input-text w25" value="" placeholder=""
                                    onkeyup="this.value=this.value.replace(/\D/g,'')" id="" name="order_by">
-                            <span class="suggest">数值越大,越靠前,仅能填写数字</span>
+                            <span class="suggest">数值越大,越靠前,只能填写数字</span>
                         </div>
                     </div>
 
@@ -56,15 +71,7 @@
                         <label class="form-label col-xs-4 col-sm-2">商品库存：</label>
                         <div class="formControls col-xs-8 col-sm-9">
                             <input type="text" class="input-text w25" onkeyup="this.value=this.value.replace(/\D/g,'')" value="" placeholder="" id="" name="stock">
-                            <span class="suggest">不填为不限制</span>
-                        </div>
-                    </div>
-
-                    <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>商品描述：</label>
-                        <div class="formControls col-xs-8 col-sm-9">
-                            <textarea name="description" cols="" rows="" class="textarea" placeholder="商品简单描述"
-                                      dragonfly="true" nullmsg=""></textarea>
+                            <span class="suggest">不填为默认 9999999</span>
                         </div>
                     </div>
 

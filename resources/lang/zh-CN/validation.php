@@ -242,6 +242,7 @@ return [
         'route'                 =>  '路由',
         'pid'                   =>  '上级栏目',
         'order_by'              =>  '排序值',
-        'thumb'                 =>  '图片'
+        'thumb'                 =>  '图片',
+        'price'                 =>  '价格'
     ],
 ];

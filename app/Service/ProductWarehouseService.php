@@ -6,6 +6,7 @@ use App\Store\ProductCategoryStore;
 use App\Store\ProductContentStore;
 use App\Store\ProductThumbStore;
 use App\Store\ProductWarehouseStore;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Validator;
 
@@ -190,7 +191,23 @@ class ProductWarehouseService
     // 获取全部消息
     public function getAll()
     {
-        return self::$productWarehouseStore->getAll();
+        $getAll =  self::$productWarehouseStore->getAll();
+
+        if (collect($getAll)->count() > 0) {
+
+            foreach ($getAll as $k => $v) {
+
+                if (collect($v->getHasOne)->count() > 0) {
+
+                    $v->thumb = config('config.product_thumb') .'/'. $v->getHasOne->thumb;
+
+                }
+
+            }
+        }
+
+        return $getAll;
+
     }
 
     // 获取个数

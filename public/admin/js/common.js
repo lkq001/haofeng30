@@ -297,3 +297,12 @@ function destroyAll(rows, ids, url, idName) {
     });
 
 }
+
+/**
+ * 图片点击放大
+ */
+
+$('body').on('click', '#img', function () {
+    $(this).toggleClass('min');
+    $(this).toggleClass('max');
+});

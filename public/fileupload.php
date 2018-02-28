@@ -59,7 +59,6 @@ $data = date('Ymd');
 $targetDir = 'upload_tmp';
 $uploadDir = 'upload/' . $data;
 
-
 $cleanupTargetDir = true; // Remove old files
 $maxFileAge = 5 * 3600; // Temp file age in seconds
 
@@ -77,9 +76,7 @@ if (!file_exists($uploadDir)) {
 // Get a file name
 if (isset($_REQUEST["name"])) {
 
-
     $fileName = $_REQUEST["name"];
-
 
 } elseif (!empty($_FILES)) {
 

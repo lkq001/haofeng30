@@ -31,8 +31,16 @@ class ProductWarehouseController extends Controller
         // 产品分类
         $productCategoryLists = self::$productWarehouseService->getProductCategory();
 
+        // 产品列表
+        $productWarehouseLists = self::$productWarehouseService->getAll();
+
+        // 数量
+        $count = self::$productWarehouseService->count();
+
         return view('admin.productWarehouse.index', [
-            'productCategoryLists' => $productCategoryLists
+            'productCategoryLists' => $productCategoryLists,
+            'productWarehouseLists' => $productWarehouseLists,
+            'count' => $count
         ]);
     }
 
@@ -45,8 +53,8 @@ class ProductWarehouseController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|min:2',
             'pid' => 'required|int',
-            'order_by' => 'required',
             'thumb' => 'required',
+            'price' => 'required|numeric'
         ]);
 
         // 数据是否验证通过

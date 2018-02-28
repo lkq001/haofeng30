@@ -22,67 +22,94 @@
         <div class="cl pd-5 bg-1 bk-gray mt-20">
 		<span class="l">
 		<span href="javascript:;" id="destroy-all" data-url="{{ route('admin.specifications.destroys') }}"
-              class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</span>
-		<span class="btn btn-primary radius" data-toggle="modal" data-target="#addModel"><i class="Hui-iconfont">&#xe600;</i> 添加产品</span>
+              class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 上架</span>
+            <span href="javascript:;" id="destroy-all" data-url="{{ route('admin.specifications.destroys') }}"
+                  class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 下架</span>
+            <span href="javascript:;" id="destroy-all" data-url="{{ route('admin.specifications.destroys') }}"
+                  class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 失效</span>
+            <span href="javascript:;" id="destroy-all" data-url="{{ route('admin.specifications.destroys') }}"
+                  class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 删除</span>
+		<span class="btn btn-primary radius" data-toggle="modal" data-target="#addModel"><i class="Hui-iconfont">&#xe600;</i> 添加</span>
 		</span>
-            {{--<span class="r">共有数据：<strong>{{ $count }}</strong> 条</span>--}}
+            <span class="r">共有数据：<strong>{{ $count }}</strong> 条</span>
         </div>
         <div class="mt-20">
             <table class="table table-border table-bordered table-hover table-bg table-sort">
                 <thead>
                 <tr class="text-c">
                     <th width="25"><input type="checkbox" name="" value=""></th>
-                    <th width="80">ID</th>
+                    <th width="25">ID</th>
+                    <th width="60">商品</th>
                     <th>产品名称</th>
-                    <th>规格参数</th>
-                    <th width="80">排序</th>
-                    <th width="80">状态</th>
-                    <th width="200">操作</th>
+                    <th width="80">价格</th>
+                    <th width="80">库存</th>
+                    <th width="80">销量</th>
+                    <th width="80">创建时间</th>
+                    <th width="40">排序</th>
+                    <th width="40">状态</th>
+                    <th width="150">操作</th>
                 </tr>
                 </thead>
                 <tbody id="checked-box">
-                {{--@if(collect($specifications)->count() > 0)--}}
-                {{--@foreach($specifications as $k => $v)--}}
-                {{--<tr class="text-c">--}}
-                {{--<td><input type="checkbox" name="check" value="{{ $v->id }}"></td>--}}
-                {{--<td>{{ $v->id }}</td>--}}
-                {{--<td class="text-l">{{ $v->name }}</td>--}}
-                {{--<td class="text-l">{{ $v->parameter }}</td>--}}
-                {{--<td id="orderBy" data-id="{{ $v->id }}"--}}
-                {{--data-url="{{ route('admin.specifications.order') }}"--}}
-                {{--data-order="{{ $v->order_by }}">{{ $v->order_by }}</td>--}}
-                {{--<td>--}}
-                {{--@if($v->status == 1)--}}
-                {{--已启用--}}
-                {{--@elseif($v->status == 2)--}}
-                {{--已禁用--}}
-                {{--@endif--}}
-                {{--</td>--}}
-                {{--<td class="f-14">--}}
-                {{--<button id="editShowModel" class="btn btn-success size-S radius" data-id="{{ $v->id }}"--}}
-                {{--data-url="{{ route('admin.specifications.edit') }}">编辑--}}
-                {{--</button>--}}
-                {{--@if($v->status == 1)--}}
-                {{--<button id="changeStatus" class="btn btn-warning size-S radius"--}}
-                {{--data-id="{{ $v->id }}"--}}
-                {{--data-url="{{ route('admin.specifications.status') }}"--}}
-                {{--data-status="{{ $v->status }}">禁用--}}
-                {{--</button>--}}
-                {{--@elseif($v->status == 2)--}}
-                {{--<button id="changeStatus" class="btn btn-secondary size-S radius"--}}
-                {{--data-id="{{ $v->id }}"--}}
-                {{--data-url="{{ route('admin.specifications.status') }}"--}}
-                {{--data-status="{{ $v->status }}">启用--}}
-                {{--</button>--}}
-                {{--@endif--}}
-                {{--<button id="destroy" class="btn btn-danger size-S radius" data-id="{{ $v->id }}"--}}
-                {{--data-url="{{ route('admin.specifications.destroy') }}">删除--}}
-                {{--</button>--}}
-                {{--</tr>--}}
-                {{--@endforeach--}}
-                {{--@endif--}}
+                @if(collect($productWarehouseLists)->count() > 0)
+                    @foreach($productWarehouseLists as $k => $v)
+                        <tr class="text-c">
+                            <td><input type="checkbox" name="check" value="{{ $v->id }}"></td>
+
+                            <td>{{ $v->id }}</td>
+                            <td class="text-l">
+                                <img src="{!! $v->thumb !!}" alt="" height="50px"/>
+                            </td>
+                            <td class="text-l">{{ $v->name }}</td>
+                            <td>{{ $v->price }}</td>
+                            <td>{{ $v->stock }}</td>
+                            <td>{{ $v->sale }}</td>
+                            <td>{{ $v->created_at }}</td>
+                            <td id="orderBy" data-id="{{ $v->id }}"
+                                data-url="{{ route('admin.specifications.order') }}"
+                                data-order="{{ $v->order_by }}">{{ $v->order_by }}</td>
+                            <td>
+                                @if($v->status == 1)
+                                    未上架
+                                @elseif($v->status == 2)
+                                    已上架
+                                @elseif($v->status == 3)
+                                    已下架
+                                @elseif($v->status == 4)
+                                    已失效
+                                @elseif($v->status == 5)
+                                    缺货
+                                @else
+                                    其他
+                                @endif
+                            </td>
+                            <td class="f-14">
+                                <button id="editShowModel" class="btn btn-success size-S radius" data-id="{{ $v->id }}"
+                                        data-url="{{ route('admin.specifications.edit') }}">编辑
+                                </button>
+                                @if($v->status == 1)
+                                    <button id="changeStatus" class="btn btn-warning size-S radius"
+                                            data-id="{{ $v->id }}"
+                                            data-url="{{ route('admin.specifications.status') }}"
+                                            data-status="{{ $v->status }}">禁用
+                                    </button>
+                                @elseif($v->status == 2)
+                                    <button id="changeStatus" class="btn btn-secondary size-S radius"
+                                            data-id="{{ $v->id }}"
+                                            data-url="{{ route('admin.specifications.status') }}"
+                                            data-status="{{ $v->status }}">启用
+                                    </button>
+                                @endif
+                                <button id="destroy" class="btn btn-danger size-S radius" data-id="{{ $v->id }}"
+                                        data-url="{{ route('admin.specifications.destroy') }}">删除
+                                </button>
+                        </tr>
+                    @endforeach
+                @endif
                 </tbody>
+
             </table>
+            {!! $productWarehouseLists->links() !!}
         </div>
     </div>
 @endsection

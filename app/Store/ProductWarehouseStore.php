@@ -44,9 +44,13 @@ class ProductWarehouseStore
     public function getAll($where = '')
     {
         if (empty($where)) {
-            return self::$productWarehouse->orderBy('order_by', 'DESC')->get();
+            return self::$productWarehouse->orderBy('order_by', 'DESC')->with(['getHasOne' => function ($query) {
+                $query->where('is_index', 1)->where('status', 1);
+            }])->paginate(config('config.page_size_l'));
         }
-        return self::$productWarehouse->where($where)->orderBy('order_by', 'DESC')->get();
+        return self::$productWarehouse->where($where)->orderBy('order_by', 'DESC')->with(['getHasMany' => function ($query) {
+            $query->where('is_index', 1)->where('status', 1);
+        }])->paginate(config('config.page_size_l'));
     }
 
     // 获取指定条件数量
@@ -123,7 +127,6 @@ class ProductWarehouseStore
             // 查询数据
             $childCount = self::$productWarehouse->where('pid', $id)->count();
         }
-
 
         return $childCount;
     }

@@ -32,8 +32,8 @@
                     <th width="80">ID</th>
                     <th>分类名称</th>
                     <th width="80">排序</th>
-                    <th width="80">状态</th>
-                    <th width="200">操作</th>
+                    <th width="40">状态</th>
+                    <th width="150">操作</th>
                 </tr>
                 </thead>
                 <tbody id="checked-box">

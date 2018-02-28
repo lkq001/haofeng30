@@ -85,7 +85,6 @@ $(function () {
         uploader;
 
 
-
     // 实例化
     uploader = WebUploader.create({
         pick: {
@@ -168,8 +167,7 @@ $(function () {
 
         var lastName = arr[arr.length - 1];
 
-
-        file.name = $.md5(file.name +'-'+ date) +'.'+ lastName;
+        file.name = $.md5(file.name + '-' + date) + '.' + lastName;
 
         var $li = $('<li id="' + file.id + '">' +
             '<p class="title">' + file.name + '</p>' +
@@ -421,9 +419,19 @@ $(function () {
                 uploaderFile = uploader.getFiles();
 
                 if (stats.successNum) {
+                    var mydate = new Date();
+                    var Year = mydate.getFullYear();
+                    var Month = parseInt(mydate.getMonth() + 1);
+                    var Day = mydate.getDate();
+
+                    if (Month < 10) {
+                        var str = Year + '0' + Month + '' + Day;
+                    } else {
+                        var str = Year + '' + Month + '' + Day;
+                    }
 
                     $.each(uploaderFile, function (k, v) {
-                        $("#form-add").append('<input type="hidden" name="thumb" value="'+ v.name +'" />');
+                        $("#form-add").append('<input type="hidden" name="thumb" value="' + str + '/' + v.name + '" />');
                     });
 
                 } else {

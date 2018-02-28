@@ -84,10 +84,14 @@ class ProductThumbStore
     {
         $arr = [];
 
+        $is_index = 1;
+
         foreach (array_unique($data['thumb']) as $k => $v) {
             if ($v) {
-                $arr[$k]['product_id'] = $data['id'] ?? 1;
+                $arr[$k]['product_id'] = $data['product_id'];
                 $arr[$k]['thumb'] = $v;
+                $arr[$k]['is_index'] = $is_index;
+                $is_index = 2;
             }
         }
 
