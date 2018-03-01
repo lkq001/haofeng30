@@ -66,6 +66,7 @@ $(function () {
                     version = '0.0';
                 }
             }
+
             version = version.match(/\d+/g);
             return parseFloat(version[0] + '.' + version[1], 10);
         })(),
@@ -425,10 +426,14 @@ $(function () {
                     var Day = mydate.getDate();
 
                     if (Month < 10) {
-                        var str = Year + '0' + Month + '' + Day;
-                    } else {
-                        var str = Year + '' + Month + '' + Day;
+                        var Month = '0' + Month;
                     }
+
+                    if (Day < 10) {
+                        var Day = '0'  + Day;
+                    }
+
+                    var str = Year +''+ Month +''+ Day;
 
                     $.each(uploaderFile, function (k, v) {
                         $("#form-add").append('<input type="hidden" name="thumb" value="' + str + '/' + v.name + '" />');
@@ -482,21 +487,83 @@ $(function () {
     };
 
     uploader.on('all', function (type) {
+
         var stats;
         switch (type) {
             case 'uploadFinished':
+                console.log(1);
                 setState('confirm');
                 break;
 
             case 'startUpload':
+                console.log(2);
                 setState('uploading');
                 break;
 
             case 'stopUpload':
+                console.log(3);
                 setState('paused');
                 break;
 
         }
+    });
+
+    uploader.on('ready', function () {
+
+        var uploadLists = $("#uploadOld").val();
+
+        if (uploadLists.length > 2) {
+
+            $statusBar.show(); //显示新增和上传按钮
+            setState('ready'); //重置上传按钮状态
+
+
+            //载入现有照片
+            $li = '';
+
+            var newUploadOne = uploadLists.replace("[{", '').replace("}]", '');
+
+            var arr = newUploadOne.split('},{')
+
+            $.each(arr, function (key, val) {
+                var arrNew = [];
+                var thumb = val.replace(/\"/g, '').replace(/\:/g, ',');
+                var thumbArr = thumb.split(',')
+
+                $.each(thumbArr, function (k, v) {
+                    if (k % 2 == 0) {
+                        arrNew[v] = thumbArr[k + 1]
+                    }
+                })
+                arr[key] = arrNew;
+            });
+
+            $.each(arr, function (k, v) {
+                $li += '<li id="' + (v.id) + '"  title ="123">' +
+                    '<p class="imgWrap"><img src="http://haofeng30.com/upload/' + (v.thumb).replace(/\\/g, "") + '"></p>' +
+                    '<p class="progress"><span></span></p>'+
+                    '<input type="hidden" name="thumbOld[' + (v.id) + ']" value="' + (v.id) + '">' +
+                    '<div class="file-panel" style="height: 30px;"><span class="cancel">删除</span></div>' +
+                    '</li>';
+            })
+
+            //给li添加删除按钮
+            $btns = $('<div class="file-panel" style="height: 30px;">' +
+                '<span class="cancel">删除</span>' +
+                '<b class="ysc">已上传</b></div>').appendTo($li);
+
+            $(".filelist").append($li);
+
+            //点击删除，提交给控制器进行删除操作
+            $(".cancel ").click(function () {
+
+                $(this).parent().parent().remove();
+
+            });
+        }
+
+
+
     });
 
     uploader.onError = function (code) {

@@ -98,7 +98,7 @@ class ProductContentStore
     public function update($id, $data)
     {
         // 查询数据
-        $productContent = self::$productContent->find($id);
+        $productContent = self::$productContent->where(['product_id' => $id])->first();
 
         foreach ($data as $k => $v) {
             $productContent->$k = $v;

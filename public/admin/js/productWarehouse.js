@@ -1,26 +1,21 @@
 $(function () {
     $("#form-add").validate({
-        // rules: {
-        //     name: {
-        //         required: true,
-        //         minlength: 2,
-        //         maxlength: 200
-        //     },
-        //     pid: {
-        //         required: true,
-        //         minlength: 1,
-        //         maxlength: 200
-        //     },
-        //     description: {
-        //         required: true,
-        //         minlength: 2,
-        //         maxlength: 255
-        //     },
-        //     thumb: {
-        //         required: true,
-        //     }
-        //
-        // },
+        rules: {
+            name: {
+                required: true,
+                minlength: 2,
+                maxlength: 200
+            },
+            pid: {
+                required: true,
+                minlength: 1,
+                maxlength: 200
+            },
+            price: {
+                required: true,
+            }
+
+        },
         onkeyup: false,
         focusCleanup: true,
         success: "valid",
@@ -47,9 +42,10 @@ $(function () {
             var url = $(form).attr('action');
             // 获取提交方式
             var type = $(form).attr('method');
-
+            // 跳转页面
+            var jumpUrl = $(form).attr('data-jump');
             // ajax 提交
-            storeSubmit(postData, url, type, 'true');
+            storeSubmit(postData, url, type, 'true', jumpUrl);
         }
     });
 
@@ -64,7 +60,7 @@ $(function () {
         // 获取状态
         var status = that.attr('data-status');
         // ajax 提交
-        statusSubmit(id, url, status, that, 1);
+        statusProductSubmit(id, url, status, that, 1);
     });
 
     // 获取修改数据
@@ -76,15 +72,17 @@ $(function () {
         // 获取提交路径
         var url = that.attr('data-url');
         // 获取修改信息
-        var info = editInfo(id, url);
 
-        // 数据指定
-        $("#editModel input[name='id']").val(info.id);
-        $("#editModel input[name='name']").val(info.name);
-        $("#editModel").find("option[value = '" + info.pid + "']").attr("selected", "selected");
-        $("#editModel input[name='parameter']").val(info.parameter);
-
-        $('#editModel').modal('show');
+        window.location.href = url + '?id=' + id;
+        // var info = editInfo(id, url);
+        //
+        // // 数据指定
+        // $("#editModel input[name='id']").val(info.id);
+        // $("#editModel input[name='name']").val(info.name);
+        // $("#editModel").find("option[value = '" + info.pid + "']").attr("selected", "selected");
+        // $("#editModel input[name='parameter']").val(info.parameter);
+        //
+        // $('#editModel').modal('show');
     });
 
     // 修改排序

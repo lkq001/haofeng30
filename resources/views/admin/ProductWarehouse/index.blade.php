@@ -4,8 +4,6 @@
     <link href="{{ asset('/admin/lib/webuploader/0.1.5/webuploader.css') }}" rel="stylesheet" type="text/css"/>
 @endsection
 @section('content')
-    @include('admin.ProductWarehouse.add')
-    {{--@include('admin.specifications.edit')--}}
     <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
         <span class="c-gray en">&gt;</span>
         总库产品管理
@@ -29,7 +27,7 @@
                   class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 失效</span>
             <span href="javascript:;" id="destroy-all" data-url="{{ route('admin.specifications.destroys') }}"
                   class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 删除</span>
-		<span class="btn btn-primary radius" data-toggle="modal" data-target="#addModel"><i class="Hui-iconfont">&#xe600;</i> 添加</span>
+		<a class="btn btn-primary radius" href="{{ route('admin.product.warehouse.add') }}"><i class="Hui-iconfont">&#xe600;</i> 添加</a>
 		</span>
             <span class="r">共有数据：<strong>{{ $count }}</strong> 条</span>
         </div>
@@ -66,7 +64,7 @@
                             <td>{{ $v->sale }}</td>
                             <td>{{ $v->created_at }}</td>
                             <td id="orderBy" data-id="{{ $v->id }}"
-                                data-url="{{ route('admin.specifications.order') }}"
+                                data-url="{{ route('admin.product.warehouse.order') }}"
                                 data-order="{{ $v->order_by }}">{{ $v->order_by }}</td>
                             <td>
                                 @if($v->status == 1)
@@ -85,23 +83,24 @@
                             </td>
                             <td class="f-14">
                                 <button id="editShowModel" class="btn btn-success size-S radius" data-id="{{ $v->id }}"
-                                        data-url="{{ route('admin.specifications.edit') }}">编辑
+                                        data-url="{{ route('admin.product.warehouse.edit') }}">编辑
                                 </button>
-                                @if($v->status == 1)
-                                    <button id="changeStatus" class="btn btn-warning size-S radius"
-                                            data-id="{{ $v->id }}"
-                                            data-url="{{ route('admin.specifications.status') }}"
-                                            data-status="{{ $v->status }}">禁用
-                                    </button>
-                                @elseif($v->status == 2)
+                                @if($v->status == 2)
                                     <button id="changeStatus" class="btn btn-secondary size-S radius"
                                             data-id="{{ $v->id }}"
-                                            data-url="{{ route('admin.specifications.status') }}"
-                                            data-status="{{ $v->status }}">启用
+                                            data-url="{{ route('admin.product.warehouse.status') }}"
+                                            data-status="{{ $v->status }}">下架
                                     </button>
+                                @else
+                                    <button id="changeStatus" class="btn btn-warning size-S radius"
+                                            data-id="{{ $v->id }}"
+                                            data-url="{{ route('admin.product.warehouse.status') }}"
+                                            data-status="{{ $v->status }}">上架
+                                    </button>
+
                                 @endif
                                 <button id="destroy" class="btn btn-danger size-S radius" data-id="{{ $v->id }}"
-                                        data-url="{{ route('admin.specifications.destroy') }}">删除
+                                        data-url="{{ route('admin.product.warehouse.destroy') }}">删除
                                 </button>
                         </tr>
                     @endforeach
@@ -115,10 +114,6 @@
 @endsection
 @section('javascript')
 
-    <script type="text/javascript" src="{{ asset('/admin/lib/webuploader/0.1.5/webuploader.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/admin/js/productWarehouse.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('/admin/js/uploads.js') }}"></script>
-    <script>
-        var ue = UE.getEditor('editor');
-    </script>
+
 @endsection

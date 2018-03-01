@@ -1,5 +1,5 @@
 // 添加
-function storeSubmit(data, url, type, isPostData) {
+function storeSubmit(data, url, type, isPostData, jumpUrl) {
     // 声明数组,存储提交数据
     var typeData = {};
 
@@ -25,11 +25,22 @@ function storeSubmit(data, url, type, isPostData) {
             console.log(res);
             if (res.code == 'SN200') {
 
-                layer.alert('添加成功,点击确定刷新页面!', {
-                    closeBtn: 0
-                }, function () {
-                    location.reload();
-                });
+                if (jumpUrl == "undefined") {
+
+                    layer.alert('添加成功,点击确定刷新页面!', {
+                        closeBtn: 0
+                    }, function () {
+                        location.reload();
+                    });
+                } else {
+                    layer.confirm('添加成功,是否跳转到列表页面？', {
+                        btn: ['确定','取消'] //按钮
+                    }, function(){
+                        window.location.href = jumpUrl;
+                    }, function(){
+                        location.reload();
+                    });
+                }
 
             } else {
                 layer.msg(res.message, {icon: 2, time: 1500});
@@ -57,6 +68,66 @@ function statusSubmit(id, url, status, that, textMessage) {
         var changeMessageChange = '禁用';
     } else {
         var changeMessage = '操作';
+    }
+
+    layer.confirm('确认要' + changeMessage + '吗？', function (index) {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            url: url,
+            data: {'id': id, 'status': status},
+            type: 'POST',
+            success: function (res) {
+                console.log(res);
+                if (res.code == 'SN200') {
+
+                    if (textMessage) {
+                        that.parent().prev().html('已' + changeMessage);
+                    }
+
+                    that.attr('data-status', statusCode);
+                    that.attr('class', statusClass);
+                    that.html(changeMessageChange);
+
+                    layer.msg('已' + changeMessage + '!', {icon: 1, time: 1500});
+                } else {
+                    layer.msg(res.message, {icon: 2, time: 1500});
+                    return false;
+                }
+            },
+            error: function (res) {
+                layer.msg(res.message, {icon: 2, time: 1500});
+                return false;
+            }
+        });
+    });
+
+}
+
+/**
+ * 上下架
+ * @param id
+ * @param url
+ * @param status
+ * @param that
+ * @param textMessage
+ */
+function statusProductSubmit(id, url, status, that, textMessage) {
+
+    if (status == 2) {
+        var changeMessage = '下架';
+        var statusCode = 1;
+        var statusClass = 'btn btn-warning size-S radius';
+        var changeMessageChange = '上架';
+    } else {
+        var changeMessage = '上架';
+        var statusCode = 2;
+        var statusClass = 'btn btn-secondary size-S radius';
+        var changeMessageChange = '下架';
     }
 
     layer.confirm('确认要' + changeMessage + '吗？', function (index) {

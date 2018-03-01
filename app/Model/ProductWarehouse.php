@@ -22,4 +22,9 @@ class ProductWarehouse extends Model
     {
         return $this->hasOne('App\Model\ProductThumb', 'product_id', 'id');
     }
+
+    public function getHasOneContent()
+    {
+        return $this->hasOne('App\Model\ProductContent', 'product_id', 'id');
+    }
 }

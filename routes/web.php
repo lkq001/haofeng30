@@ -135,6 +135,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
     Route::group(['prefix' => '/product/warehouse'], function () {
         // 数据列表
         Route::get('/index', 'ProductWarehouseController@index')->name('admin.product.warehouse.index');
+        // 添加页面
+        Route::get('/add', 'ProductWarehouseController@add')->name('admin.product.warehouse.add');
         // 添加数据
         Route::post('/store', 'ProductWarehouseController@store')->name('admin.product.warehouse.store');
         // 查询指定ID数据(id)

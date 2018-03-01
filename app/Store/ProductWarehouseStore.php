@@ -75,7 +75,9 @@ class ProductWarehouseStore
             return false;
         }
 
-        return self::$productWarehouse->where($where)->first();
+        return self::$productWarehouse->where($where)->with(['getHasMany' => function ($query) {
+            $query->where('status', 1);
+        }, 'getHasOneContent'])->first();
     }
 
     /**

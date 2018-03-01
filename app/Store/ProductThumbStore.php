@@ -48,6 +48,22 @@ class ProductThumbStore
         return self::$productThumb->where($where)->orderBy('order_by', 'DESC')->get();
     }
 
+    /**
+     * 获取ID字段几个
+     *
+     * @param string $where
+     * @return mixed
+     * author 李克勤
+     */
+
+    public function getAllIds($where = '')
+    {
+        if (empty($where)) {
+            return self::$productThumb->orderBy('order_by', 'DESC')->get(['id']);
+        }
+        return self::$productThumb->where($where)->orderBy('order_by', 'DESC')->get(['id']);
+    }
+
     // 获取指定条件数量
     public function count($where = '')
     {
@@ -127,7 +143,6 @@ class ProductThumbStore
             // 查询数据
             $childCount = self::$productThumb->where('pid', $id)->count();
         }
-
 
         return $childCount;
     }
