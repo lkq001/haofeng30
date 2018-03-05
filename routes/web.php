@@ -155,6 +155,58 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/order', 'ProductWarehouseController@order')->name('admin.product.warehouse.order');
     });
 
+    /**
+     * 宅配卡管理
+     */
+    Route::group(['prefix' => '/card'], function () {
+        // 数据列表
+        Route::get('/index', 'CardController@index')->name('admin.card.index');
+        // 添加页面
+        Route::get('/add', 'CardController@add')->name('admin.card.add');
+        // 添加数据
+        Route::post('/store', 'CardController@store')->name('admin.card.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'CardController@edit')->name('admin.card.edit');
+        // 修改数据(id)
+        Route::post('/update', 'CardController@update')->name('admin.card.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'CardController@destroy')->name('admin.card.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'CardController@destroys')->name('admin.card.destroys');
+        // 修改状态
+        Route::post('/status/all', 'CardController@statusAll')->name('admin.card.status.all');
+        // 批量修改状态
+        Route::post('/status', 'CardController@status')->name('admin.card.status');
+        // 修改排序
+        Route::post('/order', 'CardController@order')->name('admin.card.order');
+    });
+
+    /**
+     * 宅配卡分类管理
+     */
+    Route::group(['prefix' => '/card/category'], function () {
+        // 数据列表
+        Route::get('/index', 'CardCategoryController@index')->name('admin.card.category.index');
+        // 添加页面
+        Route::get('/add', 'CardCategoryController@add')->name('admin.card.category.add');
+        // 添加数据
+        Route::post('/store', 'CardCategoryController@store')->name('admin.card.category.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'CardCategoryController@edit')->name('admin.card.category.edit');
+        // 修改数据(id)
+        Route::post('/update', 'CardCategoryController@update')->name('admin.card.category.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'CardCategoryController@destroy')->name('admin.card.category.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'CardCategoryController@destroys')->name('admin.card.category.destroys');
+        // 修改状态
+        Route::post('/status/all', 'CardCategoryController@statusAll')->name('admin.card.category.status.all');
+        // 批量修改状态
+        Route::post('/status', 'CardCategoryController@status')->name('admin.card.category.status');
+        // 修改排序
+        Route::post('/order', 'CardCategoryController@order')->name('admin.card.category.order');
+    });
+
 
     Route::get('/role/index', 'RoleController@index')->name('admin.role.index');
 

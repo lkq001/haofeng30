@@ -25,21 +25,24 @@ function storeSubmit(data, url, type, isPostData, jumpUrl) {
             console.log(res);
             if (res.code == 'SN200') {
 
-                if (jumpUrl == "undefined") {
+                if (jumpUrl != null || jumpUrl == undefined || jumpUrl != "") {
 
                     layer.alert('添加成功,点击确定刷新页面!', {
                         closeBtn: 0
                     }, function () {
                         location.reload();
                     });
+
                 } else {
+
                     layer.confirm('添加成功,是否跳转到列表页面？', {
-                        btn: ['确定','取消'] //按钮
-                    }, function(){
+                        btn: ['确定', '取消'] //按钮
+                    }, function () {
                         window.location.href = jumpUrl;
-                    }, function(){
+                    }, function () {
                         location.reload();
                     });
+
                 }
 
             } else {
