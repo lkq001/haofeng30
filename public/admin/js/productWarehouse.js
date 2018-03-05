@@ -173,4 +173,26 @@ $(function () {
 
     })
 
+    // 批量修改状态
+    $('body').on('click', '#status-all', function (i) {
+        // 赋值
+        var that = $(this);
+        // 获取提交路径
+        var url = that.attr('data-url');
+        // 状态获取
+        var status = that.attr('data-status');
+        // 声明一个数组,存储选择的第几行
+        var rows = [];
+        // 声明一个数组,存储删除的ID
+        var ids = [];
+        $("input[name='check']:checked").each(function () {
+            rows.push($(this).parents("tr").index());
+            ids.push($(this).val());
+        });
+
+        // 判断操作
+        statusAll(rows, ids, url, 'checked-box', status);
+
+    })
+
 });

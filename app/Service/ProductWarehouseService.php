@@ -6,7 +6,6 @@ use App\Store\ProductCategoryStore;
 use App\Store\ProductContentStore;
 use App\Store\ProductThumbStore;
 use App\Store\ProductWarehouseStore;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Validator;
 

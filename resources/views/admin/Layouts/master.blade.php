@@ -12,6 +12,7 @@
     </section>
 
 </article>
+
 @include('admin.layouts.footer')
 @yield('javascript')
 </body>

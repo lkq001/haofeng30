@@ -148,10 +148,11 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         // 批量删除
         Route::delete('/destroys', 'ProductWarehouseController@destroys')->name('admin.product.warehouse.destroys');
         // 修改状态
+        Route::post('/status/all', 'ProductWarehouseController@statusAll')->name('admin.product.warehouse.status.all');
+        // 批量修改状态
         Route::post('/status', 'ProductWarehouseController@status')->name('admin.product.warehouse.status');
         // 修改排序
         Route::post('/order', 'ProductWarehouseController@order')->name('admin.product.warehouse.order');
-
     });
 
 

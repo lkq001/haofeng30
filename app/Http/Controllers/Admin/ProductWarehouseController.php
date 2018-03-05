@@ -278,7 +278,7 @@ class ProductWarehouseController extends Controller
             return response()->json(['code' => 'SN202', 'message' => $validator->errors()->first()]);
         }
 
-        if (empty($request->thumb) && empty($request->thumbOld) ) {
+        if (empty($request->thumb) && empty($request->thumbOld)) {
             return response()->json(['code' => 'SN202', 'message' => '至少有一张图片']);
         }
 
@@ -295,5 +295,64 @@ class ProductWarehouseController extends Controller
             return response()->json(['code' => 'SN200', 'message' => '添加成功']);
         }
         return response()->json(['code' => 'SN201', 'message' => '添加失败']);
+    }
+
+    /**
+     * 批量删除
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * author 李克勤
+     */
+    public function destroys(Request $request)
+    {
+        // 验证数据
+        $validator = Validator::make($request->all(), [
+            'ids' => 'required|array'
+        ]);
+
+        // 数据是否验证通过
+        if ($validator->fails()) {
+            return response()->json(['code' => 'SN202', 'message' => '批量删除参数错误,请联系管理员!']);
+        }
+
+        // 执行删除操作
+        $destroyStatus = self::$productWarehouseStore->destroys($request->ids);
+
+        if ($destroyStatus) {
+            return response()->json(['code' => 'SN200', 'message' => '删除数据成功!']);
+        }
+
+        return response()->json(['code' => 'SN201', 'message' => '删除数据失败!']);
+    }
+
+    /**
+     * 批量修改状态
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     * author 李克勤
+     */
+    public function statusAll(Request $request)
+    {
+        // 验证数据
+        $validator = Validator::make($request->all(), [
+            'ids' => 'required|array',
+            'status' => 'required|int',
+        ]);
+
+        // 数据是否验证通过
+        if ($validator->fails()) {
+            return response()->json(['code' => 'SN202', 'message' => '批量操作参数错误,请联系管理员!']);
+        }
+
+        // 执行修改操作
+        $changeStatus = self::$productWarehouseStore->statusAll($request->ids, $request->status);
+
+        if ($changeStatus) {
+            return response()->json(['code' => 'SN200', 'message' => '批量操作数据成功!']);
+        }
+
+        return response()->json(['code' => 'SN201', 'message' => '批量操作数据失败!']);
     }
 }

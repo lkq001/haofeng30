@@ -145,5 +145,30 @@ class ProductWarehouseStore
         return self::$productWarehouse->whereIn('id', $ids)->delete();
     }
 
+    // 批量修改状态
+    public function statusAll($ids, $status)
+    {
+        // 查询所有数据
+        $productWarehoustLists = self::$productWarehouse->whereIn('id', $ids)->get();
+
+        if (collect($productWarehoustLists)->count() > 0) {
+            DB::beginTransaction();
+            try {
+                foreach ($productWarehoustLists as $v) {
+                    $v->status = $status;
+                    $v->save();
+                }
+                DB::commit();
+                return true;
+            } catch (\Exception $e) {
+
+                DB::rollBack();
+                return false;
+            }
+        }
+
+
+        return self::$productWarehouse->whereIn('id', $ids)->save(['status' => $status]);
+    }
 
 }

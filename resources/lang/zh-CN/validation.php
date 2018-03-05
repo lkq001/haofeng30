@@ -243,6 +243,7 @@ return [
         'pid'                   =>  '上级栏目',
         'order_by'              =>  '排序值',
         'thumb'                 =>  '图片',
-        'price'                 =>  '价格'
+        'price'                 =>  '价格',
+        'status'                =>  '状态'
     ],
 ];

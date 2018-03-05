@@ -44,6 +44,7 @@ function storeSubmit(data, url, type, isPostData, jumpUrl) {
 
             } else {
                 layer.msg(res.message, {icon: 2, time: 1500});
+                return false;
             }
         },
         error: function (res) {
@@ -298,6 +299,7 @@ function updateSubmit(data, url, type) {
 function destroy(id, url, that) {
     if (parseInt(id) < 1 || !url) {
         layer.msg('数据不合法!', {icon: 2, time: 1500});
+        return false;
     }
     layer.confirm('确认要删除吗？', function (index) {
         $.ajaxSetup({
@@ -319,6 +321,7 @@ function destroy(id, url, that) {
                     return false;
                 } else {
                     layer.msg(res.message, {icon: 2, time: 1500});
+                    return false;
                 }
             },
             error: function (res) {
@@ -334,6 +337,7 @@ function destroyAll(rows, ids, url, idName) {
 
     if (ids.length < 1 || !url) {
         layer.msg('数据不合法!', {icon: 2, time: 1500});
+        return false;
     }
 
     layer.confirm('确认要删除吗？', function (index) {
@@ -361,6 +365,58 @@ function destroyAll(rows, ids, url, idName) {
             },
             error: function (res) {
                 layer.msg('添加数据失败!', {icon: 2, time: 1500});
+                return false;
+            }
+        });
+
+    });
+
+}
+
+/**
+ * 批量修改状态
+ * @param rows
+ * @param ids
+ * @param url
+ * @param idName
+ */
+function statusAll(rows, ids, url, idName, status) {
+
+    if (ids.length < 1 || !url) {
+        layer.msg('数据不合法!', {icon: 2, time: 1500});
+        return false;
+    }
+
+    if (!status) {
+        layer.msg('数据不合法!', {icon: 2, time: 1500});
+        return false;
+    }
+
+    layer.confirm('确认要操作吗？', function (index) {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            url: url,
+            data: {'ids': ids, 'status': status},
+            type: 'POST',
+            success: function (res) {
+                console.log(res);
+                if (res.code == 'SN200') {
+                    layer.alert('批量操作成功,点击确定刷新页面!', {
+                        closeBtn: 0
+                    }, function () {
+                        location.reload();
+                    });
+                } else {
+                    layer.msg(res.message, {icon: 2, time: 1500});
+                }
+            },
+            error: function (res) {
+                layer.msg('修改状态失败!', {icon: 2, time: 1500});
                 return false;
             }
         });

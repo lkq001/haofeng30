@@ -17,8 +17,16 @@
     display: inline-block
 }
 
+.pagination-left-button {
+    padding-left: 0;
+    float: left;
+    margin: 22px 0;
+    border-radius: 4px
+}
+
 .pagination {
     padding-left: 0;
+    float: right;
     margin: 22px 0;
     border-radius: 4px
 }
@@ -123,4 +131,8 @@
 .min {
     width: 100px;
     height: auto;
+}
+
+.Hui-article-index {
+
 }
