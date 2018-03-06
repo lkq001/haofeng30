@@ -1,12 +1,12 @@
 @extends('admin.layouts.master')
-@section('title', '总库产品')
+@section('title', '宅配卡产品')
 @section('css')
     <link href="{{ asset('/admin/lib/webuploader/0.1.5/webuploader.css') }}" rel="stylesheet" type="text/css"/>
 @endsection
 @section('content')
     <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
         <span class="c-gray en">&gt;</span>
-        总库产品管理
+        宅配卡
         <span class="c-gray en">&gt;</span>
         列表
         <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px"
@@ -22,9 +22,9 @@
             <div class="cl pd-5 bg-1 bk-gray mt-20">
                 <span class="l">
 
-                    <span href="javascript:;" id="destroy-all" data-url="{{ route('admin.product.warehouse.destroys') }}"
+                    <span href="javascript:;" id="destroy-all" data-url="{{ route('admin.card.destroys') }}"
                           class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</span>
-                <a class="btn btn-primary radius" href="{{ route('admin.product.warehouse.add') }}"><i
+                <a class="btn btn-primary radius" href="{{ route('admin.card.add') }}"><i
                             class="Hui-iconfont">&#xe600;</i> 添加</a>
                 </span>
                 <span class="r">共有数据：<strong>{{ $count }}</strong> 条</span>
@@ -36,11 +36,13 @@
                     <tr class="text-c">
                         <th width="25"><input type="checkbox" name="" value=""></th>
                         <th width="25">ID</th>
-                        <th width="60">商品</th>
-                        <th>产品名称</th>
+                        <th width="60">图片</th>
+                        <th>宅配卡名称</th>
                         <th width="80">价格</th>
+                        <th width="80">次数</th>
                         <th width="80">库存</th>
                         <th width="80">销量</th>
+                        <th width="80">虚拟销量</th>
                         <th width="80">创建时间</th>
                         <th width="40">排序</th>
                         <th width="40">状态</th>
@@ -48,8 +50,8 @@
                     </tr>
                     </thead>
                     <tbody id="checked-box">
-                    @if(collect($productWarehouseLists)->count() > 0)
-                        @foreach($productWarehouseLists as $k => $v)
+                    @if(collect($cardLists)->count() > 0)
+                        @foreach($cardLists as $k => $v)
                             <tr class="text-c">
                                 <td><input type="checkbox" name="check" value="{{ $v->id }}"></td>
 
@@ -59,11 +61,13 @@
                                 </td>
                                 <td class="text-l">{{ $v->name }}</td>
                                 <td>{{ $v->price }}</td>
+                                <td>{{ $v->number }}</td>
                                 <td>{{ $v->stock }}</td>
                                 <td>{{ $v->sale }}</td>
+                                <td>{{ $v->sale_virtual }}</td>
                                 <td>{{ $v->created_at }}</td>
                                 <td id="orderBy" data-id="{{ $v->id }}"
-                                    data-url="{{ route('admin.product.warehouse.order') }}"
+                                    data-url="{{ route('admin.card.order') }}"
                                     data-order="{{ $v->order_by }}">{{ $v->order_by }}</td>
                                 <td>
                                     @if($v->status == 1)
@@ -83,24 +87,24 @@
                                 <td class="f-14">
                                     <button id="editShowModel" class="btn btn-success size-S radius"
                                             data-id="{{ $v->id }}"
-                                            data-url="{{ route('admin.product.warehouse.edit') }}">编辑
+                                            data-url="{{ route('admin.card.edit') }}">编辑
                                     </button>
                                     @if($v->status == 2)
                                         <button id="changeStatus" class="btn btn-secondary size-S radius"
                                                 data-id="{{ $v->id }}"
-                                                data-url="{{ route('admin.product.warehouse.status') }}"
+                                                data-url="{{ route('admin.card.status') }}"
                                                 data-status="{{ $v->status }}">下架
                                         </button>
                                     @else
                                         <button id="changeStatus" class="btn btn-warning size-S radius"
                                                 data-id="{{ $v->id }}"
-                                                data-url="{{ route('admin.product.warehouse.status') }}"
+                                                data-url="{{ route('admin.card.status') }}"
                                                 data-status="{{ $v->status }}">上架
                                         </button>
 
                                     @endif
                                     <button id="destroy" class="btn btn-danger size-S radius" data-id="{{ $v->id }}"
-                                            data-url="{{ route('admin.product.warehouse.destroy') }}">删除
+                                            data-url="{{ route('admin.card.destroy') }}">删除
                                     </button>
                             </tr>
                         @endforeach
@@ -109,13 +113,14 @@
 
                 </table>
                 <div class="pagination-left-button ">
-                <span href="javascript:;" id="status-all" data-url="{{ route('admin.product.warehouse.status.all') }}"
-                      class="btn btn-primary-outline radius" data-status="2"><i class="Hui-iconfont">&#xe6e2;</i> 批量上架</span>
-                    <span href="javascript:;" id="status-all" data-url="{{ route('admin.product.warehouse.status.all') }}"
+                <span href="javascript:;" id="status-all" data-url="{{ route('admin.card.status.all') }}"
+                      class="btn btn-primary-outline radius" data-status="2"><i
+                            class="Hui-iconfont">&#xe6e2;</i> 批量上架</span>
+                    <span href="javascript:;" id="status-all" data-url="{{ route('admin.card.status.all') }}"
                           class="btn btn-primary-outline radius" data-status="1"><i class="Hui-iconfont">&#xe6e2;</i> 批量下架</span>
                 </div>
 
-                {!! $productWarehouseLists->links() !!}
+                {!! $cardLists->links() !!}
             </div>
         </div>
         @include('admin.layouts.bottom')
@@ -123,6 +128,6 @@
 @endsection
 @section('javascript')
 
-    <script type="text/javascript" src="{{ asset('/admin/js/productWarehouse.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/admin/js/card.js') }}"></script>
 
 @endsection

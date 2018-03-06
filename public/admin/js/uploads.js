@@ -537,10 +537,11 @@ $(function () {
                 })
                 arr[key] = arrNew;
             });
+            var href = window.location.host;
 
             $.each(arr, function (k, v) {
                 $li += '<li id="' + (v.id) + '"  title ="123">' +
-                    '<p class="imgWrap"><img src="http://haofeng30.com/upload/' + (v.thumb).replace(/\\/g, "") + '"></p>' +
+                    '<p class="imgWrap"><img src="http://' + href + '/upload/' + (v.thumb).replace(/\\/g, "") + '"></p>' +
                     '<p class="progress"><span></span></p>'+
                     '<input type="hidden" name="thumbOld[' + (v.id) + ']" value="' + (v.id) + '">' +
                     '<div class="file-panel" style="height: 30px;"><span class="cancel">删除</span></div>' +

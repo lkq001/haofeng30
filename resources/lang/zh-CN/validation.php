@@ -244,6 +244,7 @@ return [
         'order_by'              =>  '排序值',
         'thumb'                 =>  '图片',
         'price'                 =>  '价格',
-        'status'                =>  '状态'
+        'status'                =>  '状态',
+        'number'                =>  '次数'
     ],
 ];

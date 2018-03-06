@@ -11,7 +11,8 @@ class CardStore
 
     public function __construct(
         Card $card
-    ){
+    )
+    {
         self::$card = $card;
     }
 
@@ -44,7 +45,9 @@ class CardStore
             return false;
         }
 
-        return self::$card->where($where)->first();
+        return self::$card->where($where)->with(['getToMany' => function ($query) {
+            $query->where('status', 1);
+        }, 'getHasOneContent'])->first();
     }
 
     /**
@@ -59,7 +62,12 @@ class CardStore
         foreach ($data as $k => $v) {
             self::$card->$k = $v;
         }
-        return self::$card->save();
+
+        if (self::$card->save()) {
+            return self::$card;
+        }
+
+        return false;
     }
 
     public function status($id, $status)
@@ -69,7 +77,14 @@ class CardStore
         return $oneInfo->save();
     }
 
-    // 修改数据
+    /**
+     * 修改数据
+     *
+     * @param $id
+     * @param $data
+     * @return mixed
+     * author 李克勤
+     */
     public function update($id, $data)
     {
         // 查询数据
@@ -102,5 +117,30 @@ class CardStore
         return self::$card->where('id', $id)->delete();
     }
 
+    // 获取一条数据(数量)
+    public function getOneCount($where)
+    {
+        return self::$card->where($where)->count();
+    }
+
+    // 获取分页数据
+    public function getAllPaginate($page, $where = '')
+    {
+        if (empty($where)) {
+            return self::$card->orderBy('order_by', 'DESC')->with(['getOneThumb' => function ($query) {
+                $query->where('is_index', 1)->where('status', 1);
+            }])->paginate($page);
+        }
+
+        return self::$card->where($where)->orderBy('order_by', 'DESC')->with(['getOneThumb' => function ($query) {
+            $query->where('is_index', 1)->where('status', 1);
+        }])->paginate($page);
+    }
+
+    // 获取数量
+    public function getCount()
+    {
+        return self::$card->count();
+    }
 
 }

@@ -252,7 +252,7 @@ class ProductWarehouseController extends Controller
 
         // 产品分类
         $productCategoryLists = self::$productWarehouseService->getProductCategory();
-//        dd(collect($productWarehouse)->toArray());
+
         return view('admin.productWarehouse.edit', [
             'productCategoryLists' => $productCategoryLists,
             'productWarehouse' => $productWarehouse

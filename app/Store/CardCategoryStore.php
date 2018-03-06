@@ -125,4 +125,10 @@ class CardCategoryStore
         return self::$cardCategory->whereIn('id', $ids)->delete();
     }
 
+    // 获取有效数据
+    public function getAllCardgoryListExceptStatusFalse()
+    {
+        return self::$cardCategory->where('status', 1)->get();
+    }
+
 }

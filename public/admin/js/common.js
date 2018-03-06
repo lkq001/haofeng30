@@ -3,7 +3,7 @@ function storeSubmit(data, url, type, isPostData, jumpUrl) {
     // 声明数组,存储提交数据
     var typeData = {};
 
-    if (isPostData == "undefined") {
+    if (isPostData == "" || isPostData == undefined || isPostData == null) {
         $.each(data, function (k, v) {
             typeData[this.name] = this.value
         });
@@ -16,16 +16,16 @@ function storeSubmit(data, url, type, isPostData, jumpUrl) {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
-
+    console.log(jumpUrl);
     $.ajax({
         url: url,
         data: typeData,
         type: type,
         success: function (res) {
-            console.log(res);
+
             if (res.code == 'SN200') {
 
-                if (jumpUrl != null || jumpUrl == undefined || jumpUrl != "") {
+                if (jumpUrl == null || jumpUrl == undefined || jumpUrl == "") {
 
                     layer.alert('添加成功,点击确定刷新页面!', {
                         closeBtn: 0

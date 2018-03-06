@@ -13,7 +13,7 @@
            href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
     </nav>
     <div class="page-container">
-        <div class="Hui-article-index">
+        <div class="Hui-article">
             <form method="post" class="form form-horizontal" id="form-add"
                   action="{{ route('admin.product.warehouse.update') }}"
                   data-jump="{{ route('admin.product.warehouse.index') }}" enctype="multipart/form-data">
