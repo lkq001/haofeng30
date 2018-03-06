@@ -156,6 +156,32 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
     });
 
     /**
+     * 产品管理-分库
+     */
+    Route::group(['prefix' => '/product/sub/warehouse'], function () {
+        // 数据列表
+        Route::get('/index', 'ProductSubWarehouseController@index')->name('admin.product.sub.warehouse.index');
+        // 添加页面
+        Route::get('/add', 'ProductSubWarehouseController@add')->name('admin.product.sub.warehouse.add');
+        // 添加数据
+        Route::post('/store', 'ProductSubWarehouseController@store')->name('admin.product.sub.warehouse.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'ProductSubWarehouseController@edit')->name('admin.product.sub.warehouse.edit');
+        // 修改数据(id)
+        Route::post('/update', 'ProductSubWarehouseController@update')->name('admin.product.sub.warehouse.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'ProductSubWarehouseController@destroy')->name('admin.product.sub.warehouse.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'ProductSubWarehouseController@destroys')->name('admin.product.sub.warehouse.destroys');
+        // 修改状态
+        Route::post('/status/all', 'ProductSubWarehouseController@statusAll')->name('admin.product.sub.warehouse.status.all');
+        // 批量修改状态
+        Route::post('/status', 'ProductSubWarehouseController@status')->name('admin.product.sub.warehouse.status');
+        // 修改排序
+        Route::post('/order', 'ProductSubWarehouseController@order')->name('admin.product.sub.warehouse.order');
+    });
+
+    /**
      * 宅配卡管理
      */
     Route::group(['prefix' => '/card'], function () {

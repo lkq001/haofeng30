@@ -3,6 +3,7 @@
 namespace App\Store;
 
 use App\Model\Card;
+use Illuminate\Support\Facades\DB;
 
 class CardStore
 {
@@ -143,4 +144,37 @@ class CardStore
         return self::$card->count();
     }
 
+    // 批量删除
+    public function destroys($ids)
+    {
+        return self::$card->whereIn('id', $ids)->delete();
+    }
+
+    // 批量修改状态
+    public function statusAll($ids, $status)
+    {
+        // 查询所有数据
+        $cardLists = self::$card->whereIn('id', $ids)->get();
+
+        if (collect($cardLists)->count() > 0) {
+            DB::beginTransaction();
+            try {
+                foreach ($cardLists as $v) {
+                    $v->status = $status;
+                    $v->save();
+                }
+                DB::commit();
+                return true;
+            } catch (\Exception $e) {
+
+                DB::rollBack();
+                return false;
+            }
+        } else {
+            return false;
+        }
+
+
+        return self::$card->whereIn('id', $ids)->save(['status' => $status]);
+    }
 }

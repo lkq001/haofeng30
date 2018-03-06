@@ -241,4 +241,20 @@ class CardService
         }
 
     }
+
+    /**
+     * 批量删除
+     *
+     * @param $ids
+     * @return mixed
+     * author 李克勤
+     */
+    public function destroys($ids)
+    {
+        if (!is_array($ids) || count($ids) < 1) {
+            return false;
+        }
+        return self::$cardStore->destroys($ids);
+    }
+
 }

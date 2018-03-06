@@ -165,8 +165,9 @@ class ProductWarehouseStore
                 DB::rollBack();
                 return false;
             }
+        } else {
+            return false;
         }
-
 
         return self::$productWarehouse->whereIn('id', $ids)->save(['status' => $status]);
     }
