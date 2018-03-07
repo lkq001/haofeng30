@@ -270,9 +270,13 @@ class ProductWarehouseService
 
             }
         }
-
         return $getAll;
+    }
 
+    //  获取全部数据
+    public function getAllNoPage($where = '')
+    {
+        return self::$productWarehouseStore->getAllNoPage($where);
     }
 
     // 获取个数

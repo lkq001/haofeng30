@@ -2,20 +2,19 @@
 
 namespace App\Store;
 
-use App\Model\ProductWarehouse;
-
+use App\Model\ProductSubWarehouse;
 use Illuminate\Support\Facades\DB;
 
-class ProductWarehouseStore
+class ProductSubWarehouseStore
 {
     // 静态方法
-    private static $productWarehouse = null;
+    private static $productSubWarehouse = null;
 
     public function __construct(
-        ProductWarehouse $productWarehouse
+        ProductSubWarehouse $productSubWarehouse
     )
     {
-        self::$productWarehouse = $productWarehouse;
+        self::$productSubWarehouse = $productSubWarehouse;
     }
 
     /**
@@ -31,7 +30,7 @@ class ProductWarehouseStore
             return false;
         }
 
-        return self::$productWarehouse->where($where)->count();
+        return self::$productSubWarehouse->where($where)->count();
     }
 
     /**
@@ -44,13 +43,9 @@ class ProductWarehouseStore
     public function getAll($where = '')
     {
         if (empty($where)) {
-            return self::$productWarehouse->orderBy('order_by', 'DESC')->with(['getHasOne' => function ($query) {
-                $query->where('is_index', 1)->where('status', 1);
-            }])->paginate(config('config.page_size_l'));
+            return self::$productSubWarehouse->orderBy('order_by', 'DESC')->paginate(config('config.page_size_l'));
         }
-        return self::$productWarehouse->where($where)->orderBy('order_by', 'DESC')->with(['getHasMany' => function ($query) {
-            $query->where('is_index', 1)->where('status', 1);
-        }])->paginate(config('config.page_size_l'));
+        return self::$productSubWarehouse->where($where)->orderBy('order_by', 'DESC')->paginate(config('config.page_size_l'));
     }
 
     /**
@@ -63,11 +58,11 @@ class ProductWarehouseStore
     public function getAllNoPage($where = '')
     {
         if (empty($where)) {
-            return self::$productWarehouse->orderBy('order_by', 'DESC')->with(['getHasOne' => function ($query) {
+            return self::$productSubWarehouse->orderBy('order_by', 'DESC')->with(['getHasOne' => function ($query) {
                 $query->where('is_index', 1)->where('status', 1);
             }])->get();
         }
-        return self::$productWarehouse->where($where)->orderBy('order_by', 'DESC')->with(['getHasMany' => function ($query) {
+        return self::$productSubWarehouse->where($where)->orderBy('order_by', 'DESC')->with(['getHasMany' => function ($query) {
             $query->where('is_index', 1)->where('status', 1);
         }])->get();
     }
@@ -77,9 +72,9 @@ class ProductWarehouseStore
     public function count($where = '')
     {
         if (empty($where)) {
-            return self::$productWarehouse->count();
+            return self::$productSubWarehouse->count();
         }
-        return self::$productWarehouse->where($where)->count();
+        return self::$productSubWarehouse->where($where)->count();
     }
 
     /**
@@ -95,9 +90,7 @@ class ProductWarehouseStore
             return false;
         }
 
-        return self::$productWarehouse->where($where)->with(['getHasMany' => function ($query) {
-            $query->where('status', 1);
-        }, 'getHasOneContent'])->first();
+        return self::$productSubWarehouse->where($where)->first();
     }
 
     /**
@@ -110,11 +103,11 @@ class ProductWarehouseStore
     public function store($data)
     {
         foreach ($data as $k => $v) {
-            self::$productWarehouse->$k = $v;
+            self::$productSubWarehouse->$k = $v;
         }
 
-        if (self::$productWarehouse->save()) {
-            return self::$productWarehouse;
+        if (self::$productSubWarehouse->save()) {
+            return self::$productSubWarehouse;
         }
 
         return false;
@@ -122,7 +115,7 @@ class ProductWarehouseStore
 
     public function status($id, $status)
     {
-        $oneInfo = self::$productWarehouse->where('id', $id)->first();
+        $oneInfo = self::$productSubWarehouse->where('id', $id)->first();
         $oneInfo->status = $status;
         return $oneInfo->save();
     }
@@ -131,12 +124,12 @@ class ProductWarehouseStore
     public function update($id, $data)
     {
         // 查询数据
-        $productWarehouse = self::$productWarehouse->find($id);
+        $productSubWarehouse = self::$productSubWarehouse->find($id);
 
         foreach ($data as $k => $v) {
-            $productWarehouse->$k = $v;
+            $productSubWarehouse->$k = $v;
         }
-        return $productWarehouse->save();
+        return $productSubWarehouse->save();
     }
 
     // 获取子栏目数据
@@ -144,10 +137,10 @@ class ProductWarehouseStore
     {
         if ($status) {
             // 查询数据
-            $childCount = self::$productWarehouse->where('pid', $id)->where('status', $status)->count();
+            $childCount = self::$productSubWarehouse->where('pid', $id)->where('status', $status)->count();
         } else {
             // 查询数据
-            $childCount = self::$productWarehouse->where('pid', $id)->count();
+            $childCount = self::$productSubWarehouse->where('pid', $id)->count();
         }
 
         return $childCount;
@@ -156,20 +149,20 @@ class ProductWarehouseStore
     // 执行删除
     public function destroy($id)
     {
-        return self::$productWarehouse->where('id', $id)->delete();
+        return self::$productSubWarehouse->where('id', $id)->delete();
     }
 
     // 批量删除
     public function destroys($ids)
     {
-        return self::$productWarehouse->whereIn('id', $ids)->delete();
+        return self::$productSubWarehouse->whereIn('id', $ids)->delete();
     }
 
     // 批量修改状态
     public function statusAll($ids, $status)
     {
         // 查询所有数据
-        $productWarehoustLists = self::$productWarehouse->whereIn('id', $ids)->get();
+        $productWarehoustLists = self::$productSubWarehouse->whereIn('id', $ids)->get();
 
         if (collect($productWarehoustLists)->count() > 0) {
             DB::beginTransaction();
@@ -189,7 +182,7 @@ class ProductWarehouseStore
             return false;
         }
 
-        return self::$productWarehouse->whereIn('id', $ids)->save(['status' => $status]);
+        return self::$productSubWarehouse->whereIn('id', $ids)->save(['status' => $status]);
     }
 
 }
