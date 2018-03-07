@@ -167,6 +167,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/store', 'ProductSubWarehouseController@store')->name('admin.product.sub.warehouse.store');
         // 查询指定ID数据(id)
         Route::get('/edit', 'ProductSubWarehouseController@edit')->name('admin.product.sub.warehouse.edit');
+        // 产品分库产品管理
+        Route::get('/product/list', 'ProductSubWarehouseController@productLists')->name('admin.product.sub.warehouse.product.list');
+        // 产品分库产品管理添加
+        Route::post('/product/store', 'ProductSubWarehouseController@productStore')->name('admin.product.sub.warehouse.product.store');
         // 修改数据(id)
         Route::post('/update', 'ProductSubWarehouseController@update')->name('admin.product.sub.warehouse.update');
         // 删除数据(id)

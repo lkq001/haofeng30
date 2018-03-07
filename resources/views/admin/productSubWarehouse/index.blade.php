@@ -49,8 +49,9 @@
                                 <button id="editShowModel" class="btn btn-success size-S radius" data-id="{{ $v->id }}"
                                         data-url="{{ route('admin.product.sub.warehouse.edit') }}">编辑
                                 </button>
-                                <button id="editShowModel" class="btn btn-success size-S radius" data-id="{{ $v->id }}"
-                                        data-url="{{ route('admin.product.sub.warehouse.edit') }}">产品添加
+                                <button id="productShowModel" class="btn btn-success size-S radius"
+                                        data-id="{{ $v->id }}"
+                                        data-url="{{ route('admin.product.sub.warehouse.product.list') }}">产品编辑
                                 </button>
                                 @if($v->status == 1)
                                     <button id="changeStatus" class="btn btn-warning size-S radius"

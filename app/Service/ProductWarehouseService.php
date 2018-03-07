@@ -276,7 +276,27 @@ class ProductWarehouseService
     //  获取全部数据
     public function getAllNoPage($where = '')
     {
-        return self::$productWarehouseStore->getAllNoPage($where);
+        $getAll = self::$productWarehouseStore->getAllNoPage($where);
+
+        if (collect($getAll)->count() > 0) {
+
+            foreach ($getAll as $k => $v) {
+
+                if (collect($v->getHasOne)->count() > 0) {
+
+                    $v->thumb = config('config.product_thumb') . '/' . $v->getHasOne->thumb;
+
+                }
+
+            }
+        }
+        return $getAll;
+    }
+
+    // 获取数量
+    public function getAllNoPageCount($where = '')
+    {
+        return self::$productWarehouseStore->getAllNoPageCount($where);
     }
 
     // 获取个数

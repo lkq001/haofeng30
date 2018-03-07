@@ -48,7 +48,7 @@ class ProductWarehouseStore
                 $query->where('is_index', 1)->where('status', 1);
             }])->paginate(config('config.page_size_l'));
         }
-        return self::$productWarehouse->where($where)->orderBy('order_by', 'DESC')->with(['getHasMany' => function ($query) {
+        return self::$productWarehouse->where($where)->orderBy('order_by', 'DESC')->with(['getHasOne' => function ($query) {
             $query->where('is_index', 1)->where('status', 1);
         }])->paginate(config('config.page_size_l'));
     }
@@ -67,9 +67,24 @@ class ProductWarehouseStore
                 $query->where('is_index', 1)->where('status', 1);
             }])->get();
         }
-        return self::$productWarehouse->where($where)->orderBy('order_by', 'DESC')->with(['getHasMany' => function ($query) {
+        return self::$productWarehouse->where($where)->orderBy('order_by', 'DESC')->with(['getHasOne' => function ($query) {
             $query->where('is_index', 1)->where('status', 1);
         }])->get();
+    }
+
+    /**
+     * 获取所有数据,不分页
+     *
+     * @param string $where
+     * @return mixed
+     * author 李克勤
+     */
+    public function getAllNoPageCount($where = '')
+    {
+        if (empty($where)) {
+            return self::$productWarehouse->orderBy('order_by', 'DESC')->count();
+        }
+        return self::$productWarehouse->where($where)->orderBy('order_by', 'DESC')->count();
     }
 
 

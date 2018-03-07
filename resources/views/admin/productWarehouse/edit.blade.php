@@ -82,17 +82,6 @@
                 </div>
 
                 <div class="row cl">
-                    <label class="form-label col-xs-4 col-sm-2">商品库存：</label>
-                    <div class="formControls col-xs-8 col-sm-9">
-                        <input type="text" class="input-text w25"
-                               onkeyup="this.value=this.value.replace(/\D/g,'')" value="{{  $productWarehouse->stock }}"
-                               placeholder="" id=""
-                               name="stock">
-                        <span class="suggest">不填为默认 9999999</span>
-                    </div>
-                </div>
-
-                <div class="row cl">
                     <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>商品图片：</label>
                     <div class="formControls col-xs-8 col-sm-9">
                         <input type="hidden" id="uploadOld" value="{{  $productWarehouse->getHasMany }}"/>

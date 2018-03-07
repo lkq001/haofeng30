@@ -9,6 +9,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductSubWarehouseController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductSubWarehouseController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Service/ProductWarehouseService.php" afterPath="$PROJECT_DIR$/app/Service/ProductWarehouseService.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Store/ProductWarehouseStore.php" afterPath="$PROJECT_DIR$/app/Store/ProductWarehouseStore.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/admin/js/common.js" afterPath="$PROJECT_DIR$/public/admin/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/admin/js/productSubWarehouse.js" afterPath="$PROJECT_DIR$/public/admin/js/productSubWarehouse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productSubWarehouse/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productSubWarehouse/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productWarehouse/add.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productWarehouse/add.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productWarehouse/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productWarehouse/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productWarehouse/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productWarehouse/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,56 +26,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/productSubWarehouse/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productSubWarehouse.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/admin/js/productSubWarehouse.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CategoryController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="256" column="5" lean-forward="true" selection-start-line="207" selection-start-column="4" selection-end-line="256" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductSubWarehouseController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductSubWarehouseController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProductSubWarehouseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="215" column="77" lean-forward="true" selection-start-line="215" selection-start-column="77" selection-end-line="215" selection-end-column="77" />
+            <state relative-caret-position="553">
+              <caret line="306" column="34" lean-forward="true" selection-start-line="306" selection-start-column="34" selection-end-line="306" selection-end-column="34" />
               <folding>
-                <element signature="e#46#86#0#PHP" expanded="true" />
+                <element signature="e#46#96#0#PHP" expanded="true" />
+                <element signature="e#1489#1756#0#PHP" expanded="false" />
+                <element signature="e#1762#1886#0#PHP" expanded="false" />
+                <element signature="e#1891#2813#0#PHP" expanded="false" />
+                <element signature="e#2819#2943#0#PHP" expanded="false" />
+                <element signature="e#2948#3995#0#PHP" expanded="false" />
+                <element signature="e#4001#4125#0#PHP" expanded="false" />
+                <element signature="e#4130#4810#0#PHP" expanded="false" />
+                <element signature="e#4816#4940#0#PHP" expanded="false" />
+                <element signature="e#4945#5909#0#PHP" expanded="false" />
+                <element signature="e#5915#6039#0#PHP" expanded="false" />
+                <element signature="e#6044#6938#0#PHP" expanded="false" />
+                <element signature="e#6944#7068#0#PHP" expanded="false" />
+                <element signature="e#7073#8261#0#PHP" expanded="false" />
+                <element signature="e#8267#8424#0#PHP" expanded="false" />
+                <element signature="e#10425#10551#0#PHP" expanded="false" />
+                <element signature="e#10556#11983#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductSubWarehouseStore.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Store/ProductSubWarehouseStore.php">
+      <file leaf-file-name="list.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/productSubWarehouse/list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="100" column="17" lean-forward="true" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
-              <folding>
-                <element signature="e#29#63#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="461">
+              <caret line="61" column="100" lean-forward="false" selection-start-line="61" selection-start-column="100" selection-end-line="61" selection-end-column="100" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,9 +77,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>input</find>
-      <find>[]</find>
-      <find>uploader.on</find>
       <find>update</find>
       <find>.pagination</find>
       <find>$category</find>
@@ -115,7 +103,10 @@
       <find>number</find>
       <find>product_id</find>
       <find>$productWarehouse</find>
+      <find>edit</find>
       <find>destroy-all</find>
+      <find>$productSubWarehouse</find>
+      <find>save</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -143,13 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/admin/ProductWarehouse/add.blade.php" />
-        <option value="$PROJECT_DIR$/app/Store/ProductContentStore.php" />
-        <option value="$PROJECT_DIR$/app/Store/ProductThumbStore.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/ProductWarehouse/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/Layouts/footer.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/common.css" />
-        <option value="$PROJECT_DIR$/resources/views/admin/Layouts/master.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/Layouts/bottom.blade.php" />
         <option value="$PROJECT_DIR$/public/admin/js/productWarehouse.js" />
         <option value="$PROJECT_DIR$/resources/views/admin/ProductWarehouse/index.blade.php" />
@@ -162,14 +146,12 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CardCategoryController.php" />
         <option value="$PROJECT_DIR$/app/Store/CardCategoryStore.php" />
         <option value="$PROJECT_DIR$/public/cardFileupload.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/productWarehouse/edit.blade.php" />
         <option value="$PROJECT_DIR$/public/admin/js/uploads.js" />
         <option value="$PROJECT_DIR$/app/Model/CardContent.php" />
         <option value="$PROJECT_DIR$/app/Model/CardThumb.php" />
         <option value="$PROJECT_DIR$/app/Store/CardThumbStore.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/config/config.php" />
-        <option value="$PROJECT_DIR$/public/admin/js/common.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductWarehouseController.php" />
         <option value="$PROJECT_DIR$/app/Model/Card.php" />
         <option value="$PROJECT_DIR$/public/admin/js/cardUploads.js" />
@@ -184,16 +166,25 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CardController.php" />
         <option value="$PROJECT_DIR$/app/Store/CardStore.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Store/ProductWarehouseStore.php" />
-        <option value="$PROJECT_DIR$/app/Service/ProductWarehouseService.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/productSubWarehouse/add.blade.php" />
         <option value="$PROJECT_DIR$/app/Model/ProductSubWarehouse.php" />
-        <option value="$PROJECT_DIR$/public/admin/js/productSubWarehouse.js" />
         <option value="$PROJECT_DIR$/app/Store/ProductSubWarehouseStore.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/productSubWarehouse/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductSubWarehouseController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/productSubWarehouse/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/productSubWarehouse/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Store/ProductWarehouseStore.php" />
+        <option value="$PROJECT_DIR$/app/Service/ProductWarehouseService.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/productWarehouse/add.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/productWarehouse/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/productWarehouse/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Model/ProductSubWarehouseProduct.php" />
+        <option value="$PROJECT_DIR$/app/Service/ProductSubWarehouseService.php" />
+        <option value="$PROJECT_DIR$/app/Service/ProductSubWarehouseProductService.php" />
+        <option value="$PROJECT_DIR$/app/Store/ProductSubWarehouseProductStore.php" />
+        <option value="$PROJECT_DIR$/public/admin/js/common.js" />
+        <option value="$PROJECT_DIR$/public/admin/js/productSubWarehouse.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductSubWarehouseController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/productSubWarehouse/list.blade.php" />
       </list>
     </option>
   </component>
@@ -268,45 +259,6 @@
             <path>
               <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
               <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
-              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
-              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
-              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
-              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
-              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
-              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -333,10 +285,7 @@
             <path>
               <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
               <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="productWarehouse" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="routes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -355,11 +304,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/admin/js" />
+      <recent name="$PROJECT_DIR$/app/Service" />
       <recent name="$PROJECT_DIR$/app/Model" />
       <recent name="$PROJECT_DIR$/app/Store" />
-      <recent name="$PROJECT_DIR$/resources/views/admin" />
-      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/productSubWarehouse" />
+      <recent name="$PROJECT_DIR$/public/admin/js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
@@ -413,12 +362,12 @@
       <workItem from="1519631201825" duration="31642000" />
       <workItem from="1519781933344" duration="40806000" />
       <workItem from="1520226355562" duration="15186000" />
-      <workItem from="1520310992375" duration="18801000" />
+      <workItem from="1520310992375" duration="40775000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247883000" />
+    <option name="totallyTimeSpent" value="269857000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -472,70 +421,16 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/cardCategory/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="87" column="72" lean-forward="false" selection-start-line="87" selection-start-column="60" selection-end-line="87" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProductCategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="287" column="0" lean-forward="true" selection-start-line="287" selection-start-column="0" selection-end-line="287" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProductGroupController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Store/CardCategoryStore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="128" column="33" lean-forward="false" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/js/productCategory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="121" column="31" lean-forward="true" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/js/uploads.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="540" column="12" lean-forward="true" selection-start-line="540" selection-start-column="12" selection-end-line="540" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/cardFileupload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/productWarehouse/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -567,22 +462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/js/productWarehouse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="47" column="62" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="47" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="305" column="5" lean-forward="true" selection-start-line="305" selection-start-column="5" selection-end-line="305" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -696,14 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/productWarehouse/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="29" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -724,14 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="148" column="79" lean-forward="false" selection-start-line="148" selection-start-column="79" selection-end-line="148" selection-end-column="79" />
           <folding />
         </state>
       </provider>
@@ -799,72 +662,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Store/CardStore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="160" column="17" lean-forward="true" selection-start-line="160" selection-start-column="17" selection-end-line="160" selection-end-column="17" />
-          <folding>
-            <element signature="e#29#48#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/productWarehouse/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Service/ProductWarehouseService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="256" column="28" lean-forward="false" selection-start-line="256" selection-start-column="28" selection-end-line="256" selection-end-column="28" />
-          <folding>
-            <element signature="e#1425#1527#0#PHP" expanded="false" />
-            <element signature="e#1533#1628#0#PHP" expanded="false" />
-            <element signature="e#1633#1985#0#PHP" expanded="false" />
-            <element signature="e#1991#2086#0#PHP" expanded="false" />
-            <element signature="e#2091#2438#0#PHP" expanded="false" />
-            <element signature="e#2444#2536#0#PHP" expanded="false" />
-            <element signature="e#2541#3532#0#PHP" expanded="false" />
-            <element signature="e#3550#3846#0#PHP" expanded="false" />
-            <element signature="e#3864#5624#0#PHP" expanded="false" />
-            <element signature="e#5643#5949#0#PHP" expanded="false" />
-            <element signature="e#5967#6066#0#PHP" expanded="false" />
-            <element signature="e#6086#6189#0#PHP" expanded="false" />
-            <element signature="e#6209#6616#0#PHP" expanded="false" />
-            <element signature="e#6775#6864#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProductWarehouseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="97" column="74" lean-forward="true" selection-start-line="72" selection-start-column="8" selection-end-line="97" selection-end-column="74" />
-          <folding>
-            <element signature="e#1759#1881#0#PHP" expanded="false" />
-            <element signature="e#2918#3042#0#PHP" expanded="false" />
-            <element signature="e#3047#3999#0#PHP" expanded="false" />
-            <element signature="e#4005#4125#0#PHP" expanded="false" />
-            <element signature="e#4130#4391#0#PHP" expanded="false" />
-            <element signature="e#4397#4521#0#PHP" expanded="false" />
-            <element signature="e#4526#5581#0#PHP" expanded="false" />
-            <element signature="e#5587#5711#0#PHP" expanded="false" />
-            <element signature="e#5716#6581#0#PHP" expanded="false" />
-            <element signature="e#6587#6711#0#PHP" expanded="false" />
-            <element signature="e#6716#7470#0#PHP" expanded="false" />
-            <element signature="e#7486#8690#0#PHP" expanded="false" />
-            <element signature="e#8696#8820#0#PHP" expanded="false" />
-            <element signature="e#8825#9459#0#PHP" expanded="false" />
-            <element signature="e#9465#9591#0#PHP" expanded="false" />
-            <element signature="e#9596#10293#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/ProductSubWarehouse.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -897,36 +694,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Store/ProductWarehouseStore.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/productSubWarehouse/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="52" column="28" lean-forward="true" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
-          <folding>
-            <element signature="e#2539#2627#0#PHP" expanded="false" />
-            <element signature="e#2632#2891#0#PHP" expanded="false" />
-            <element signature="e#2897#3085#0#PHP" expanded="false" />
-            <element signature="e#3103#3360#0#PHP" expanded="false" />
-            <element signature="e#3381#3739#0#PHP" expanded="false" />
-            <element signature="e#3757#3865#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/js/productSubWarehouse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="52" column="0" lean-forward="false" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
+        <state relative-caret-position="496">
+          <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Store/ProductSubWarehouseStore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="100" column="17" lean-forward="true" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
-          <folding>
-            <element signature="e#29#63#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -940,27 +712,222 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/productSubWarehouse/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+        <state relative-caret-position="369">
+          <caret line="53" column="104" lean-forward="false" selection-start-line="53" selection-start-column="104" selection-end-line="53" selection-end-column="104" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/productSubWarehouse/edit.blade.php">
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="172" column="19" lean-forward="false" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/admin/js/productWarehouse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/productWarehouse/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="60" column="55" lean-forward="true" selection-start-line="60" selection-start-column="55" selection-end-line="60" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/productWarehouse/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="81" column="22" lean-forward="false" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/productWarehouse/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="64" column="22" lean-forward="true" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Store/ProductWarehouseStore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#2923#3011#0#PHP" expanded="false" />
+            <element signature="e#3281#3469#0#PHP" expanded="false" />
+            <element signature="e#3487#3744#0#PHP" expanded="false" />
+            <element signature="e#3765#4123#0#PHP" expanded="false" />
+            <element signature="e#4141#4249#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Service/ProductSubWarehouseService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
-          <caret line="31" column="6" lean-forward="true" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="526" column="20" lean-forward="false" selection-start-line="526" selection-start-column="20" selection-end-line="526" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Service/ProductWarehouseService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="138" column="9" lean-forward="true" selection-start-line="120" selection-start-column="8" selection-end-line="138" selection-end-column="9" />
+          <folding>
+            <element signature="e#1425#1527#0#PHP" expanded="false" />
+            <element signature="e#1533#1628#0#PHP" expanded="false" />
+            <element signature="e#1633#1985#0#PHP" expanded="false" />
+            <element signature="e#1991#2086#0#PHP" expanded="false" />
+            <element signature="e#2091#2438#0#PHP" expanded="false" />
+            <element signature="e#2444#2536#0#PHP" expanded="false" />
+            <element signature="e#3550#3846#0#PHP" expanded="false" />
+            <element signature="e#3864#5624#0#PHP" expanded="false" />
+            <element signature="e#5643#5949#0#PHP" expanded="false" />
+            <element signature="e#5967#6066#0#PHP" expanded="false" />
+            <element signature="e#6086#6189#0#PHP" expanded="false" />
+            <element signature="e#6209#6616#0#PHP" expanded="false" />
+            <element signature="e#6637#7073#0#PHP" expanded="false" />
+            <element signature="e#7091#7221#0#PHP" expanded="false" />
+            <element signature="e#7239#7328#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/ProductSubWarehouseProduct.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Service/ProductSubWarehouseProductService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="128" column="65" lean-forward="false" selection-start-line="128" selection-start-column="59" selection-end-line="128" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Store/CardStore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="70" column="21" lean-forward="true" selection-start-line="62" selection-start-column="8" selection-end-line="70" selection-end-column="21" />
+          <folding>
+            <element signature="e#29#48#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Store/ProductSubWarehouseProductStore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="58" column="29" lean-forward="true" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Store/ProductSubWarehouseStore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="54" column="20" lean-forward="true" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+          <folding>
+            <element signature="e#29#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProductWarehouseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="94" column="22" lean-forward="false" selection-start-line="94" selection-start-column="8" selection-end-line="97" selection-end-column="74" />
+          <folding>
+            <element signature="e#1759#1881#0#PHP" expanded="false" />
+            <element signature="e#2918#3042#0#PHP" expanded="false" />
+            <element signature="e#3047#3999#0#PHP" expanded="false" />
+            <element signature="e#4005#4125#0#PHP" expanded="false" />
+            <element signature="e#4130#4391#0#PHP" expanded="false" />
+            <element signature="e#4397#4521#0#PHP" expanded="false" />
+            <element signature="e#4526#5581#0#PHP" expanded="false" />
+            <element signature="e#5587#5711#0#PHP" expanded="false" />
+            <element signature="e#5716#6581#0#PHP" expanded="false" />
+            <element signature="e#6587#6711#0#PHP" expanded="false" />
+            <element signature="e#6716#7470#0#PHP" expanded="false" />
+            <element signature="e#7486#8690#0#PHP" expanded="false" />
+            <element signature="e#8696#8820#0#PHP" expanded="false" />
+            <element signature="e#8825#9459#0#PHP" expanded="false" />
+            <element signature="e#9465#9591#0#PHP" expanded="false" />
+            <element signature="e#9596#10293#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/admin/js/productSubWarehouse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="229" column="77" lean-forward="false" selection-start-line="229" selection-start-column="77" selection-end-line="229" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/admin/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="957">
+          <caret line="474" column="0" lean-forward="true" selection-start-line="474" selection-start-column="0" selection-end-line="474" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProductSubWarehouseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="215" column="77" lean-forward="true" selection-start-line="215" selection-start-column="77" selection-end-line="215" selection-end-column="77" />
+        <state relative-caret-position="553">
+          <caret line="306" column="34" lean-forward="true" selection-start-line="306" selection-start-column="34" selection-end-line="306" selection-end-column="34" />
           <folding>
-            <element signature="e#46#86#0#PHP" expanded="true" />
+            <element signature="e#46#96#0#PHP" expanded="true" />
+            <element signature="e#1489#1756#0#PHP" expanded="false" />
+            <element signature="e#1762#1886#0#PHP" expanded="false" />
+            <element signature="e#1891#2813#0#PHP" expanded="false" />
+            <element signature="e#2819#2943#0#PHP" expanded="false" />
+            <element signature="e#2948#3995#0#PHP" expanded="false" />
+            <element signature="e#4001#4125#0#PHP" expanded="false" />
+            <element signature="e#4130#4810#0#PHP" expanded="false" />
+            <element signature="e#4816#4940#0#PHP" expanded="false" />
+            <element signature="e#4945#5909#0#PHP" expanded="false" />
+            <element signature="e#5915#6039#0#PHP" expanded="false" />
+            <element signature="e#6044#6938#0#PHP" expanded="false" />
+            <element signature="e#6944#7068#0#PHP" expanded="false" />
+            <element signature="e#7073#8261#0#PHP" expanded="false" />
+            <element signature="e#8267#8424#0#PHP" expanded="false" />
+            <element signature="e#10425#10551#0#PHP" expanded="false" />
+            <element signature="e#10556#11983#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/productSubWarehouse/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="61" column="100" lean-forward="false" selection-start-line="61" selection-start-column="100" selection-end-line="61" selection-end-column="100" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -39,7 +39,6 @@
                         <th width="60">商品</th>
                         <th>产品名称</th>
                         <th width="80">价格</th>
-                        <th width="80">库存</th>
                         <th width="80">销量</th>
                         <th width="80">创建时间</th>
                         <th width="40">排序</th>
@@ -59,7 +58,6 @@
                                 </td>
                                 <td class="text-l">{{ $v->name }}</td>
                                 <td>{{ $v->price }}</td>
-                                <td>{{ $v->stock }}</td>
                                 <td>{{ $v->sale }}</td>
                                 <td>{{ $v->created_at }}</td>
                                 <td id="orderBy" data-id="{{ $v->id }}"
