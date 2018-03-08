@@ -237,6 +237,32 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/order', 'CardCategoryController@order')->name('admin.card.category.order');
     });
 
+    /**
+     * 用户组管理
+     */
+    Route::group(['prefix' => 'admin/member/group'], function () {
+        // 数据列表
+        Route::get('/index', 'MemberGroupController@index')->name('admin.member.group.index');
+        // 添加页面
+        Route::get('/add', 'MemberGroupController@add')->name('admin.member.group.add');
+        // 添加数据
+        Route::post('/store', 'MemberGroupController@store')->name('admin.member.group.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'MemberGroupController@edit')->name('admin.member.group.edit');
+        // 修改数据(id)
+        Route::post('/update', 'MemberGroupController@update')->name('admin.member.group.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'MemberGroupController@destroy')->name('admin.member.group.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'MemberGroupController@destroys')->name('admin.member.group.destroys');
+        // 修改状态
+        Route::post('/status/all', 'MemberGroupController@statusAll')->name('admin.member.group.status.all');
+        // 批量修改状态
+        Route::post('/status', 'MemberGroupController@status')->name('admin.member.group.status');
+        // 修改排序
+        Route::post('/order', 'MemberGroupController@order')->name('admin.member.group.order');
+    });
+
 
     Route::get('/role/index', 'RoleController@index')->name('admin.role.index');
 

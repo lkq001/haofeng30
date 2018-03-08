@@ -297,6 +297,10 @@ class ProductSubWarehouseController extends Controller
         // 获取已经存在的ids
         $productSubWarehouseProductIds = array_column(collect($productSubWarehouseProductLists)->toArray(), 'product_warehouse_id');
 
+        // 声明一个数组,用于记录已经添加的数据
+        $productHasWarehouse = array();
+        $productHasWarehouseNo = array();
+
         if (collect($productWarehouseLists)->count() > 0) {
             foreach ($productWarehouseLists as $k => $v) {
                 if (in_array($v->id, $productSubWarehouseProductIds)) {
@@ -314,7 +318,10 @@ class ProductSubWarehouseController extends Controller
                             $v->check = 1;
                         }
                     }
+                    $productHasWarehouse[] = $v;
 
+                } else {
+                    $productHasWarehouseNo[] = $v;
                 }
             }
         }
@@ -325,6 +332,8 @@ class ProductSubWarehouseController extends Controller
         return view('admin.productSubWarehouse.list', [
             'productWarehouseLists' => $productWarehouseLists,
             'productSubWarehouseProductLists' => $productSubWarehouseProductLists,
+            'productHasWarehouse' => $productHasWarehouse,
+            'productHasWarehouseNo' => $productHasWarehouseNo,
             'count' => $count,
             'id' => $request->id
         ]);

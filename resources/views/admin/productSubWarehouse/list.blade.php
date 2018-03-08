@@ -40,29 +40,73 @@
                             <th width="80">库存</th>
                             <th width="80">虚拟销量</th>
                             <th width="80">创建时间</th>
+                            <th width="80">状态</th>
                         </tr>
                         </thead>
                         <tbody id="checked-box">
-                        @if(collect($productWarehouseLists)->count() > 0)
-                            @foreach($productWarehouseLists as $k => $v)
+                        @if(collect($productHasWarehouse)->count() > 0)
+                            @foreach($productHasWarehouse as $k => $v)
                                 <tr class="text-c">
-                                    <td><input type="checkbox" name="check" @if($v->check == 1) checked @endif value="{{ $v->id }}"></td>
+                                    <td><input type="checkbox" name="check" @if($v->check == 1) checked
+                                               @endif value="{{ $v->id }}"></td>
                                     <td>{{ $v->id }}</td>
                                     <td class="text-l">
                                         <img src="{!! $v->thumb !!}" alt="" height="50px"/>
                                     </td>
                                     <td class="text-l">{{ $v->name }}</td>
                                     <td name="price">{{ $v->price }}</td>
-                                    <td><input type="text" class="input-text" value="{{ $v->new_price ?? $v->price }}" placeholder=""
+                                    <td><input type="text" class="input-text" value="{{ $v->new_price ?? $v->price }}"
+                                               placeholder=""
                                                onkeyup="onlyNumber(this)"
                                                name="price"></td>
-                                    <td><input type="text" class="input-text" value="{{ $v->new_stock ?? '999999' }}" placeholder=""
+                                    <td><input type="text" class="input-text" value="{{ $v->new_stock ?? '999999' }}"
+                                               placeholder=""
                                                onkeyup="this.value=this.value.replace(/\D/g,'')"
                                                name="price"></td>
                                     <td><input type="text" class="input-text" value="{{ $v->new_sale }}" placeholder="0"
                                                onkeyup="this.value=this.value.replace(/\D/g,'')"
                                                name="sale_virtual"></td>
                                     <td>{{ $v->created_at }}</td>
+                                    <td>
+                                        @if($v->check == 1)
+                                            <span class="btn btn-success radius">已启用</span>
+                                        @else
+                                            <span class="btn disabled radius">未启用</span>
+                                        @endif
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endif
+                        @if(collect($productHasWarehouseNo)->count() > 0)
+                            @foreach($productHasWarehouseNo as $k => $v)
+                                <tr class="text-c">
+                                    <td><input type="checkbox" name="check" @if($v->check == 1) checked
+                                               @endif value="{{ $v->id }}"></td>
+                                    <td>{{ $v->id }}</td>
+                                    <td class="text-l">
+                                        <img src="{!! $v->thumb !!}" alt="" height="50px"/>
+                                    </td>
+                                    <td class="text-l">{{ $v->name }}</td>
+                                    <td name="price">{{ $v->price }}</td>
+                                    <td><input type="text" class="input-text" value="{{ $v->new_price ?? $v->price }}"
+                                               placeholder=""
+                                               onkeyup="onlyNumber(this)"
+                                               name="price"></td>
+                                    <td><input type="text" class="input-text" value="{{ $v->new_stock ?? '999999' }}"
+                                               placeholder=""
+                                               onkeyup="this.value=this.value.replace(/\D/g,'')"
+                                               name="price"></td>
+                                    <td><input type="text" class="input-text" value="{{ $v->new_sale }}" placeholder="0"
+                                               onkeyup="this.value=this.value.replace(/\D/g,'')"
+                                               name="sale_virtual"></td>
+                                    <td>{{ $v->created_at }}</td>
+                                    <td>
+                                        @if($v->check == 1)
+                                            <span class="btn btn-success radius">已启用</span>
+                                        @else
+                                            <span class="btn disabled radius">未启用</span>
+                                        @endif
+                                    </td>
                                 </tr>
                             @endforeach
                         @endif

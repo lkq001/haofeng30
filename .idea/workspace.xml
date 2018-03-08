@@ -7,14 +7,7 @@
     <list default="true" id="e2c0058d-7924-4258-b6df-56745826ec93" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductSubWarehouseController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductSubWarehouseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Service/ProductWarehouseService.php" afterPath="$PROJECT_DIR$/app/Service/ProductWarehouseService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Store/ProductWarehouseStore.php" afterPath="$PROJECT_DIR$/app/Store/ProductWarehouseStore.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/admin/js/common.js" afterPath="$PROJECT_DIR$/public/admin/js/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/admin/js/productSubWarehouse.js" afterPath="$PROJECT_DIR$/public/admin/js/productSubWarehouse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productSubWarehouse/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productSubWarehouse/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productWarehouse/add.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productWarehouse/add.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productWarehouse/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productWarehouse/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productWarehouse/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productWarehouse/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productSubWarehouse/list.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productSubWarehouse/list.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +22,8 @@
       <file leaf-file-name="ProductSubWarehouseController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProductSubWarehouseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="306" column="34" lean-forward="true" selection-start-line="306" selection-start-column="34" selection-end-line="306" selection-end-column="34" />
+            <state relative-caret-position="537">
+              <caret line="334" column="32" lean-forward="false" selection-start-line="334" selection-start-column="13" selection-end-line="334" selection-end-column="32" />
               <folding>
                 <element signature="e#46#96#0#PHP" expanded="true" />
                 <element signature="e#1489#1756#0#PHP" expanded="false" />
@@ -47,18 +40,28 @@
                 <element signature="e#6944#7068#0#PHP" expanded="false" />
                 <element signature="e#7073#8261#0#PHP" expanded="false" />
                 <element signature="e#8267#8424#0#PHP" expanded="false" />
-                <element signature="e#10425#10551#0#PHP" expanded="false" />
-                <element signature="e#10556#11983#0#PHP" expanded="false" />
+                <element signature="e#10785#10911#0#PHP" expanded="false" />
+                <element signature="e#10916#12343#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="list.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/productSubWarehouse/list.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="61" column="100" lean-forward="false" selection-start-line="61" selection-start-column="100" selection-end-line="61" selection-end-column="100" />
+            <state relative-caret-position="343">
+              <caret line="73" column="49" lean-forward="false" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="524">
+              <caret line="262" column="86" lean-forward="false" selection-start-line="262" selection-start-column="86" selection-end-line="262" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -77,7 +80,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>update</find>
       <find>.pagination</find>
       <find>$category</find>
       <find>$cardStore</find>
@@ -107,6 +109,7 @@
       <find>destroy-all</find>
       <find>$productSubWarehouse</find>
       <find>save</find>
+      <find>card.category</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -173,7 +176,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/productSubWarehouse/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Store/ProductWarehouseStore.php" />
         <option value="$PROJECT_DIR$/app/Service/ProductWarehouseService.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/productWarehouse/add.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/productWarehouse/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/productWarehouse/index.blade.php" />
@@ -185,6 +187,7 @@
         <option value="$PROJECT_DIR$/public/admin/js/productSubWarehouse.js" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductSubWarehouseController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/productSubWarehouse/list.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -259,6 +262,27 @@
             <path>
               <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
               <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
+              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
+              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
+              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -273,14 +297,6 @@
               <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
-              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="productSubWarehouse" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
@@ -362,12 +378,12 @@
       <workItem from="1519631201825" duration="31642000" />
       <workItem from="1519781933344" duration="40806000" />
       <workItem from="1520226355562" duration="15186000" />
-      <workItem from="1520310992375" duration="40775000" />
+      <workItem from="1520310992375" duration="43350000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269857000" />
+    <option name="totallyTimeSpent" value="272432000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -718,14 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="172" column="19" lean-forward="false" selection-start-line="172" selection-start-column="19" selection-end-line="172" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/admin/js/productWarehouse.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="592">
@@ -899,8 +907,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProductSubWarehouseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="306" column="34" lean-forward="true" selection-start-line="306" selection-start-column="34" selection-end-line="306" selection-end-column="34" />
+        <state relative-caret-position="537">
+          <caret line="334" column="32" lean-forward="false" selection-start-line="334" selection-start-column="13" selection-end-line="334" selection-end-column="32" />
           <folding>
             <element signature="e#46#96#0#PHP" expanded="true" />
             <element signature="e#1489#1756#0#PHP" expanded="false" />
@@ -917,16 +925,24 @@
             <element signature="e#6944#7068#0#PHP" expanded="false" />
             <element signature="e#7073#8261#0#PHP" expanded="false" />
             <element signature="e#8267#8424#0#PHP" expanded="false" />
-            <element signature="e#10425#10551#0#PHP" expanded="false" />
-            <element signature="e#10556#11983#0#PHP" expanded="false" />
+            <element signature="e#10785#10911#0#PHP" expanded="false" />
+            <element signature="e#10916#12343#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/productSubWarehouse/list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="61" column="100" lean-forward="false" selection-start-line="61" selection-start-column="100" selection-end-line="61" selection-end-column="100" />
+        <state relative-caret-position="343">
+          <caret line="73" column="49" lean-forward="false" selection-start-line="73" selection-start-column="49" selection-end-line="73" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="262" column="86" lean-forward="false" selection-start-line="262" selection-start-column="86" selection-end-line="262" selection-end-column="86" />
           <folding />
         </state>
       </provider>
