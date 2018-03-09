@@ -261,6 +261,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/status', 'MemberGroupController@status')->name('admin.member.group.status');
         // 修改排序
         Route::post('/order', 'MemberGroupController@order')->name('admin.member.group.order');
+        // 产品分库产品管理
+        Route::get('/product/list', 'MemberGroupController@productLists')->name('admin.member.group.product.list');
+        // 产品分库产品管理添加
+        Route::post('/product/store', 'MemberGroupController@productStore')->name('admin.member.group.product.store');
     });
 
 

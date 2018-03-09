@@ -58,13 +58,9 @@ class ProductSubWarehouseStore
     public function getAllNoPage($where = '')
     {
         if (empty($where)) {
-            return self::$productSubWarehouse->orderBy('order_by', 'DESC')->with(['getHasOne' => function ($query) {
-                $query->where('is_index', 1)->where('status', 1);
-            }])->get();
+            return self::$productSubWarehouse->orderBy('order_by', 'DESC')->get();
         }
-        return self::$productSubWarehouse->where($where)->orderBy('order_by', 'DESC')->with(['getHasMany' => function ($query) {
-            $query->where('is_index', 1)->where('status', 1);
-        }])->get();
+        return self::$productSubWarehouse->where($where)->orderBy('order_by', 'DESC')->get();
     }
 
 
