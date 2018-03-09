@@ -154,45 +154,6 @@ $(function () {
 
     })
 
-    // 提交产品信息
-    // $('body').on('click', '#product-all', function (i) {
-    //
-    //     // 赋值
-    //     var that = $(this);
-    //     // ID
-    //     var id = $('input[name=id]').val();
-    //     if (parseInt(id) < 1) {
-    //         layer.msg('产品参数错误!', {icon: 2, time: 1500});
-    //         return false;
-    //     }
-    //     // 获取提交路径
-    //     var url = that.attr('data-url');
-    //     // 声明一个数组,存储选择的第几行
-    //     var rows = [];
-    //     // 声明一个数组,存储删除的ID
-    //     var products = {};
-    //     $("input[name='check']:checked").each(function (k, v) {
-    //
-    //         var array = {};
-    //         rows.push($(this).parents("tr").index());
-    //         if ($(this).parents("tr").children('td').eq(1).text() > 0) {
-    //             array.id = parseInt($(this).parents("tr").children('td').eq(1).text());
-    //             array.price = parseFloat($(this).parents("tr").children('td').eq(5).children('input').val());
-    //             array.sale = parseInt($(this).parents("tr").children('td').eq(7).children('input').val());
-    //
-    //             products[k] = array;
-    //         }
-    //
-    //     });
-    //
-    //     if (products.length < 1) {
-    //         layer.msg('请选择产品!', {icon: 2, time: 1500});
-    //         return false;
-    //     }
-    //
-    //     productSubWarehouseSubmit(products, url, id);
-    // })
-
     $('body').on('click', '#product-all', function (i) {
 
         // 赋值

@@ -288,6 +288,7 @@ class ProductSubWarehouseController extends Controller
         if ($validator->fails()) {
             return response()->json(['code' => 'SN202', 'message' => $validator->errors()->first()]);
         }
+
         // 产品信息
         $productWarehouseLists = self::$productWarehouseService->getAllNoPage(['status' => 2]);
 

@@ -2,20 +2,21 @@
 
 namespace App\Store;
 
+use App\Model\MemberGroupProduct;
 use App\Model\ProductSubWarehouse;
 use App\Model\ProductSubWarehouseProduct;
 use Illuminate\Support\Facades\DB;
 
-class ProductSubWarehouseProductStore
+class MemberGroupProductStore
 {
     // 静态方法
-    private static $productSubWarehouseProduct = null;
+    private static $memberGroupProduct = null;
 
     public function __construct(
-        ProductSubWarehouseProduct $productSubWarehouseProduct
+        MemberGroupProduct $memberGroupProduct
     )
     {
-        self::$productSubWarehouseProduct = $productSubWarehouseProduct;
+        self::$memberGroupProduct = $memberGroupProduct;
     }
 
     /**
@@ -31,7 +32,7 @@ class ProductSubWarehouseProductStore
             return false;
         }
 
-        return self::$productSubWarehouseProduct->where($where)->count();
+        return self::$memberGroupProduct->where($where)->count();
     }
 
     /**
@@ -44,9 +45,9 @@ class ProductSubWarehouseProductStore
     public function getAll($where = '')
     {
         if (empty($where)) {
-            return self::$productSubWarehouseProduct->orderBy('order_by', 'DESC')->paginate(config('config.page_size_l'));
+            return self::$memberGroupProduct->orderBy('order_by', 'DESC')->paginate(config('config.page_size_l'));
         }
-        return self::$productSubWarehouseProduct->where($where)->orderBy('order_by', 'DESC')->paginate(config('config.page_size_l'));
+        return self::$memberGroupProduct->where($where)->orderBy('order_by', 'DESC')->paginate(config('config.page_size_l'));
     }
 
     /**
@@ -59,9 +60,9 @@ class ProductSubWarehouseProductStore
     public function getAllNoPage($where = '')
     {
         if (empty($where)) {
-            return self::$productSubWarehouseProduct->orderBy('order_by', 'DESC')->get();
+            return self::$memberGroupProduct->orderBy('order_by', 'DESC')->get();
         }
-        return self::$productSubWarehouseProduct->where($where)->orderBy('order_by', 'DESC')->get();
+        return self::$memberGroupProduct->where($where)->orderBy('order_by', 'DESC')->get();
     }
 
 
@@ -69,9 +70,9 @@ class ProductSubWarehouseProductStore
     public function count($where = '')
     {
         if (empty($where)) {
-            return self::$productSubWarehouseProduct->count();
+            return self::$memberGroupProduct->count();
         }
-        return self::$productSubWarehouseProduct->where($where)->count();
+        return self::$memberGroupProduct->where($where)->count();
     }
 
     /**
@@ -87,7 +88,7 @@ class ProductSubWarehouseProductStore
             return false;
         }
 
-        return self::$productSubWarehouseProduct->where($where)->first();
+        return self::$memberGroupProduct->where($where)->first();
     }
 
     /**
@@ -99,14 +100,14 @@ class ProductSubWarehouseProductStore
      */
     public function insert($data)
     {
-        self::$productSubWarehouseProduct->insert($data);
+        self::$memberGroupProduct->insert($data);
 
         return false;
     }
 
     public function status($id, $status)
     {
-        $oneInfo = self::$productSubWarehouseProduct->where('id', $id)->first();
+        $oneInfo = self::$memberGroupProduct->where('id', $id)->first();
         $oneInfo->status = $status;
         return $oneInfo->save();
     }
@@ -115,12 +116,12 @@ class ProductSubWarehouseProductStore
     public function update($id, $data)
     {
         // 查询数据
-        $productSubWarehouseProduct = self::$productSubWarehouseProduct->find($id);
+        $memberGroupProduct = self::$memberGroupProduct->find($id);
 
         foreach ($data as $k => $v) {
-            $productSubWarehouseProduct->$k = $v;
+            $memberGroupProduct->$k = $v;
         }
-        return $productSubWarehouseProduct->save();
+        return $memberGroupProduct->save();
     }
 
     // 获取子栏目数据
@@ -128,10 +129,10 @@ class ProductSubWarehouseProductStore
     {
         if ($status) {
             // 查询数据
-            $childCount = self::$productSubWarehouseProduct->where('pid', $id)->where('status', $status)->count();
+            $childCount = self::$memberGroupProduct->where('pid', $id)->where('status', $status)->count();
         } else {
             // 查询数据
-            $childCount = self::$productSubWarehouseProduct->where('pid', $id)->count();
+            $childCount = self::$memberGroupProduct->where('pid', $id)->count();
         }
 
         return $childCount;
@@ -140,19 +141,19 @@ class ProductSubWarehouseProductStore
     // 执行删除
     public function destroy($id)
     {
-        return self::$productSubWarehouseProduct->where('id', $id)->delete();
+        return self::$memberGroupProduct->where('id', $id)->delete();
     }
 
     // 批量删除
     public function destroys($ids)
     {
-        return self::$productSubWarehouseProduct->whereIn('id', $ids)->delete();
+        return self::$memberGroupProduct->whereIn('id', $ids)->delete();
     }
 
     // 批量删除
     public function destroysByProductWarehouseId($ids, $id)
     {
-        return self::$productSubWarehouseProduct->whereIn('product_warehouse_id', $ids)->where('product_sub_id', $id)->delete();
+        return self::$memberGroupProduct->whereIn('product_warehouse_id', $ids)->where('member_group_id', $id)->delete();
     }
 
 
@@ -160,7 +161,7 @@ class ProductSubWarehouseProductStore
     public function statusAll($ids, $status)
     {
         // 查询所有数据
-        $productWarehoustLists = self::$productSubWarehouseProduct->whereIn('id', $ids)->get();
+        $productWarehoustLists = self::$memberGroupProduct->whereIn('id', $ids)->get();
 
         if (collect($productWarehoustLists)->count() > 0) {
             DB::beginTransaction();
@@ -180,15 +181,7 @@ class ProductSubWarehouseProductStore
             return false;
         }
 
-        return self::$productSubWarehouseProduct->whereIn('id', $ids)->save(['status' => $status]);
+        return self::$memberGroupProduct->whereIn('id', $ids)->save(['status' => $status]);
     }
 
-    // 获取指定条件的产品数量,不分页
-    public function getAllNoPageCount($where)
-    {
-        if (empty($where)) {
-            return self::$productSubWarehouseProduct->count();
-        }
-        return self::$productSubWarehouseProduct->where($where)->count();
-    }
 }

@@ -207,4 +207,25 @@ class ProductWarehouseStore
         return self::$productWarehouse->whereIn('id', $ids)->save(['status' => $status]);
     }
 
+    /**
+     * 根据ids获取产品信息
+     *
+     * @param array $ids
+     * @return mixed
+     * author 李克勤
+     */
+    public function getAllNoPageByIds($ids)
+    {
+        if (empty($ids)) {
+            return self::$productWarehouse->orderBy('order_by', 'DESC')->with(['getHasOne' => function ($query) {
+                $query->where('is_index', 1)->where('status', 1);
+            }])->get();
+        } else {
+            return self::$productWarehouse->whereIn('id', $ids)->orderBy('order_by', 'DESC')->with(['getHasOne' => function ($query) {
+                $query->where('is_index', 1)->where('status', 1);
+            }])->get();
+        }
+
+    }
+
 }

@@ -131,7 +131,7 @@ $(function () {
         var rows = [];
         // 声明一个数组,存储删除的ID
         var ids = [];
-        $("input[name='check']:checked").each(function() {
+        $("input[name='check']:checked").each(function () {
             rows.push($(this).parents("tr").index());
             ids.push($(this).val());
         });
@@ -139,6 +139,61 @@ $(function () {
         // 判断操作
         destroyAll(rows, ids, url, 'checked-box');
 
+    });
+
+    // 产品赋值
+    $('body').on('click', '#productShowModel', function (i) {
+        // 赋值
+        var that = $(this);
+        // 获取提交数据
+        var id = that.attr('data-id');
+        // 获取提交路径
+        var url = that.attr('data-url');
+        // 获取修改信息
+        windowHref(url, id);
+
+    });
+
+    $('body').on('click', '#product-all', function (i) {
+
+        // 赋值
+        var that = $(this);
+        // ID
+        var id = $('input[name=id]').val();
+        if (parseInt(id) < 1) {
+            layer.msg('产品参数错误!', {icon: 2, time: 1500});
+            return false;
+        }
+        // 获取提交路径
+        var url = that.attr('data-url');
+        // 获取跳转网址
+        var jumpUrl = that.attr('data-jump');
+        // 声明一个数组,存储选择的第几行
+        var rows = [];
+        // 存储价格
+        var prices = [];
+        // 存储ids
+        var ids = [];
+
+
+        $("input[name='check']:checked").each(function (k, v) {
+
+
+            rows.push($(this).parents("tr").index());
+            if ($(this).parents("tr").children('td').eq(1).text() > 0) {
+                ids.push(parseInt($(this).parents("tr").children('td').eq(1).text()));
+                prices.push(parseFloat($(this).parents("tr").children('td').eq(5).children('input').val()));
+            }
+
+
+        });
+
+        if (ids.length < 1) {
+            layer.msg('请选择产品!', {icon: 2, time: 1500});
+            return false;
+        }
+
+        memberGroupProductSubmit(ids, prices, url, id, jumpUrl);
     })
 
 });

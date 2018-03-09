@@ -506,3 +506,67 @@ function productSubWarehouseSubmit(ids, prices, stocks, sales, url, id, jumpUrl)
         }
     });
 }
+
+function memberGroupProductSubmit(ids, prices, url, id, jumpUrl) {
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $.ajax({
+        url: url,
+        data: {'id': id, 'ids': ids, 'prices': prices},
+        type: 'post',
+        success: function (res) {
+            console.log(res);
+            if (res.code == 'SN200') {
+
+                layer.confirm('添加成功,是否跳转到列表页面？', {
+                    btn: ['确定', '取消'] //按钮
+                }, function () {
+                    window.location.href = jumpUrl;
+                }, function () {
+                    location.reload();
+                });
+
+            } else {
+                layer.msg(res.message, {icon: 2, time: 1500});
+                return false;
+            }
+        },
+        error: function (res) {
+            layer.msg('添加数据失败!', {icon: 2, time: 1500});
+            return false;
+        }
+    });
+}
+
+// 跳转
+function windowHref(url, id) {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $.ajax({
+        url: url,
+        data: {'id': id},
+        type: 'get',
+        success: function (res) {
+            console.log(res);
+            if (res.code == 'SN201' || res.code == 'SN202') {
+                layer.msg(res.message, {icon: 2, time: 1500});
+                return false;
+            } else {
+                window.location.href = url + '?id=' + id;
+            }
+        },
+        error: function (res) {
+            layer.msg('操作失败!', {icon: 2, time: 1500});
+            return false;
+        }
+    });
+}

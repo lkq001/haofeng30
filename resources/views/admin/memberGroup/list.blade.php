@@ -1,12 +1,9 @@
 @extends('admin.layouts.master')
 @section('title', '产品分库产品配置')
-@section('css')
-    <link href="{{ asset('/admin/lib/webuploader/0.1.5/webuploader.css') }}" rel="stylesheet" type="text/css"/>
-@endsection
 @section('content')
     <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
         <span class="c-gray en">&gt;</span>
-        产品分库
+        会员组
         <span class="c-gray en">&gt;</span>
         产品配置
         <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px"
@@ -35,10 +32,8 @@
                             <th width="25">ID</th>
                             <th width="60">商品</th>
                             <th>产品名称</th>
-                            <th width="80">总库价格</th>
+                            <th width="80">分库价格</th>
                             <th width="80">销售价格</th>
-                            <th width="80">库存</th>
-                            <th width="80">虚拟销量</th>
                             <th width="80">创建时间</th>
                             <th width="80">状态</th>
                         </tr>
@@ -59,13 +54,6 @@
                                                placeholder=""
                                                onkeyup="onlyNumber(this)"
                                                name="price"></td>
-                                    <td><input type="text" class="input-text" value="{{ $v->new_stock ?? '999999' }}"
-                                               placeholder=""
-                                               onkeyup="this.value=this.value.replace(/\D/g,'')"
-                                               name="price"></td>
-                                    <td><input type="text" class="input-text" value="{{ $v->new_sale }}" placeholder="0"
-                                               onkeyup="this.value=this.value.replace(/\D/g,'')"
-                                               name="sale_virtual"></td>
                                     <td>{{ $v->created_at }}</td>
                                     <td>
                                         @if($v->check == 1)
@@ -92,13 +80,6 @@
                                                placeholder=""
                                                onkeyup="onlyNumber(this)"
                                                name="price"></td>
-                                    <td><input type="text" class="input-text" value="{{ $v->new_stock ?? '999999' }}"
-                                               placeholder=""
-                                               onkeyup="this.value=this.value.replace(/\D/g,'')"
-                                               name="price"></td>
-                                    <td><input type="text" class="input-text" value="{{ $v->new_sale }}" placeholder="0"
-                                               onkeyup="this.value=this.value.replace(/\D/g,'')"
-                                               name="sale_virtual"></td>
                                     <td>{{ $v->created_at }}</td>
                                     <td>
                                         @if($v->check == 1)
@@ -116,8 +97,8 @@
 
                 </div>
                 <div class="cl pd-5 bg-1 bk-gray mt-20">
-                <span id="product-all" data-url="{{ route('admin.product.sub.warehouse.product.store') }}"
-                      data-jump="{{ route('admin.product.sub.warehouse.index') }}"
+                <span id="product-all" data-url="{{ route('admin.member.group.product.store') }}"
+                      data-jump="{{ route('admin.member.group.index') }}"
                       class="r btn btn-success radius"><i class="icon Hui-iconfont">&#xe632;</i> 提交</span>
                 </div>
             </form>
@@ -127,6 +108,6 @@
 @endsection
 @section('javascript')
 
-    <script type="text/javascript" src="{{ asset('/admin/js/productSubWarehouse.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/admin/js/memberGroup.js') }}"></script>
 
 @endsection

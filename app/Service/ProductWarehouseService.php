@@ -304,4 +304,25 @@ class ProductWarehouseService
     {
         return self::$productWarehouseStore->count();
     }
+
+    // 根据ids 获取数据
+    public function getAllNoPageByIds($ids)
+    {
+        $getAll = self::$productWarehouseStore->getAllNoPageByIds($ids);
+
+        if (collect($getAll)->count() > 0) {
+
+            foreach ($getAll as $k => $v) {
+
+                if (collect($v->getHasOne)->count() > 0) {
+
+                    $v->thumb = config('config.product_thumb') . '/' . $v->getHasOne->thumb;
+
+                }
+
+            }
+        }
+        return $getAll;
+    }
+
 }
