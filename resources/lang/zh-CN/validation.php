@@ -81,6 +81,7 @@ return [
     'timezone'             => ':attribute 必须是一个合法的时区值。',
     'unique'               => ':attribute 已经存在。',
     'url'                  => ':attribute 格式不正确。',
+    'cn_phone'             => ':attribute 格式不正确',
 
     /*
     |--------------------------------------------------------------------------
@@ -245,6 +246,7 @@ return [
         'thumb'                 =>  '图片',
         'price'                 =>  '价格',
         'status'                =>  '状态',
-        'number'                =>  '次数'
+        'number'                =>  '次数',
+        'cn_phone'              =>  '手机号码'
     ],
 ];

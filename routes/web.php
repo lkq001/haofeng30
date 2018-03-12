@@ -267,6 +267,32 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/product/store', 'MemberGroupController@productStore')->name('admin.member.group.product.store');
     });
 
+    /**
+     * 会员管理
+     */
+    Route::group(['prefix' => '/member'], function () {
+        // 数据列表
+        Route::get('/index', 'MemberController@index')->name('admin.member.index');
+        // 添加页面
+        Route::get('/add', 'MemberController@add')->name('admin.member.add');
+        // 添加数据
+        Route::post('/store', 'MemberController@store')->name('admin.member.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'MemberController@edit')->name('admin.member.edit');
+        // 修改数据(id)
+        Route::post('/update', 'MemberController@update')->name('admin.member.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'MemberController@destroy')->name('admin.member.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'MemberController@destroys')->name('admin.member.destroys');
+        // 修改状态
+        Route::post('/status/all', 'MemberController@statusAll')->name('admin.member.status.all');
+        // 批量修改状态
+        Route::post('/status', 'MemberController@status')->name('admin.member.status');
+        // 修改排序
+        Route::post('/order', 'MemberController@order')->name('admin.member.order');
+    });
+
 
     Route::get('/role/index', 'RoleController@index')->name('admin.role.index');
 

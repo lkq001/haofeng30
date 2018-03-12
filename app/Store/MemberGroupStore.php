@@ -12,7 +12,8 @@ class MemberGroupStore
 
     public function __construct(
         MemberGroup $memberGroup
-    ){
+    )
+    {
         self::$memberGroup = $memberGroup;
     }
 
@@ -110,8 +111,11 @@ class MemberGroupStore
     }
 
     // 获取全部列表
-    public function getAll()
+    public function getAll($status = '')
     {
+        if ($status) {
+            return self::$memberGroup->where('status', $status)->orderBy('order_by', 'desc')->get();
+        }
         return self::$memberGroup->orderBy('order_by', 'desc')->get();
     }
 

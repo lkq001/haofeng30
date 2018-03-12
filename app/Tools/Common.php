@@ -1,6 +1,8 @@
 <?php
+
 namespace App\Tools;
 
+use Crypt;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
 
@@ -12,19 +14,30 @@ use Illuminate\Support\Facades\Validator;
 class Common
 {
     /**
-     * 加密算法
      *
-     * @param $user
+     * 加密
+     *
      * @param $pwd
      * @param int $position
-     * @return string
-     * @author 郭鹏超
+     * @return mixed
+     * author 李克勤
      */
-    public static function cryptString($user, $pwd, $position = 3)
+    public static function encryptString($pwd, $position = 10)
     {
-        $subUser  = substr($user, 0, $position);
-        $cryptPwd = md5($pwd);
-        return md5(md5($cryptPwd . $subUser));
+        return Crypt::encrypt($pwd);
+    }
+
+    /**
+     * 解密
+     *
+     * @param $pwd
+     * @param int $position
+     * @return mixed
+     * author 李克勤
+     */
+    public static function decryptString($pwd, $position = 10)
+    {
+        return Crypt::decrypt($pwd);
     }
 
     /**
@@ -69,7 +82,7 @@ class Common
     {
         sort($data);
         // 获取最大值
-        $max = $data[count($data)-1];
+        $max = $data[count($data) - 1];
 
         // 键值互换
         $data = array_flip($data);
@@ -96,7 +109,7 @@ class Common
 
         $data = [];
         for ($i = 1; $i <= $max; $i++) {
-            if ($binString[$i-1] == 1) {
+            if ($binString[$i - 1] == 1) {
                 $data[] = $i;
             }
         }
@@ -112,7 +125,8 @@ class Common
      * @return array
      * @author 郭鹏超
      */
-    public static function getTree($array, $id = 0) {
+    public static function getTree($array, $id = 0)
+    {
         $tree = [];
 
         while ($id > 0) {
@@ -167,7 +181,7 @@ class Common
             if ($v->father_id == $id) {
                 $v->lev = $lev;
                 $tree[] = $v;
-                $tree = array_merge($tree, self::getCatTree($arr, $v->id, $lev+1));
+                $tree = array_merge($tree, self::getCatTree($arr, $v->id, $lev + 1));
             }
         }
 
@@ -385,14 +399,14 @@ class Common
         }
         // 参数
         $temp = [
-            'param'  => [
+            'param' => [
                 'nowPage' => $nowPage,
-                'offset'  => $data['offset'],
-                'guid'    => session('admin')->guid   // 获取用户的guid
+                'offset' => $data['offset'],
+                'guid' => session('admin')->guid   // 获取用户的guid
             ],
             'search' => [
                 'nowPage' => $nowPage,
-                'offset'  => $data['offset'],
+                'offset' => $data['offset'],
             ]
         ];
         // 判断条件是否为空
@@ -402,7 +416,7 @@ class Common
         // 追加有的值
         foreach ($must as $v) {
             if (!empty($data[$v]) || isset($data[$v]) && $data[$v] === '0') {
-                $temp['param'][$v]  = trim($data[$v]);
+                $temp['param'][$v] = trim($data[$v]);
                 $temp['search'][$v] = trim($data[$v]);
             }
         }
@@ -450,9 +464,9 @@ class Common
     {
         if (!empty($curl)) {
             if ($curl['ServerNo'] == 'SN200') {
-                return redirect('/'.$url.'?'.$urlInfo)->with( ['ServerNo' => 200, 'Message' => '修改成功']);
+                return redirect('/' . $url . '?' . $urlInfo)->with(['ServerNo' => 200, 'Message' => '修改成功']);
             } else {
-                return back()->with( ['ServerNo' => 400, 'Message' => $curl['ResultData'] ?? '操作失败']);
+                return back()->with(['ServerNo' => 400, 'Message' => $curl['ResultData'] ?? '操作失败']);
             }
         }
         return back()->with(['ServerNo' => 500, 'Message' => '请求失败']);
@@ -469,9 +483,9 @@ class Common
     public static function unicodeDecode($name)
     {
 
-        $json = '{"str":"'.$name.'"}';
-        $arr = json_decode($json,true);
-        if(empty($arr)) {
+        $json = '{"str":"' . $name . '"}';
+        $arr = json_decode($json, true);
+        if (empty($arr)) {
             return '';
         }
         return $arr['str'];
@@ -513,4 +527,21 @@ class Common
         }
         return $response;
     }
+
+    /**
+     * 密码是否一致
+     *
+     * @param $password
+     * @param $rePassword
+     * @return bool
+     * author 李克勤
+     */
+    public static function rePassword($password, $rePassword)
+    {
+        if ($password === $rePassword) {
+            return true;
+        }
+        return false;
+    }
+
 }
