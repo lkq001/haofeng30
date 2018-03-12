@@ -47,7 +47,7 @@ $(function () {
             var type = $(form).attr('method');
             // 跳转页面
             var jumpUrl = $(form).attr('data-jump');
-            console.log(jumpUrl);
+
             // ajax 提交
             storeSubmit(postData, url, type, 'true', jumpUrl);
         }

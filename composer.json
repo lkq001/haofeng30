@@ -11,6 +11,7 @@
         "laravel/tinker": "~1.0",
         "laravelcollective/html": "^5.5",
         "overtrue/laravel-lang": "~3.0",
+        "ramsey/uuid": "^3.7",
         "zizaco/entrust": "5.2.x-dev"
     },
     "require-dev": {

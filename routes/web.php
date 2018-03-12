@@ -240,7 +240,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
     /**
      * 用户组管理
      */
-    Route::group(['prefix' => 'admin/member/group'], function () {
+    Route::group(['prefix' => '/member/group'], function () {
         // 数据列表
         Route::get('/index', 'MemberGroupController@index')->name('admin.member.group.index');
         // 添加页面

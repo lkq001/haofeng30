@@ -82,7 +82,7 @@ $(function () {
         // 获取提交路径
         var url = that.attr('data-url');
         // 获取提交路径
-        var order = that.attr('data-order');
+        var order = parseInt(that.attr('data-order'));
         // 获取修改信息
         inputOrderBy(id, url, that, order);
     })
@@ -96,7 +96,7 @@ $(function () {
         // 获取提交路径
         var url = that.attr('data-url');
         // 获取提交路径
-        var order = $('#changeOrder').val();
+        var order = parseInt($('#changeOrder').val());
 
         // 获取修改信息
         changeOrderBy(id, url, that, order);
