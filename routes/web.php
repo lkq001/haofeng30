@@ -398,6 +398,31 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/order', 'WarehouseController@order')->name('admin.warehouse.order');
     });
 
+    /**
+     * 幻灯片管理
+     */
+    Route::group(['prefix' => '/banner'], function () {
+        // 数据列表
+        Route::get('/index', 'BannerController@index')->name('admin.banner.index');
+        // 添加页面
+        Route::get('/add', 'BannerController@add')->name('admin.banner.add');
+        // 添加数据
+        Route::post('/store', 'BannerController@store')->name('admin.banner.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'BannerController@edit')->name('admin.banner.edit');
+        // 修改数据(id)
+        Route::post('/update', 'BannerController@update')->name('admin.banner.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'BannerController@destroy')->name('admin.banner.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'BannerController@destroys')->name('admin.banner.destroys');
+        // 修改状态
+        Route::post('/status/all', 'BannerController@statusAll')->name('admin.banner.status.all');
+        // 批量修改状态
+        Route::post('/status', 'BannerController@status')->name('admin.banner.status');
+        // 修改排序
+        Route::post('/order', 'BannerController@order')->name('admin.banner.order');
+    });
 
     Route::get('/role/index', 'RoleController@index')->name('admin.role.index');
 
