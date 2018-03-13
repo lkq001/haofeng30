@@ -82,6 +82,7 @@
                 @endif
                 </tbody>
             </table>
+            {!! $memberLists->links() !!}
         </div>
     </div>
 @endsection

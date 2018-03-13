@@ -98,6 +98,23 @@ class MemberStore
         return self::$member->orderBy('order_by', 'DESC')->with(['getHasOneGroup'])->paginate($pageSize);
     }
 
+    // 获取分页数据,按照指定字段
+    public function getAllByDesc($where = [], $pageSize = 10, $desc = 'order_by', $descStatus, $paginate = 'page')
+    {
+        if ($descStatus) {
+            if (!empty($where)) {
+                return self::$member->where($where)->orderBy($desc, 'DESC')->with(['getHasOneGroup'])->paginate($pageSize, ['*'], $paginate);
+            }
+            return self::$member->orderBy($desc, 'DESC')->with(['getHasOneGroup'])->paginate($pageSize, ['*'], $paginate);
+        } else {
+            if (!empty($where)) {
+                return self::$member->where($where)->orderBy($desc, 'ASC')->with(['getHasOneGroup'])->paginate($pageSize, ['*'], $paginate);
+            }
+            return self::$member->orderBy($desc, 'ASC')->with(['getHasOneGroup'])->paginate($pageSize, ['*'], $paginate);
+        }
+
+    }
+
     // 获取数量
     public function count($where = [])
     {

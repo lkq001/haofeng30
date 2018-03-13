@@ -293,6 +293,111 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/order', 'MemberController@order')->name('admin.member.order');
     });
 
+    /**
+     * 会员消费排行榜管理
+     */
+    Route::group(['prefix' => '/member/consumption'], function () {
+        // 数据列表
+        Route::get('/index', 'MemberConsumptionController@index')->name('admin.member.consumption.index');
+        // 添加页面
+        Route::get('/add', 'MemberConsumptionController@add')->name('admin.member.consumption.add');
+        // 添加数据
+        Route::post('/store', 'MemberConsumptionController@store')->name('admin.member.consumption.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'MemberConsumptionController@edit')->name('admin.member.consumption.edit');
+        // 修改数据(id)
+        Route::post('/update', 'MemberConsumptionController@update')->name('admin.member.consumption.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'MemberConsumptionController@destroy')->name('admin.member.consumption.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'MemberConsumptionController@destroys')->name('admin.member.consumption.destroys');
+        // 修改状态
+        Route::post('/status/all', 'MemberConsumptionController@statusAll')->name('admin.member.consumption.status.all');
+        // 批量修改状态
+        Route::post('/status', 'MemberConsumptionController@status')->name('admin.member.consumption.status');
+        // 修改排序
+        Route::post('/order', 'MemberConsumptionController@order')->name('admin.member.consumption.order');
+    });
+
+    /**
+     * 会员充值排行榜管理
+     */
+    Route::group(['prefix' => '/member/recharge'], function () {
+        // 数据列表
+        Route::get('/index', 'MemberRechargeController@index')->name('admin.member.recharge.index');
+        // 添加页面
+        Route::get('/add', 'MemberRechargeController@add')->name('admin.member.recharge.add');
+        // 添加数据
+        Route::post('/store', 'MemberRechargeController@store')->name('admin.member.recharge.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'MemberRechargeController@edit')->name('admin.member.recharge.edit');
+        // 修改数据(id)
+        Route::post('/update', 'MemberRechargeController@update')->name('admin.member.recharge.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'MemberRechargeController@destroy')->name('admin.member.recharge.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'MemberRechargeController@destroys')->name('admin.member.recharge.destroys');
+        // 修改状态
+        Route::post('/status/all', 'MemberRechargeController@statusAll')->name('admin.member.recharge.status.all');
+        // 批量修改状态
+        Route::post('/status', 'MemberRechargeController@status')->name('admin.member.recharge.status');
+        // 修改排序
+        Route::post('/order', 'MemberRechargeController@order')->name('admin.member.recharge.order');
+    });
+
+
+    /**
+     * 会员积分排行榜管理
+     */
+    Route::group(['prefix' => '/member/integral'], function () {
+        // 数据列表
+        Route::get('/index', 'MemberIntegralController@index')->name('admin.member.integral.index');
+        // 添加页面
+        Route::get('/add', 'MemberIntegralController@add')->name('admin.member.integral.add');
+        // 添加数据
+        Route::post('/store', 'MemberIntegralController@store')->name('admin.member.integral.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'MemberIntegralController@edit')->name('admin.member.integral.edit');
+        // 修改数据(id)
+        Route::post('/update', 'MemberIntegralController@update')->name('admin.member.integral.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'MemberIntegralController@destroy')->name('admin.member.integral.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'MemberIntegralController@destroys')->name('admin.member.integral.destroys');
+        // 修改状态
+        Route::post('/status/all', 'MemberIntegralController@statusAll')->name('admin.member.integral.status.all');
+        // 批量修改状态
+        Route::post('/status', 'MemberIntegralController@status')->name('admin.member.integral.status');
+        // 修改排序
+        Route::post('/order', 'MemberIntegralController@order')->name('admin.member.integral.order');
+    });
+
+    /**
+     * 会员积分排行榜管理
+     */
+    Route::group(['prefix' => '/warehouse'], function () {
+        // 数据列表
+        Route::get('/index', 'WarehouseController@index')->name('admin.warehouse.index');
+        // 添加页面
+        Route::get('/add', 'WarehouseController@add')->name('admin.warehouse.add');
+        // 添加数据
+        Route::post('/store', 'WarehouseController@store')->name('admin.warehouse.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'WarehouseController@edit')->name('admin.warehouse.edit');
+        // 修改数据(id)
+        Route::post('/update', 'WarehouseController@update')->name('admin.warehouse.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'WarehouseController@destroy')->name('admin.warehouse.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'WarehouseController@destroys')->name('admin.warehouse.destroys');
+        // 修改状态
+        Route::post('/status/all', 'WarehouseController@statusAll')->name('admin.warehouse.status.all');
+        // 批量修改状态
+        Route::post('/status', 'WarehouseController@status')->name('admin.warehouse.status');
+        // 修改排序
+        Route::post('/order', 'WarehouseController@order')->name('admin.warehouse.order');
+    });
+
 
     Route::get('/role/index', 'RoleController@index')->name('admin.role.index');
 

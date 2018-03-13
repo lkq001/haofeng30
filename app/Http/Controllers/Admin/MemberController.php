@@ -89,6 +89,11 @@ class MemberController extends Controller
         if ($getCount > 0) {
             return response()->json(['code' => 'SN202', 'message' => '数据已经存在']);
         }
+        // 判断用户是否存在
+        $getCountByName = self::$memberStore->getOneInfoCount(['username' => $request->username]);
+        if ($getCountByName > 0) {
+            return response()->json(['code' => 'SN202', 'message' => '数据已经存在']);
+        }
 
 
         // 获取需要提交的数据
@@ -275,6 +280,26 @@ class MemberController extends Controller
         $getCount = self::$memberStore->getOneInfoCount(['id' => $request->id, 'uuid' => $request->uuid]);
         if ($getCount < 1) {
             return response()->json(['code' => 'SN202', 'message' => '数据不存在']);
+        }
+
+        // 判断用户是否存在
+        $getAllByPhone = self::$memberStore->getAll(['phone' => $request->phone]);
+        if (collect($getAllByPhone)->count() > 0) {
+            foreach ($getAllByPhone as $k => $v) {
+                if ($v->id != $request->id) {
+                    return response()->json(['code' => 'SN202', 'message' => '手机号已经存在']);
+                }
+            }
+        }
+
+        // 判断用户是否存在
+        $getAllByName = self::$memberStore->getAll(['username' => $request->username]);
+        if (collect($getAllByName)->count() > 0 ) {
+            foreach ($getAllByName as $k => $v) {
+                if ($v->id != $request->id) {
+                    return response()->json(['code' => 'SN202', 'message' => '用户名已经存在']);
+                }
+            }
         }
 
         // 执行数据修改

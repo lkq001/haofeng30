@@ -5,7 +5,7 @@
             @if(session('global_nav')[0])
                 @foreach(session('global_nav')[0] as $k => $v)
                     <dl id="menu-article">
-                        <dt><i class="Hui-iconfont">&#xe616;</i> {{ $v->name }}<i
+                        <dt><i class="Hui-iconfont">{{ $v->icon }}</i> {{ $v->name }}<i
                                     class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i>
                         </dt>
                         @if(isset(session('global_nav')[$v->id]))
