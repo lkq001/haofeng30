@@ -345,7 +345,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/order', 'MemberRechargeController@order')->name('admin.member.recharge.order');
     });
 
-
     /**
      * 会员积分排行榜管理
      */
@@ -448,6 +447,32 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/status', 'BannerController@status')->name('admin.banner.status');
         // 修改排序
         Route::post('/order', 'BannerController@order')->name('admin.banner.order');
+    });
+
+    /**
+     * 绿色主张
+     */
+    Route::group(['prefix' => '/green/advocate'], function () {
+        // 数据列表
+        Route::get('/index', 'GreenAdvocateController@index')->name('admin.green.advocate.index');
+        // 添加页面
+        Route::get('/add', 'GreenAdvocateController@add')->name('admin.green.advocate.add');
+        // 添加数据
+        Route::post('/store', 'GreenAdvocateController@store')->name('admin.green.advocate.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'GreenAdvocateController@edit')->name('admin.green.advocate.edit');
+        // 修改数据(id)
+        Route::post('/update', 'GreenAdvocateController@update')->name('admin.green.advocate.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'GreenAdvocateController@destroy')->name('admin.green.advocate.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'GreenAdvocateController@destroys')->name('admin.green.advocate.destroys');
+        // 修改状态
+        Route::post('/status/all', 'GreenAdvocateController@statusAll')->name('admin.green.advocate.status.all');
+        // 批量修改状态
+        Route::post('/status', 'GreenAdvocateController@status')->name('admin.green.advocate.status');
+        // 修改排序
+        Route::post('/order', 'GreenAdvocateController@order')->name('admin.green.advocate.order');
     });
 
     Route::get('/role/index', 'RoleController@index')->name('admin.role.index');
