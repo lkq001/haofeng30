@@ -172,7 +172,12 @@ function statusProductSubmit(id, url, status, that, textMessage) {
 
 }
 
-// 获取修改信息
+/**
+ * 获取修改信息
+ * @param id
+ * @param url
+ * @returns {number}
+ */
 function editInfo(id, url) {
     var resultData = 1;
     $.ajaxSetup({
@@ -204,7 +209,13 @@ function editInfo(id, url) {
     return resultData;
 }
 
-// 点击修改排序
+/**
+ * 点击修改排序
+ * @param id
+ * @param url
+ * @param that
+ * @param order
+ */
 function inputOrderBy(id, url, that, order) {
     that.html('<input name="order_by" class="input-text radius size-MINI" id="changeOrder" value="' + order + '" data-id="' + id + '" data-url="' + url + '" data-order="' + order + '" >');
     $("#changeOrder").css("display", "inline").val(order);//赋值
@@ -212,7 +223,13 @@ function inputOrderBy(id, url, that, order) {
 
 }
 
-// 点击执行修改排序
+/**
+ * 点击执行修改排序
+ * @param id
+ * @param url
+ * @param that
+ * @param order
+ */
 function changeOrderBy(id, url, that, order) {
     $.ajaxSetup({
         headers: {
@@ -246,7 +263,10 @@ function changeOrderBy(id, url, that, order) {
 
 }
 
-// 鼠标定位 末尾
+/**
+ * 鼠标定位 末尾
+ * @param obj
+ */
 function moveEnd(obj) {
     obj.focus();
     var len = obj.value.length;
@@ -260,7 +280,12 @@ function moveEnd(obj) {
     }
 }
 
-// 数据修改
+/**
+ * 数据修改
+ * @param data
+ * @param url
+ * @param type
+ */
 function updateSubmit(data, url, type) {
     // 声明数组,存储提交数据
     var typeData = {};
@@ -298,7 +323,13 @@ function updateSubmit(data, url, type) {
     });
 }
 
-// 数据删除
+/**
+ * 数据删除
+ * @param id
+ * @param url
+ * @param that
+ * @returns {boolean}
+ */
 function destroy(id, url, that) {
     if (parseInt(id) < 1 || !url) {
         layer.msg('数据不合法!', {icon: 2, time: 1500});
@@ -335,7 +366,14 @@ function destroy(id, url, that) {
     });
 }
 
-// 批量数据删除
+/**
+ * 批量数据删除
+ * @param rows
+ * @param ids
+ * @param url
+ * @param idName
+ * @returns {boolean}
+ */
 function destroyAll(rows, ids, url, idName) {
 
     if (ids.length < 1 || !url) {
@@ -431,7 +469,6 @@ function statusAll(rows, ids, url, idName, status) {
 /**
  * 图片点击放大
  */
-
 $('body').on('click', '#img', function () {
     $(this).toggleClass('min');
     $(this).toggleClass('max');
@@ -470,7 +507,16 @@ function onlyNumber(obj) {
 
 }
 
-// 产品分库添加数据
+/**
+ * 产品分库添加数据
+ * @param ids
+ * @param prices
+ * @param stocks
+ * @param sales
+ * @param url
+ * @param id
+ * @param jumpUrl
+ */
 function productSubWarehouseSubmit(ids, prices, stocks, sales, url, id, jumpUrl) {
 
     $.ajaxSetup({

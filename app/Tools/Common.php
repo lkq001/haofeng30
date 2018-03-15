@@ -544,4 +544,38 @@ class Common
         return false;
     }
 
+    /**
+     * 图片上传
+     *
+     * @param $request
+     * @param string $imageName
+     * @param string $filePath
+     * @return bool|string
+     * author 李克勤
+     */
+    public static function upload($request, $imageName = 'thumb', $filePath = 'upload')
+    {
+        $file = $request->file($imageName);
+
+        $allowed_extensions = ["png", "jpg", "gif", 'jpeg'];
+        if ($file->getClientOriginalExtension() && !in_array($file->getClientOriginalExtension(), $allowed_extensions)) {
+            return false;
+        }
+
+        $destinationPath = $filePath . '/' . date('Ymd', time()); //public 文件夹下面建 $filePath / 时间目录 文件夹
+
+        // 组装名称
+        $fileCreatedName = md5($file->getClientOriginalName() . '/' . time());
+
+        // 后缀,图片格式
+        $extension = $file->getClientOriginalExtension();
+
+        $fileName = $fileCreatedName . '.' . $extension;
+
+        if ($file->move($destinationPath, $fileName)) {
+            return $fileName;
+        }
+        return false;
+    }
+
 }

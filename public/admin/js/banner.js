@@ -13,12 +13,14 @@ $(function () {
             }
 
         },
+
         onkeyup: false,
         focusCleanup: true,
         success: "valid",
         submitHandler: function (form) {
             // 获取提交数据
             var data = $(form).serializeArray();
+
             // 获取提交路径
             var url = $(form).attr('action');
             // 获取提交方式
@@ -50,17 +52,8 @@ $(function () {
         var id = that.attr('data-id');
         // 获取提交路径
         var url = that.attr('data-url');
-        // 获取修改信息
-        var info = editInfo(id, url);
 
-        // 数据指定
-        $("#editModel input[name='id']").val(info.id);
-        $("#editModel input[name='name']").val(info.name);
-        $("#editModel").find("option[value = '" + info.pid + "']").attr("selected", "selected");
-        $("#editModel input[name='route']").val(info.route);
-        $("#editModel input[name='route_alias']").val(info.route_alias);
-        $("#editModel input[name='icon']").val(info.icon);
-        $('#editModel').modal('show');
+        window.location.href = url + '?id=' + id;
     });
 
     // 修改排序

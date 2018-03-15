@@ -26,4 +26,6 @@ return [
     // 产品图片
     'product_thumb' => env('PRODUCT_THUMB'),
     'card_thumb' => env('CARD_THUMB'),
+    // 图片地址
+    'thumb_image' => env('THUMB_IMAGE'),
 ];

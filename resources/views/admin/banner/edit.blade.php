@@ -1,32 +1,42 @@
-<div class="modal fade" id="editModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title" id="myModalLabel">修改仓库</h4>
-            </div>
+@extends('admin.layouts.master')
+@section('title', '幻灯片产品')
 
-
-            <form method="post" class="form form-horizontal" id="form-category-edit"
-                  action="{{ route('admin.warehouse.update') }}">
+@section('content')
+    <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
+        <span class="c-gray en">&gt;</span>
+        幻灯片管理
+        <span class="c-gray en">&gt;</span>
+        修改
+        <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px"
+           href="javascript:location.replace(location.href);" title="刷新"><i class="Hui-iconfont">&#xe68f;</i></a>
+    </nav>
+    <div class="Hui-article">
+        <div class="page-container">
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    <div class="Huialert Huialert-danger text-c"><i class="Hui-iconfont">&#xe6a6;</i>{{ $error }}</div>
+                @endforeach
+            @endif
+            <form method="post" class="form form-horizontal"
+                  action="{{ route('admin.banner.update') }}" enctype="multipart/form-data">
                 {{ csrf_field() }}
-                <input type="hidden" name="id" value="" />
+                <input type="hidden" name="id" value="{{ $info->id }}">
                 <div class="modal-body">
                     <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>仓库名称：</label>
+                        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>幻灯片名称：</label>
                         <div class="formControls col-xs-8 col-sm-8">
-                            <input type="text" class="input-text" value="" placeholder="" id="name" name="name">
+                            <input type="text" class="input-text" value=" {{  old('name') ?? $info->name }} " placeholder="" id="name" name="name">
                         </div>
                     </div>
+
                     <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>上级栏目：</label>
+                        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>所属分类栏目：</label>
                         <div class="formControls col-xs-8 col-sm-8">
                             <span class="select-box">
                                 <select name="pid" class="select">
-                                    <option value="0">顶级分类</option>
-                                    @if($warehouseLists[0])
-                                        @foreach($warehouseLists[0] as $key => $value)
-                                            <option value="{{ $value->id }}">{{ $value->name }}</option>
+                                    @if(isset($bannerCategoryLists) && collect($bannerCategoryLists)->count() > 0)
+                                        @foreach($bannerCategoryLists as $key => $value)
+                                            <option @if((old('pid')  ?? $info->pid)  == $value->id ) selected @endif value="{{ $value->id }}">{{ $value->name }}</option>
                                         @endforeach
                                     @endif
                                 </select>
@@ -34,14 +44,38 @@
                         </div>
                     </div>
 
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>图片：</label>
+                        <div class="formControls col-xs-8 col-sm-8">
+                            <input type="file" name="thumb"/>
+                        </div>
+                    </div>
+
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-3">指向链接：</label>
+                        <div class="formControls col-xs-8 col-sm-8">
+                            <input type="text" class="input-text" value="http://" placeholder="{{ old('url')  ?? $info->url}}" id="" name="url">
+                        </div>
+                    </div>
+
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-3">栏目排序：</label>
+                        <div class="formControls col-xs-8 col-sm-8">
+                            <input type="text" class="input-text" value="{{ old('order_by') ?? $info->order_by }}" placeholder="" id="" name="order_by">
+                        </div>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <a href="{{ route('admin.banner.index') }}" class="btn btn-default">返回列表</a>
                     <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
                 </div>
             </form>
+        </div>
+    </div>
+@endsection
+@section('javascript')
 
+    <script type="text/javascript" src="{{ asset('/admin/js/banner.js') }}"></script>
 
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal -->
-</div>
+@endsection

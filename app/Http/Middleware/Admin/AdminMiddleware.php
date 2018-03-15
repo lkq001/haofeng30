@@ -85,7 +85,7 @@ class AdminMiddleware
             $path = $request->path();
 
             // 获取栏目信息
-            $category = Category::where('status', 1)->orderBy('order_by', 'desc')->get()->groupBy('pid');
+            $category = Category::orderBy('order_by', 'desc')->get()->groupBy('pid');
 
             $request->session()->put('global_nav', $category);
 

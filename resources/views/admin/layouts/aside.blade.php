@@ -14,8 +14,10 @@
                                 <ul>
                                     @foreach(session('global_nav')[$v->id] as $key => $val)
                                         <li @if( Request::path() == $val->route) id="open" @endif>
-                                            <a href="{{ route( $val->route_alias ) }}"
-                                               data-title="{{ $val->name }}">{{ $val->name }}</a>
+                                            @if($val->status == 1)
+                                                <a href="{{ route( $val->route_alias ) }}"
+                                                   data-title="{{ $val->name }}">{{ $val->name }}</a>
+                                            @endif
                                         </li>
 
                                     @endforeach
