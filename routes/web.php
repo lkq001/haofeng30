@@ -452,30 +452,36 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
     /**
      * 绿色主张
      */
-    Route::group(['prefix' => '/green/advocate'], function () {
+    Route::group(['prefix' => '/article'], function () {
         // 数据列表
-        Route::get('/index', 'GreenAdvocateController@index')->name('admin.green.advocate.index');
+        Route::get('/index', 'ArticleController@index')->name('admin.article.index');
         // 添加页面
-        Route::get('/add', 'GreenAdvocateController@add')->name('admin.green.advocate.add');
+        Route::get('/add', 'ArticleController@add')->name('admin.article.add');
         // 添加数据
-        Route::post('/store', 'GreenAdvocateController@store')->name('admin.green.advocate.store');
+        Route::post('/store', 'ArticleController@store')->name('admin.article.store');
         // 查询指定ID数据(id)
-        Route::get('/edit', 'GreenAdvocateController@edit')->name('admin.green.advocate.edit');
+        Route::get('/edit', 'ArticleController@edit')->name('admin.article.edit');
         // 修改数据(id)
-        Route::post('/update', 'GreenAdvocateController@update')->name('admin.green.advocate.update');
+        Route::post('/update', 'ArticleController@update')->name('admin.article.update');
         // 删除数据(id)
-        Route::delete('/destroy', 'GreenAdvocateController@destroy')->name('admin.green.advocate.destroy');
+        Route::delete('/destroy', 'ArticleController@destroy')->name('admin.article.destroy');
         // 批量删除
-        Route::delete('/destroys', 'GreenAdvocateController@destroys')->name('admin.green.advocate.destroys');
+        Route::delete('/destroys', 'ArticleController@destroys')->name('admin.article.destroys');
         // 修改状态
-        Route::post('/status/all', 'GreenAdvocateController@statusAll')->name('admin.green.advocate.status.all');
+        Route::post('/status/all', 'ArticleController@statusAll')->name('admin.article.status.all');
         // 批量修改状态
-        Route::post('/status', 'GreenAdvocateController@status')->name('admin.green.advocate.status');
+        Route::post('/status', 'ArticleController@status')->name('admin.article.status');
         // 修改排序
-        Route::post('/order', 'GreenAdvocateController@order')->name('admin.green.advocate.order');
+        Route::post('/order', 'ArticleController@order')->name('admin.article.order');
+
+        Route::post('/upload', 'ArticleController@postUpload')->name('admin.article.upload');
+
+        Route::post('/crop', 'ArticleController@postCrop')->name('admin.article.crop');
+
     });
 
     Route::get('/role/index', 'RoleController@index')->name('admin.role.index');
+
 
 });
 

@@ -28,4 +28,5 @@ return [
     'card_thumb' => env('CARD_THUMB'),
     // 图片地址
     'thumb_image' => env('THUMB_IMAGE'),
+    'article_image' => env('THUMB_IMAGE') . '/article/',
 ];

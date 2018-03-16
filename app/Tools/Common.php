@@ -578,4 +578,32 @@ class Common
         return false;
     }
 
+    /**
+     * 单图片上传
+     *
+     * @param $thumb
+     * @param $thumbPath
+     * @return bool|string
+     * author 李克勤
+     */
+    public static function thumb($thumb, $thumbPath)
+    {
+        $img = str_replace('data:image/png;base64,', '', $thumb);
+        $img = str_replace(' ', '+', $img);
+        $data = base64_decode($img);
+        $day = date("Ymd", time());
+        $file_name = mt_rand(1000000000000000, 9999999999999999);
+        if (!is_dir($thumbPath . '/' . $day)) {
+            mkdir($thumbPath . '/' . $day);
+        }
+        $file = $thumbPath . '/' . $day . "/" . $file_name . '.png';
+
+        $success = file_put_contents($file, $data);
+
+        if ($success) {
+            return $file;
+        }
+        return false;
+    }
+
 }
