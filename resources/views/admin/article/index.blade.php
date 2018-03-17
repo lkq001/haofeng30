@@ -26,7 +26,7 @@
             </div>
             <div class="cl pd-5 bg-1 bk-gray mt-20">
                 <span class="l">
-                    <a href="{{ route('admin.article.add') }}" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i>添加栏目</a>
+                    <a href="{{ route('admin.article.add') }}" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i>添加文章</a>
                 </span>
                 </span>
                 {{--<span class="r">共有数据：<strong>{{ $count ? $count : 0 }}</strong> 条</span>--}}

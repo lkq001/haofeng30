@@ -480,6 +480,130 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
 
     });
 
+    /**
+     * 吃货口碑
+     */
+    Route::group(['prefix' => '/reputation'], function () {
+        // 数据列表
+        Route::get('/index', 'ReputationController@index')->name('admin.reputation.index');
+        // 添加页面
+        Route::get('/add', 'ReputationController@add')->name('admin.reputation.add');
+        // 添加数据
+        Route::post('/store', 'ReputationController@store')->name('admin.reputation.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'ReputationController@edit')->name('admin.reputation.edit');
+        // 修改数据(id)
+        Route::post('/update', 'ReputationController@update')->name('admin.reputation.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'ReputationController@destroy')->name('admin.reputation.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'ReputationController@destroys')->name('admin.reputation.destroys');
+        // 修改状态
+        Route::post('/status/all', 'ReputationController@statusAll')->name('admin.reputation.status.all');
+        // 批量修改状态
+        Route::post('/status', 'ReputationController@status')->name('admin.reputation.status');
+        // 修改排序
+        Route::post('/order', 'ReputationController@order')->name('admin.reputation.order');
+
+        Route::post('/upload', 'ReputationController@postUpload')->name('admin.reputation.upload');
+
+        Route::post('/crop', 'ReputationController@postCrop')->name('admin.reputation.crop');
+
+    });
+
+    /**
+     * 评价管理
+     */
+    Route::group(['prefix' => '/assess'], function () {
+        // 数据列表
+        Route::get('/index', 'AssessController@index')->name('admin.assess.index');
+        // 添加页面
+        Route::get('/add', 'AssessController@add')->name('admin.assess.add');
+        // 添加数据
+        Route::post('/store', 'AssessController@store')->name('admin.assess.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'AssessController@edit')->name('admin.assess.edit');
+        // 修改数据(id)
+        Route::post('/update', 'AssessController@update')->name('admin.assess.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'AssessController@destroy')->name('admin.assess.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'AssessController@destroys')->name('admin.assess.destroys');
+        // 修改状态
+        Route::post('/status/all', 'AssessController@statusAll')->name('admin.assess.status.all');
+        // 批量修改状态
+        Route::post('/status', 'AssessController@status')->name('admin.assess.status');
+        // 修改排序
+        Route::post('/order', 'AssessController@order')->name('admin.assess.order');
+
+        Route::post('/upload', 'AssessController@postUpload')->name('admin.assess.upload');
+
+        Route::post('/crop', 'AssessController@postCrop')->name('admin.assess.crop');
+
+    });
+
+    /**
+     * 视频管理
+     */
+    Route::group(['prefix' => '/video'], function () {
+        // 数据列表
+        Route::get('/index', 'VideoController@index')->name('admin.video.index');
+        // 添加页面
+        Route::get('/add', 'VideoController@add')->name('admin.video.add');
+        // 添加数据
+        Route::post('/store', 'VideoController@store')->name('admin.video.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'VideoController@edit')->name('admin.video.edit');
+        // 修改数据(id)
+        Route::post('/update', 'VideoController@update')->name('admin.video.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'VideoController@destroy')->name('admin.video.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'VideoController@destroys')->name('admin.video.destroys');
+        // 修改状态
+        Route::post('/status/all', 'VideoController@statusAll')->name('admin.video.status.all');
+        // 批量修改状态
+        Route::post('/status', 'VideoController@status')->name('admin.video.status');
+        // 修改排序
+        Route::post('/order', 'VideoController@order')->name('admin.video.order');
+
+        Route::post('/upload', 'VideoController@postUpload')->name('admin.video.upload');
+
+        Route::post('/crop', 'VideoController@postCrop')->name('admin.video.crop');
+
+    });
+
+    /**
+     * 动图管理
+     */
+    Route::group(['prefix' => '/gif'], function () {
+        // 数据列表
+        Route::get('/index', 'GifController@index')->name('admin.gif.index');
+        // 添加页面
+        Route::get('/add', 'GifController@add')->name('admin.gif.add');
+        // 添加数据
+        Route::post('/store', 'GifController@store')->name('admin.gif.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'GifController@edit')->name('admin.gif.edit');
+        // 修改数据(id)
+        Route::post('/update', 'GifController@update')->name('admin.gif.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'GifController@destroy')->name('admin.gif.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'GifController@destroys')->name('admin.gif.destroys');
+        // 修改状态
+        Route::post('/status/all', 'GifController@statusAll')->name('admin.gif.status.all');
+        // 批量修改状态
+        Route::post('/status', 'GifController@status')->name('admin.gif.status');
+        // 修改排序
+        Route::post('/order', 'GifController@order')->name('admin.gif.order');
+
+        Route::post('/upload', 'GifController@postUpload')->name('admin.gif.upload');
+
+        Route::post('/crop', 'GifController@postCrop')->name('admin.gif.crop');
+
+    });
+
     Route::get('/role/index', 'RoleController@index')->name('admin.role.index');
 
 

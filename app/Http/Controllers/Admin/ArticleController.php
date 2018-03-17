@@ -97,17 +97,16 @@ class ArticleController extends Controller
             $data['content'] = $request->editorValue;
             unset($data['editorValue']);
         }
-//        dd($data);
+
         // 保存数据
         $result = self::$articleStore->store($data);
 
         if ($result) {
-            return redirect()->back()->withErrors('添加成功')->withInput();
+            return redirect()->back()->with('添加成功');
         };
 
         return redirect()->back()->withErrors('添加失败')->withInput();
 
-        dd($request->all());
     }
 
     /**
