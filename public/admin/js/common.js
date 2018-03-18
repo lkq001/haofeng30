@@ -324,6 +324,50 @@ function updateSubmit(data, url, type) {
 }
 
 /**
+ *  数据修改(跳转首页)
+ * @param data
+ * @param url
+ * @param type
+ * @param jumpUrl
+ */
+function updateToSubmit(data, url, type, jumpUrl) {
+    // 声明数组,存储提交数据
+    var typeData = {};
+    $.each(data, function (k, v) {
+        typeData[this.name] = this.value
+    });
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $.ajax({
+        url: url,
+        data: typeData,
+        type: type,
+        success: function (res) {
+            console.log(res);
+            if (res.code == 'SN200') {
+                layer.alert('修改成功,点击确定跳转到列表页!', {
+                    closeBtn: 0
+                }, function () {
+                    window.location.href = jumpUrl;
+                });
+
+            } else {
+                layer.msg(res.message, {icon: 2, time: 1500});
+            }
+        },
+        error: function (res) {
+            layer.msg('修改数据失败!', {icon: 2, time: 1500});
+            return false;
+        }
+    });
+}
+
+/**
  * 数据删除
  * @param id
  * @param url
@@ -615,4 +659,11 @@ function windowHref(url, id) {
             return false;
         }
     });
+}
+
+// 单图片上传
+function uploadThumb() {
+    // 单图片上传
+    var urlUpload = $('input[name=upload_url]').val();
+    $("#up-btn-ok").attr('url', urlUpload)
 }
