@@ -1,6 +1,5 @@
 <?php
-
-use App\Store;
+namespace App\Store;
 
 class BaseStore
 {
@@ -16,5 +15,7 @@ class BaseStore
     {
         self::$db = app('db');
     }
+
+
 
 }

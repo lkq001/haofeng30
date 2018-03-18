@@ -248,6 +248,7 @@ return [
         'status'                =>  '状态',
         'number'                =>  '次数',
         'cn_phone'              =>  '手机号码',
-        'uuid'                  =>  '用户编码'
+        'uuid'                  =>  '用户编码',
+        'editorValue'             =>  '内容'
     ],
 ];

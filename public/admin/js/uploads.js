@@ -491,17 +491,17 @@ $(function () {
         var stats;
         switch (type) {
             case 'uploadFinished':
-                console.log(1);
+
                 setState('confirm');
                 break;
 
             case 'startUpload':
-                console.log(2);
+
                 setState('uploading');
                 break;
 
             case 'stopUpload':
-                console.log(3);
+
                 setState('paused');
                 break;
 
@@ -512,7 +512,7 @@ $(function () {
 
         var uploadLists = $("#uploadOld").val();
 
-        if (uploadLists.length > 2) {
+        if (uploadLists &&  (uploadLists.length) > 2) {
 
             $statusBar.show(); //显示新增和上传按钮
             setState('ready'); //重置上传按钮状态

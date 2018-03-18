@@ -292,9 +292,9 @@ class ProductWarehouseController extends Controller
         $result = self::$productWarehouseService->update($request->id, $data);
 
         if ($result) {
-            return response()->json(['code' => 'SN200', 'message' => '添加成功']);
+            return response()->json(['code' => 'SN200', 'message' => '修改成功']);
         }
-        return response()->json(['code' => 'SN201', 'message' => '添加失败']);
+        return response()->json(['code' => 'SN201', 'message' => '修改失败']);
     }
 
     /**

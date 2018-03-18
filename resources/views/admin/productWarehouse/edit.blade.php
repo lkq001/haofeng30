@@ -84,7 +84,7 @@
                 <div class="row cl">
                     <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>商品图片：</label>
                     <div class="formControls col-xs-8 col-sm-9">
-                        <input type="hidden" id="uploadOld" value="{{  $productWarehouse->getHasMany }}"/>
+                        <input type="hidden" id="uploadOld" value="{{ $productWarehouse->getHasMany }}"/>
                         <div class="uploader-list-container">
                             <div class="queueList">
                                 <div id="dndArea" class="placeholder">
