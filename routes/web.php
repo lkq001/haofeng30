@@ -604,6 +604,37 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
 
     });
 
+    /**
+     * 限时抢购
+     */
+    Route::group(['prefix' => '/limit/buy'], function () {
+        // 数据列表
+        Route::get('/index', 'LimitBuyController@index')->name('admin.limit.buy.index');
+        // 添加页面
+        Route::get('/add', 'LimitBuyController@add')->name('admin.limit.buy.add');
+        // 添加数据
+        Route::post('/store', 'LimitBuyController@store')->name('admin.limit.buy.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'LimitBuyController@edit')->name('admin.limit.buy.edit');
+        // 修改数据(id)
+        Route::post('/update', 'LimitBuyController@update')->name('admin.limit.buy.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'LimitBuyController@destroy')->name('admin.limit.buy.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'LimitBuyController@destroys')->name('admin.limit.buy.destroys');
+        // 修改状态
+        Route::post('/status/all', 'LimitBuyController@statusAll')->name('admin.limit.buy.status.all');
+        // 批量修改状态
+        Route::post('/status', 'LimitBuyController@status')->name('admin.limit.buy.status');
+        // 修改排序
+        Route::post('/order', 'LimitBuyController@order')->name('admin.limit.buy.order');
+
+        Route::post('/upload', 'LimitBuyController@postUpload')->name('admin.limit.buy.upload');
+
+        Route::post('/crop', 'LimitBuyController@postCrop')->name('admin.limit.buy.crop');
+
+    });
+
     Route::get('/role/index', 'RoleController@index')->name('admin.role.index');
 
 
