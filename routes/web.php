@@ -616,6 +616,8 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/store', 'LimitBuyController@store')->name('admin.limit.buy.store');
         // 查询指定ID数据(id)
         Route::get('/edit', 'LimitBuyController@edit')->name('admin.limit.buy.edit');
+        // 查询一条数据
+        Route::get('/show', 'LimitBuyController@show')->name('admin.limit.buy.show');
         // 修改数据(id)
         Route::post('/update', 'LimitBuyController@update')->name('admin.limit.buy.update');
         // 删除数据(id)
@@ -632,6 +634,40 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/upload', 'LimitBuyController@postUpload')->name('admin.limit.buy.upload');
 
         Route::post('/crop', 'LimitBuyController@postCrop')->name('admin.limit.buy.crop');
+
+    });
+
+
+    /**
+     * 限时抢购
+     */
+    Route::group(['prefix' => '/teamwork'], function () {
+        // 数据列表
+        Route::get('/index', 'TeamworkController@index')->name('admin.teamwork.index');
+        // 添加页面
+        Route::get('/add', 'TeamworkController@add')->name('admin.teamwork.add');
+        // 添加数据
+        Route::post('/store', 'TeamworkController@store')->name('admin.teamwork.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'TeamworkController@edit')->name('admin.teamwork.edit');
+        // 查询一条数据
+        Route::get('/show', 'TeamworkController@show')->name('admin.teamwork.show');
+        // 修改数据(id)
+        Route::post('/update', 'TeamworkController@update')->name('admin.teamwork.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'TeamworkController@destroy')->name('admin.teamwork.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'TeamworkController@destroys')->name('admin.teamwork.destroys');
+        // 修改状态
+        Route::post('/status/all', 'TeamworkController@statusAll')->name('admin.teamwork.status.all');
+        // 批量修改状态
+        Route::post('/status', 'TeamworkController@status')->name('admin.teamwork.status');
+        // 修改排序
+        Route::post('/order', 'TeamworkController@order')->name('admin.teamwork.order');
+
+        Route::post('/upload', 'TeamworkController@postUpload')->name('admin.teamwork.upload');
+
+        Route::post('/crop', 'TeamworkController@postCrop')->name('admin.teamwork.crop');
 
     });
 

@@ -249,6 +249,8 @@ return [
         'number'                =>  '次数',
         'cn_phone'              =>  '手机号码',
         'uuid'                  =>  '用户编码',
-        'editorValue'             =>  '内容'
+        'editorValue'           =>  '内容',
+        'old_price'             =>  '旧价格',
+        'people_number'         =>  '人数'
     ],
 ];

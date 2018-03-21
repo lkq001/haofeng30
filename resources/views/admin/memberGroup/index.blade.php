@@ -46,29 +46,34 @@
                                 @endif
                             </td>
                             <td class="f-14">
-                                <button id="editShowModel" class="btn btn-success size-S radius" data-id="{{ $v->id }}"
-                                        data-url="{{ route('admin.member.group.edit') }}">编辑
-                                </button>
+                                @if($v->id != 1)
+                                    <button id="editShowModel" class="btn btn-success size-S radius"
+                                            data-id="{{ $v->id }}"
+                                            data-url="{{ route('admin.member.group.edit') }}">编辑
+                                    </button>
+                                @endif
                                 <button id="productShowModel" class="btn btn-success size-S radius"
                                         data-id="{{ $v->id }}"
                                         data-url="{{ route('admin.member.group.product.list') }}">产品配置
                                 </button>
-                                @if($v->status == 1)
-                                    <button id="changeStatus" class="btn btn-warning size-S radius"
-                                            data-id="{{ $v->id }}"
-                                            data-url="{{ route('admin.member.group.status') }}"
-                                            data-status="{{ $v->status }}">禁用
+                                @if($v->id != 1)
+                                    @if($v->status == 1)
+                                        <button id="changeStatus" class="btn btn-warning size-S radius"
+                                                data-id="{{ $v->id }}"
+                                                data-url="{{ route('admin.member.group.status') }}"
+                                                data-status="{{ $v->status }}">禁用
+                                        </button>
+                                    @elseif($v->status == 2)
+                                        <button id="changeStatus" class="btn btn-secondary size-S radius"
+                                                data-id="{{ $v->id }}"
+                                                data-url="{{ route('admin.member.group.status') }}"
+                                                data-status="{{ $v->status }}">启用
+                                        </button>
+                                    @endif
+                                    <button id="destroy" class="btn btn-danger size-S radius" data-id="{{ $v->id }}"
+                                            data-url="{{ route('admin.member.group.destroy') }}">删除
                                     </button>
-                                @elseif($v->status == 2)
-                                    <button id="changeStatus" class="btn btn-secondary size-S radius"
-                                            data-id="{{ $v->id }}"
-                                            data-url="{{ route('admin.member.group.status') }}"
-                                            data-status="{{ $v->status }}">启用
-                                    </button>
-                                @endif
-                                <button id="destroy" class="btn btn-danger size-S radius" data-id="{{ $v->id }}"
-                                        data-url="{{ route('admin.member.group.destroy') }}">删除
-                                </button>
+                            @endif
                         </tr>
                     @endforeach
                 @endif

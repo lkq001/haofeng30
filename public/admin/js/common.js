@@ -74,6 +74,7 @@ function statusSubmit(id, url, status, that, textMessage) {
         var changeMessage = '操作';
     }
 
+
     layer.confirm('确认要' + changeMessage + '吗？', function (index) {
         $.ajaxSetup({
             headers: {
@@ -96,6 +97,54 @@ function statusSubmit(id, url, status, that, textMessage) {
                     that.attr('data-status', statusCode);
                     that.attr('class', statusClass);
                     that.html(changeMessageChange);
+
+                    layer.msg('已' + changeMessage + '!', {icon: 1, time: 1500});
+                } else {
+                    layer.msg(res.message, {icon: 2, time: 1500});
+                    return false;
+                }
+            },
+            error: function (res) {
+                layer.msg(res.message, {icon: 2, time: 1500});
+                return false;
+            }
+        });
+    });
+
+}
+
+// 状态修改
+function statusActiveSubmit(id, url, status, that, textMessage) {
+
+    if (status == 1) {
+        var changeMessage = '结束';
+    } else if (status == 2) {
+        var changeMessage = '开始';
+    } else {
+        var changeMessage = '操作';
+    }
+
+
+    layer.confirm('确认要' + changeMessage + '吗？', function (index) {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
+        $.ajax({
+            url: url,
+            data: {'id': id, 'status': status},
+            type: 'POST',
+            success: function (res) {
+                console.log(res);
+                if (res.code == 'SN200') {
+
+                    if (textMessage) {
+                        that.parent().prev().html('已' + changeMessage);
+                    }
+
+                    that.remove();
 
                     layer.msg('已' + changeMessage + '!', {icon: 1, time: 1500});
                 } else {
@@ -179,6 +228,38 @@ function statusProductSubmit(id, url, status, that, textMessage) {
  * @returns {number}
  */
 function editInfo(id, url) {
+    var resultData = 1;
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $.ajax({
+        url: url,
+        data: {'id': id},
+        type: 'GET',
+        async: false,
+        success: function (res) {
+            console.log(res);
+            if (res.code == 'SN200') {
+                resultData = res.data;
+            } else {
+                layer.msg(res.message, {icon: 2, time: 1500});
+                return false;
+            }
+        },
+        error: function (res) {
+            layer.msg(res.message, {icon: 2, time: 1500});
+            return false;
+        }
+    });
+
+    return resultData;
+}
+
+// 获取数据
+function showInfo(id, url) {
     var resultData = 1;
     $.ajaxSetup({
         headers: {

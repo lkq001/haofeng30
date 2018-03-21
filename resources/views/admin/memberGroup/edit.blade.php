@@ -19,6 +19,24 @@
                         </div>
                     </div>
 
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>产品分库：</label>
+                        <div class="formControls col-xs-8 col-sm-8">
+                            <span class="select-box">
+                                <select name="pid" class="select">
+
+                                    @if($productSubWarehouseLists)
+                                        @foreach($productSubWarehouseLists as $key => $value)
+                                            <option value="{{ $value->id }}">{{ $value->name }}</option>
+                                        @endforeach
+                                    @else
+                                        <option value="">暂无分库,请添加</option>
+                                    @endif
+                                </select>
+                            </span>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
