@@ -476,8 +476,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
 
         Route::post('/upload', 'ArticleController@postUpload')->name('admin.article.upload');
 
-        Route::post('/crop', 'ArticleController@postCrop')->name('admin.article.crop');
-
     });
 
     /**
@@ -506,8 +504,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/order', 'ReputationController@order')->name('admin.reputation.order');
 
         Route::post('/upload', 'ReputationController@postUpload')->name('admin.reputation.upload');
-
-        Route::post('/crop', 'ReputationController@postCrop')->name('admin.reputation.crop');
 
     });
 
@@ -538,8 +534,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
 
         Route::post('/upload', 'AssessController@postUpload')->name('admin.assess.upload');
 
-        Route::post('/crop', 'AssessController@postCrop')->name('admin.assess.crop');
-
     });
 
     /**
@@ -569,8 +563,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
 
         Route::post('/upload', 'VideoController@postUpload')->name('admin.video.upload');
 
-        Route::post('/crop', 'VideoController@postCrop')->name('admin.video.crop');
-
     });
 
     /**
@@ -599,8 +591,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/order', 'GifController@order')->name('admin.gif.order');
 
         Route::post('/upload', 'GifController@postUpload')->name('admin.gif.upload');
-
-        Route::post('/crop', 'GifController@postCrop')->name('admin.gif.crop');
 
     });
 
@@ -632,9 +622,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/order', 'LimitBuyController@order')->name('admin.limit.buy.order');
 
         Route::post('/upload', 'LimitBuyController@postUpload')->name('admin.limit.buy.upload');
-
-        Route::post('/crop', 'LimitBuyController@postCrop')->name('admin.limit.buy.crop');
-
     });
 
 
@@ -666,8 +653,69 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
         Route::post('/order', 'TeamworkController@order')->name('admin.teamwork.order');
 
         Route::post('/upload', 'TeamworkController@postUpload')->name('admin.teamwork.upload');
+    });
 
-        Route::post('/crop', 'TeamworkController@postCrop')->name('admin.teamwork.crop');
+    /**
+     * C端订单管理
+     */
+    Route::group(['prefix' => '/c/order'], function () {
+        // 数据列表
+        Route::get('/index', 'CorderController@index')->name('admin.c.order.index');
+        // 添加页面
+        Route::get('/add', 'CorderController@add')->name('admin.c.order.add');
+        // 添加数据
+        Route::post('/store', 'CorderController@store')->name('admin.c.order.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'CorderController@edit')->name('admin.c.order.edit');
+        // 查询一条数据
+        Route::get('/show', 'CorderController@show')->name('admin.c.order.show');
+        // 修改数据(id)
+        Route::post('/update', 'CorderController@update')->name('admin.c.order.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'CorderController@destroy')->name('admin.c.order.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'CorderController@destroys')->name('admin.c.order.destroys');
+        // 修改状态
+        Route::post('/status/all', 'CorderController@statusAll')->name('admin.c.order.status.all');
+        // 批量修改状态
+        Route::post('/status', 'CorderController@status')->name('admin.c.order.status');
+        // 修改排序
+        Route::post('/order', 'CorderController@order')->name('admin.c.order.order');
+
+        Route::post('/upload', 'CorderController@postUpload')->name('admin.c.order.upload');
+
+    });
+
+    /**
+     * 优惠券管理
+     */
+    Route::group(['prefix' => '/coupon'], function () {
+        // 数据列表
+        Route::get('/index', 'CouponController@index')->name('admin.coupon.index');
+        // 添加页面
+        Route::get('/add', 'CouponController@add')->name('admin.coupon.add');
+        // 添加数据
+        Route::post('/store', 'CouponController@store')->name('admin.coupon.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'CouponController@edit')->name('admin.coupon.edit');
+        // 查询一条数据
+        Route::get('/show', 'CouponController@show')->name('admin.coupon.show');
+        // 修改数据(id)
+        Route::post('/update', 'CouponController@update')->name('admin.coupon.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'CouponController@destroy')->name('admin.coupon.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'CouponController@destroys')->name('admin.coupon.destroys');
+        // 修改状态
+        Route::post('/status/all', 'CouponController@statusAll')->name('admin.coupon.status.all');
+        // 批量修改状态
+        Route::post('/status', 'CouponController@status')->name('admin.coupon.status');
+        // 修改排序
+        Route::post('/order', 'CouponController@order')->name('admin.coupon.order');
+        // 单图片上传
+        Route::post('/upload', 'CouponController@postUpload')->name('admin.coupon.upload');
+        // 优惠券发放
+        Route::post('/issue', 'CouponController@issue')->name('admin.coupon.issue');
 
     });
 

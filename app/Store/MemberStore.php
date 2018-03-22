@@ -98,6 +98,14 @@ class MemberStore
         return self::$member->orderBy('order_by', 'DESC')->with(['getHasOneGroup'])->paginate($pageSize);
     }
 
+    public function getWhereIn($name = 'id', $where = [])
+    {
+        if (!empty($where)) {
+           return false;
+        }
+        return self::$member->orderBy('order_by', 'DESC')->whereIn($name, $where)->get();
+    }
+
     // 获取分页数据,按照指定字段
     public function getAllByDesc($where = [], $pageSize = 10, $desc = 'order_by', $descStatus, $paginate = 'page')
     {
