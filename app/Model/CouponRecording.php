@@ -12,4 +12,9 @@ class CouponRecording extends Model
     protected $primaryKey = 'id'; //主键
     protected $datas = ['deleted_at'];
 
+    public function getOneCoupon()
+    {
+        return $this->hasOne('App\Model\Coupon', 'id', 'coupon_id');
+    }
+
 }

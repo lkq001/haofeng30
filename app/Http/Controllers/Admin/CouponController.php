@@ -319,6 +319,11 @@ class CouponController extends Controller
         // 整理手机号
         $phones = (explode(",", $request->phones));
 
+        foreach( $phones as $k=>$v){
+            if( !$v )
+                unset( $phones[$k] );
+        }
+
         if (count($phones) < 1) {
             return response()->json(['code' => 'SN202', 'message' => '请输入手机号']);
         }

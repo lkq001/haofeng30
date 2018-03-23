@@ -38,10 +38,10 @@
                     @foreach($memberLists as $k => $v)
                         <tr class="text-c">
                             <td>{{ $v->id }}</td>
-                            <td class="text-l">{{ $v->name }}</td>
-                            <td>{{ $v->phone }}</td>
-                            <td class="text-l">{{ $v->username }}</td>
-                            <td>{{ $v->getHasOneGroup->name }}</td>
+                            <td class="text-l">{{ $v->name ?? ''  }}</td>
+                            <td>{{ $v->phone ?? ''  }}</td>
+                            <td class="text-l">{{ $v->username ?? '' }}</td>
+                            <td>{{ $v->getHasOneGroup->name ?? '' }}</td>
                             <td id="orderBy" data-id="{{ $v->id }}"
                                 data-url="{{ route('admin.member.order') }}"
                                 data-order="{{ $v->order_by }}">{{ $v->order_by }}</td>

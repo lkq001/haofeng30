@@ -87,6 +87,7 @@ class CouponService
                                 $membersCoupon[$j]['relief_price'] = $couponInfo->relief_price;
                                 $membersCoupon[$j]['buy_total'] = $couponInfo->buy_total;
                                 $membersCoupon[$j]['coupon_id'] = $couponInfo->id;
+                                $membersCoupon[$j]['coupon_name'] = $couponInfo->name;
                                 $membersCoupon[$j]['start_time'] = $couponInfo->start_time;
                                 $membersCoupon[$j]['end_time'] = $couponInfo->end_time;
                             }
@@ -96,6 +97,7 @@ class CouponService
                             $membersCoupon[$j]['relief_price'] = $couponInfo->relief_price;
                             $membersCoupon[$j]['buy_total'] = $couponInfo->buy_total;
                             $membersCoupon[$j]['coupon_id'] = $couponInfo->id;
+                            $membersCoupon[$j]['coupon_name'] = $couponInfo->name;
                             $membersCoupon[$j]['start_time'] = $couponInfo->start_time;
                             $membersCoupon[$j]['end_time'] = $couponInfo->end_time;
                         }

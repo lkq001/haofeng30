@@ -130,7 +130,7 @@ class MemberCouponStore
      */
     public function getAll($where = null, $pageSize = 10)
     {
-        return self::$memberCoupon->orderBy('order_by', 'DESC')->paginate($pageSize);
+        return self::$memberCoupon->orderBy('id', 'DESC')->with(['getOneMember'])->paginate($pageSize);
     }
 
     // 数量

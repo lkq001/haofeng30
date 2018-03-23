@@ -719,6 +719,27 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
 
     });
 
+    /**
+     * 优惠券发放记录
+     */
+    Route::group(['prefix' => '/coupon/recording'], function () {
+        // 数据列表
+        Route::get('/index', 'CouponRecordingController@index')->name('admin.coupon.recording.index');
+    });
+
+    /**
+     * 会员优惠券管理
+     */
+    Route::group(['prefix' => '/member/coupon'], function () {
+        // 数据列表
+        Route::get('/index', 'MemberCouponController@index')->name('admin.member.coupon.index');
+        // 删除数据(id)
+        Route::delete('/destroy', 'MemberCouponController@destroy')->name('admin.member.coupon.destroy');
+        // 修改状态
+        Route::post('/status', 'MemberCouponController@status')->name('admin.member.coupon.status');
+
+    });
+
     Route::get('/role/index', 'RoleController@index')->name('admin.role.index');
 
 

@@ -12,4 +12,8 @@ class MemberCoupon extends Model
     protected $primaryKey = 'id'; //主键
     protected $datas = ['deleted_at'];
 
+    public function getOneMember()
+    {
+        return $this->hasOne('App\Model\Member', 'uuid', 'uuid');
+    }
 }

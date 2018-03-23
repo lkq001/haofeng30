@@ -40,7 +40,7 @@ class MemberController extends Controller
 
         // 获取会员信息
         $memberLists = self::$memberStore->getAll([], config('config.page_size_l'));
-//        dd(collect($memberLists)->toArray());
+
         // 数量
         $count = self::$memberStore->count();
 

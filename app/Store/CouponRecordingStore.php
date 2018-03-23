@@ -122,7 +122,7 @@ class CouponRecordingStore
      */
     public function getAll($where = null, $pageSize = 10)
     {
-        return self::$couponRecording->orderBy('order_by', 'DESC')->with(['getOneArticleLists'])->paginate($pageSize);
+        return self::$couponRecording->orderBy('id', 'DESC')->with(['getOneCoupon'])->paginate($pageSize);
     }
 
     // 数量
