@@ -46,17 +46,17 @@
                         </div>
                     </div>
 
-                    {{--<div class="row cl">--}}
-                        {{--<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>优惠券分类：</label>--}}
-                        {{--<div class="formControls col-xs-8 col-sm-4">--}}
-                            {{--<span class="select-box">--}}
-                                {{--<select name="coupon_type" class="select">--}}
-                                    {{--<option value="1">满减劵</option>--}}
-                                    {{--<option value="2">满赠劵</option>--}}
-                                {{--</select>--}}
-                            {{--</span>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>优惠券分类：</label>
+                        <div class="formControls col-xs-8 col-sm-4">
+                            <span class="select-box">
+                                <select name="coupon_type" class="select">
+                                    <option value="1">满减劵</option>
+                                    <option value="2">满赠劵</option>
+                                </select>
+                            </span>
+                        </div>
+                    </div>
 
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>优惠券图片：</label>

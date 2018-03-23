@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e2c0058d-7924-4258-b6df-56745826ec93" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CouponController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CouponController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MemberController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MemberController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/CouponRecording.php" afterPath="$PROJECT_DIR$/app/Model/CouponRecording.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/MemberCoupon.php" afterPath="$PROJECT_DIR$/app/Model/MemberCoupon.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Service/CouponService.php" afterPath="$PROJECT_DIR$/app/Service/CouponService.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Store/CouponRecordingStore.php" afterPath="$PROJECT_DIR$/app/Store/CouponRecordingStore.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Store/MemberCouponStore.php" afterPath="$PROJECT_DIR$/app/Store/MemberCouponStore.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/common.css" afterPath="$PROJECT_DIR$/public/css/common.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/member/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/member/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/coupon/add.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/coupon/add.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/coupon/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/coupon/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,39 +21,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CouponController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CouponController.php">
+      <file leaf-file-name="add.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/coupon/add.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="311" column="11" lean-forward="true" selection-start-line="311" selection-start-column="11" selection-end-line="311" selection-end-column="11" />
-              <folding>
-                <element signature="e#46#76#0#PHP" expanded="true" />
-                <element signature="e#1104#1398#0#PHP" expanded="false" />
-                <element signature="e#1404#1478#0#PHP" expanded="false" />
-                <element signature="e#1484#1582#0#PHP" expanded="false" />
-                <element signature="e#1587#2725#0#PHP" expanded="false" />
-                <element signature="e#2731#2857#0#PHP" expanded="false" />
-                <element signature="e#2862#3226#0#PHP" expanded="false" />
-                <element signature="e#3232#3356#0#PHP" expanded="false" />
-                <element signature="e#3361#4391#0#PHP" expanded="false" />
-                <element signature="e#4397#4521#0#PHP" expanded="false" />
-                <element signature="e#4526#5371#0#PHP" expanded="false" />
-                <element signature="e#5377#5501#0#PHP" expanded="false" />
-                <element signature="e#5506#6420#0#PHP" expanded="false" />
-                <element signature="e#6426#6554#0#PHP" expanded="false" />
-                <element signature="e#6559#7216#0#PHP" expanded="false" />
-                <element signature="e#7222#7320#0#PHP" expanded="false" />
-                <element signature="e#7325#8300#0#PHP" expanded="false" />
-              </folding>
+            <state relative-caret-position="220">
+              <caret line="52" column="57" lean-forward="false" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="57" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/couponRecording/index.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/coupon/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+            <state relative-caret-position="354">
+              <caret line="71" column="37" lean-forward="true" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -184,11 +158,9 @@
         <option value="$PROJECT_DIR$/app/Model/Coupon.php" />
         <option value="$PROJECT_DIR$/public/admin/thumbJq/js/custom_up_img.js" />
         <option value="$PROJECT_DIR$/public/admin/js/assess.js" />
-        <option value="$PROJECT_DIR$/resources/views/admin/coupon/add.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/coupon/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Store/MemberStore.php" />
         <option value="$PROJECT_DIR$/app/Model/couponRecording.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/coupon/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/coupon/issue.blade.php" />
         <option value="$PROJECT_DIR$/app/Store/CouponStore.php" />
         <option value="$PROJECT_DIR$/public/admin/js/coupon.js" />
@@ -206,6 +178,8 @@
         <option value="$PROJECT_DIR$/resources/views/admin/memberCoupon/index.blade.php" />
         <option value="$PROJECT_DIR$/public/css/common.css" />
         <option value="$PROJECT_DIR$/resources/views/admin/couponRecording/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/coupon/add.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/coupon/index.blade.php" />
       </list>
     </option>
   </component>
@@ -275,13 +249,28 @@
             <path>
               <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
               <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
               <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
+              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
+              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="coupon" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -365,12 +354,12 @@
       <workItem from="1521174558285" duration="68285000" />
       <workItem from="1521610951742" duration="3189000" />
       <workItem from="1521624220666" duration="3000" />
-      <workItem from="1521630705815" duration="27048000" />
+      <workItem from="1521630705815" duration="27722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="446347000" />
+    <option name="totallyTimeSpent" value="447021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -462,14 +451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-609">
           <caret line="40" column="71" lean-forward="true" selection-start-line="40" selection-start-column="71" selection-end-line="40" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/coupon/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="128" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="149" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -705,14 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/coupon/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="94" column="66" lean-forward="false" selection-start-line="94" selection-start-column="66" selection-end-line="94" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/memberCoupon/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -837,6 +810,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="158" column="4" lean-forward="false" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/couponRecording/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CouponController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -863,18 +852,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/common.css">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/coupon/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="158" column="4" lean-forward="false" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="4" />
+        <state relative-caret-position="220">
+          <caret line="52" column="57" lean-forward="false" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/couponRecording/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/coupon/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        <state relative-caret-position="354">
+          <caret line="71" column="37" lean-forward="true" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
           <folding />
         </state>
       </provider>

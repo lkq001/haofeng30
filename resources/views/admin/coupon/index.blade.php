@@ -39,7 +39,8 @@
                     <thead>
                     <tr class="text-c">
                         <th width="80">ID</th>
-                        <th>文章名称</th>
+                        <th>优惠券名称</th>
+                        <th>优惠券类型</th>
                         <th>图片缩略图</th>
                         <th width="80">开启时间</th>
                         <th width="80">结束时间</th>
@@ -56,13 +57,12 @@
                                 <td>{{ $v->id }}</td>
                                 <td>{{ $v->name }}</td>
                                 <td>
-                                    <img src="{!! $v->thumb !!}" alt="" height="50px"/>
+                                    @if($v->coupon_type == 1)
+                                        满减卷
+                                    @else
+                                        满赠券
+                                    @endif
                                 </td>
-                                <td>{{ $v->start_time }}</td>
-                                <td>{{ $v->end_time }}</td>
-                                <td id="orderBy" data-id="{{ $v->id }}"
-                                    data-url="{{ route('admin.coupon.order') }}"
-                                    data-order="{{ $v->order_by }}">{{ $v->order_by }}</td>
                                 <td>
                                     @if($v->status == 1)
                                         已启用
@@ -70,6 +70,16 @@
                                         已禁用
                                     @endif
                                 </td>
+                                <td>
+                                    <img src="{!! $v->thumb !!}" alt="" height="50px"/>
+                                </td>
+                                <td>{{ $v->start_time }}</td>
+                                <td>{{ $v->end_time }}</td>
+                                <td id="orderBy" data-id="{{ $v->id }}"
+                                    data-url="{{ route('admin.coupon.order') }}"
+                                    data-order="{{ $v->order_by }}">{{ $v->order_by }}
+                                </td>
+
                                 <td class="f-14">
                                     <button id="editShowModel" class="btn btn-success size-S radius"
                                             data-id="{{ $v->id }}"
@@ -90,13 +100,13 @@
                                         </button>
 
                                     @endif
-
-                                    <button id="issueCoupon" class="btn btn-secondary size-S radius"
-                                            data-id="{{ $v->id }}"
-                                            data-url="{{ route('admin.coupon.issue') }}"
-                                            data-status="{{ $v->status }}">发放
-                                    </button>
-
+                                    @if($v->coupon_type == 1)
+                                        <button id="issueCoupon" class="btn btn-secondary size-S radius"
+                                                data-id="{{ $v->id }}"
+                                                data-url="{{ route('admin.coupon.issue') }}"
+                                                data-status="{{ $v->status }}">发放
+                                        </button>
+                                    @endif
                                     <button id="destroy" class="btn btn-danger size-S radius" data-id="{{ $v->id }}"
                                             data-url="{{ route('admin.coupon.destroy') }}">删除
                                     </button>
