@@ -11,4 +11,14 @@ class MemberGroupProduct extends Model
     protected $table = 'member_group_product'; //表名
     protected $primaryKey = 'id'; //主键
     protected $datas = ['deleted_at'];
+
+    public function getOneGroupProduct()
+    {
+        return $this->hasOne('App\Model\ProductWarehouse', 'id', 'product_warehouse_id');
+    }
+
+    public function getOneProductThumb()
+    {
+        return $this->hasOne('App\Model\ProductThumb', 'product_id', 'product_warehouse_id');
+    }
 }

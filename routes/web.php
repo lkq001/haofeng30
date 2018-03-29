@@ -740,6 +740,39 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
 
     });
 
+    /**
+     * 分销管理
+     */
+    Route::group(['prefix' => '/distribution'], function () {
+        // 数据列表
+        Route::get('/index', 'DistributionController@index')->name('admin.distribution.index');
+        // 添加页面
+        Route::get('/add', 'DistributionController@add')->name('admin.distribution.add');
+        // 添加数据
+        Route::post('/store', 'DistributionController@store')->name('admin.distribution.store');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'DistributionController@edit')->name('admin.distribution.edit');
+        // 查询一条数据
+        Route::get('/show', 'DistributionController@show')->name('admin.distribution.show');
+        // 修改数据(id)
+        Route::post('/update', 'DistributionController@update')->name('admin.distribution.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'DistributionController@destroy')->name('admin.distribution.destroy');
+        // 批量删除
+        Route::delete('/destroys', 'DistributionController@destroys')->name('admin.distribution.destroys');
+        // 修改状态
+        Route::post('/status/all', 'DistributionController@statusAll')->name('admin.distribution.status.all');
+        // 批量修改状态
+        Route::post('/status', 'DistributionController@status')->name('admin.distribution.status');
+        // 修改排序
+        Route::post('/order', 'DistributionController@order')->name('admin.distribution.order');
+        // 单图片上传
+        Route::post('/upload', 'DistributionController@postUpload')->name('admin.distribution.upload');
+        // 优惠券发放
+        Route::post('/issue', 'DistributionController@issue')->name('admin.distribution.issue');
+
+    });
+
     Route::get('/role/index', 'RoleController@index')->name('admin.role.index');
 
 

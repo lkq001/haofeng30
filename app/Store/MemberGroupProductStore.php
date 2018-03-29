@@ -39,15 +39,20 @@ class MemberGroupProductStore
      * 获取指定条件所有数据
      *
      * @param string $where
+     * @param int $pageSize
      * @return mixed
      * author 李克勤
      */
-    public function getAll($where = '')
+    public function getAll($where = '', $pageSize = 10)
     {
         if (empty($where)) {
-            return self::$memberGroupProduct->orderBy('order_by', 'DESC')->paginate(config('config.page_size_l'));
+            return self::$memberGroupProduct->orderBy('order_by', 'DESC')->with(['getOneGroupProduct', 'getOneProductThumb' => function ($query) {
+                $query->where('is_index', 1);
+            }])->paginate($pageSize);
         }
-        return self::$memberGroupProduct->where($where)->orderBy('order_by', 'DESC')->paginate(config('config.page_size_l'));
+        return self::$memberGroupProduct->where($where)->orderBy('order_by', 'DESC')->with(['getOneGroupProduct', 'getOneProductThumb' => function ($query) {
+            $query->where('is_index', 1);
+        }])->paginate($pageSize);
     }
 
     /**
