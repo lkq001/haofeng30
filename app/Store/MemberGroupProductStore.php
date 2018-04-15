@@ -189,4 +189,24 @@ class MemberGroupProductStore
         return self::$memberGroupProduct->whereIn('id', $ids)->save(['status' => $status]);
     }
 
+    /**
+     * api 接口 (每次10条)
+     *
+     * @param array $where
+     * @param int $pageSize
+     * @return mixed
+     * author 李克勤
+     */
+    public function getAllByApi($where = [], $pageSize = 10)
+    {
+        if (empty($where)) {
+            return self::$memberGroupProduct->orderBy('order_by', 'DESC')->with(['getOneGroupProduct', 'getOneProductThumb' => function ($query) {
+                $query->where('is_index', 1);
+            }])->paginate($pageSize);
+        }
+
+        return self::$memberGroupProduct->where($where)->orderBy('order_by', 'DESC')->with(['getOneGroupProduct', 'getOneProductThumb' => function ($query) {
+            $query->where('is_index', 1);
+        }])->paginate($pageSize);
+    }
 }

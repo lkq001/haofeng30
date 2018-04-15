@@ -44,7 +44,7 @@ class ProductCategoryController extends Controller
         $count = self::$productCategoryStore->count();
 
         return view('admin.productCategory.index', [
-            'productCategoryLists' => $productCategoryLists,
+            'productCategoryLists' => $productCategoryLists ?? '',
             'count' => $count ?? 0
         ]);
     }
@@ -63,7 +63,6 @@ class ProductCategoryController extends Controller
         // 验证数据
         $validator = Validator::make($request->all(), [
             'name' => 'required|min:2',
-            'pid' => 'required|int',
         ]);
 
         // 数据是否验证通过
@@ -261,7 +260,6 @@ class ProductCategoryController extends Controller
         $validator = Validator::make($request->all(), [
             'id' => 'required|int',
             'name' => 'required|min:2',
-            'pid' => 'required|int',
         ]);
 
         // 数据是否验证通过
@@ -273,17 +271,6 @@ class ProductCategoryController extends Controller
         $infoCount = self::$productCategoryStore->getOneInfoCount(['id' => $request->id]);
         if ($infoCount != 1) {
             return response()->json(['code' => 'SN201', 'message' => '数据不存在']);
-        }
-
-        // 验证该数据下面是否有子栏目
-        $childCount = self::$productCategoryStore->getChildStatus($request->id);
-        if ($childCount > 0 && $request->pid > 0) {
-            return response()->json(['code' => 'SN201', 'message' => '栏目下面存在子栏目,禁止修改上级栏目']);
-        }
-
-        // 验证父类id 是够是本身id
-        if ($request->id == $request->pid) {
-            return response()->json(['code' => 'SN201', 'message' => '父类栏目不能为自己!']);
         }
 
         // 指定添加

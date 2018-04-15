@@ -22,6 +22,7 @@ return [
     'page_size' => env('PAGE_NUM'),
     'page_size_m' => env('PAGE_NUM_M'),
     'page_size_l' => env('PAGE_NUM_L'),
+    'page_size_api' => env('PAGE_NUM_API'),
 
     // 产品图片
     'product_thumb' => env('PRODUCT_THUMB'),

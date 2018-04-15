@@ -31,14 +31,9 @@
                                 <span class="select-box">
                                     <select name="pid" class="select">
 
-                                        @if($productCategoryLists[0])
-                                            @foreach($productCategoryLists[0] as $key => $value)
+                                        @if($productCategoryLists)
+                                            @foreach($productCategoryLists as $key => $value)
                                                 <option value="{{ $value->id }}">{{ $value->name }}</option>
-                                                @if(isset($productCategoryLists[$value->id]))
-                                                    @foreach($productCategoryLists[$value->id] as $key => $val)
-                                                        <option value="{{ $val->id }}">|--{{ $val->name }}</option>
-                                                    @endforeach
-                                                @endif
                                             @endforeach
                                         @else
                                             <option value="0">暂无分类,请添加分类!</option>

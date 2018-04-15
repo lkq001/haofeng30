@@ -1,6 +1,21 @@
 @extends('admin.layouts.master')
 @section('title', '幻灯片产品')
+@section('css')
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin/thumbJq/css/font-awesome.4.6.0.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/thumbJq/css/amazeui.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/thumbJq/css/amazeui.cropper.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/thumbJq/css/custom_up_img.css') }}">
+    <style type="text/css">
+        .up-img-cover {
+            width: 100px;
+            height: 100px;
+        }
 
+        .up-img-cover img {
+            width: 100%;
+        }
+    </style>
+@endsection
 @section('content')
     <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
         <span class="c-gray en">&gt;</span>
@@ -17,14 +32,15 @@
                     <div class="Huialert Huialert-danger text-c"><i class="Hui-iconfont">&#xe6a6;</i>{{ $error }}</div>
                 @endforeach
             @endif
-            <form method="post" class="form form-horizontal"
-                  action="{{ route('admin.banner.store') }}" enctype="multipart/form-data">
+            <form method="post" class="form form-horizontal" id="form-add"
+                 data-jump="{{ route('admin.banner.index') }}"  action="{{ route('admin.banner.store') }}" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>幻灯片名称：</label>
                         <div class="formControls col-xs-8 col-sm-8">
-                            <input type="text" class="input-text" value=" {{ old('name') }} " placeholder="" id="name" name="name">
+                            <input type="text" class="input-text" value=" {{ old('name') }} " placeholder="" id="name"
+                                   name="name">
                         </div>
                     </div>
 
@@ -35,7 +51,8 @@
                                 <select name="pid" class="select">
                                     @if(isset($bannerCategoryLists) && collect($bannerCategoryLists)->count() > 0)
                                         @foreach($bannerCategoryLists as $key => $value)
-                                            <option @if(old('pid') == $value->id ) selected @endif value="{{ $value->id }}">{{ $value->name }}</option>
+                                            <option @if(old('pid') == $value->id ) selected
+                                                    @endif value="{{ $value->id }}">{{ $value->name }}</option>
                                         @endforeach
                                     @endif
                                 </select>
@@ -45,22 +62,26 @@
 
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>图片：</label>
-                        <div class="formControls col-xs-8 col-sm-8">
-                            <input type="file" name="thumb"/>
+                        <div class="formControls col-xs-8 col-sm-8" id="up-img-touch">
+                            <img class="am-circle" alt="点击图片上传" data-width="4" data-height="1"
+                                 src="{{ asset('admin/thumbJq/thumb.png') }}">
+                            <input type="hidden" name="thumb" value=""/>
                         </div>
                     </div>
 
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-3">指向链接：</label>
                         <div class="formControls col-xs-8 col-sm-8">
-                            <input type="text" class="input-text" value="http://" placeholder="{{ old('url') }}" id="" name="url">
+                            <input type="text" class="input-text" value="http://" placeholder="{{ old('url') }}" id=""
+                                   name="url">
                         </div>
                     </div>
 
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-3">栏目排序：</label>
                         <div class="formControls col-xs-8 col-sm-8">
-                            <input type="text" class="input-text" value="{{ old('order_by') ?? 0 }}" placeholder="" id="" name="order_by">
+                            <input type="text" class="input-text" value="{{ old('order_by') ?? 0 }}" placeholder=""
+                                   id="" name="order_by">
                         </div>
                     </div>
 
@@ -72,9 +93,13 @@
             </form>
         </div>
     </div>
+    @include('admin.layouts.thumb')
 @endsection
 @section('javascript')
 
     <script type="text/javascript" src="{{ asset('/admin/js/banner.js') }}"></script>
+    <script src="{{ asset('admin/thumbJq/js/amazeui.min.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('admin/thumbJq/js/cropper.min.js') }}" charset="utf-8"></script>
+    <script src="{{ asset('admin/thumbJq/js/custom_up_img2.js') }}" charset="utf-8"></script>
 
 @endsection

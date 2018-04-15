@@ -30,14 +30,6 @@ class BannerController extends Controller
 
         $bannerLists = self::$bannerStore->getAll('', config('config.page_size_l'));
 
-        if (collect($bannerLists)->count() > 0) {
-            foreach ($bannerLists as $k => $v) {
-                if ($v->thumb) {
-                    $v->thumb = config('config.thumb_image') . $v->thumb;
-                }
-            }
-        }
-
         $count = self::$bannerStore->count();
 
         return view('admin.banner.index', [
@@ -80,29 +72,20 @@ class BannerController extends Controller
             'order_by' => 'required|int',
             'thumb' => 'required'
         ]);
+
         // 数据是否验证通过
         if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
-        }
-
-        // 调用公共方法单图片上传, 返回地址链接
-        $thumb = Common::upload($request, 'thumb', 'banner');
-
-        // 图片上传成功
-        if ($thumb) {
-            $data['thumb'] = '/banner/' . date('Ymd', time()) . '/' . $thumb;
-        } else {
-            return redirect()->back()->withErrors('图片上传失败')->withInput();
+            return response()->json(['code' => 'SN201', 'message' => $validator->errors()->first()]);
         }
 
         // 执行保存
         $result = self::$bannerStore->store($data);
 
         if ($result) {
-            return redirect()->back()->withErrors('添加成功')->withInput();
+            return response()->json(['code' => 'SN200', 'message' => '栏目添加成功!']);
         };
 
-        return redirect()->back()->withErrors('添加失败')->withInput();
+        return response()->json(['code' => 'SN201', 'message' => '添加失败!']);
 
     }
 
@@ -123,7 +106,7 @@ class BannerController extends Controller
         ]);
         // 数据是否验证通过
         if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
+            return response()->json(['code' => 'SN201', 'message' => $validator->errors()->first()]);
         }
 
         $bannerCategoryLists = self::$bannerCategoryStore->getAll();
@@ -150,35 +133,23 @@ class BannerController extends Controller
         $validator = Validator::make($request->all(), [
             'id' => 'required|int',
             'name' => 'required|min:2',
+            'thumb' => 'required',
             'order_by' => 'required|int',
         ]);
+
         // 数据是否验证通过
         if ($validator->fails()) {
-            return redirect()->back()->withErrors($validator)->withInput();
+            return response()->json(['code' => 'SN201', 'message' => $validator->errors()->first()]);
         }
-
-        // 判断是否修改了图片
-        if ($request->thumb) {
-            // 调用公共方法单图片上传, 返回地址链接
-            $thumb = Common::upload($request, 'thumb', 'banner');
-
-            // 图片上传成功
-            if ($thumb) {
-                $data['thumb'] = '/banner/' . date('Ymd', time()) . '/' . $thumb;
-            } else {
-                return redirect()->back()->withErrors('图片上传失败')->withInput();
-            }
-        }
-
 
         // 执行保存
         $result = self::$bannerStore->update($request->id, $data);
 
         if ($result) {
-            return redirect()->back()->withErrors('修改成功')->withInput();
+            return response()->json(['code' => 'SN200', 'message' => '修改成功!']);
         };
 
-        return redirect()->back()->withErrors('修改失败')->withInput();
+        return response()->json(['code' => 'SN201', 'message' => '修改失败!']);
 
     }
 

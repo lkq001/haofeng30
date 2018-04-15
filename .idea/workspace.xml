@@ -5,9 +5,232 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2c0058d-7924-4258-b6df-56745826ec93" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/00831abe708269d67bc18dc8b2ef58f9.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/27cfb0f82a2839c9aee5a4332507ebc7.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/2bee9b6e8e4d20383be04d7ed7eca7f3.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/332a6276089351cfffbbce90878db538.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/3ab6ae3f7dc60f55d33ea4cd78c7012f.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/3be61f77cd6d2d3c0fe8a52aa807d0e2.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/4901612b0e7462dea8e3f09a5b272329.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/86588b0815223570f37372dc081e7d57.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/8feb9b40364e9ad659a6edd8a98ddef9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/942baee6e7a00e98c15eede95003e26a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/9cb96795f47610c17f0624f6376ea462.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/a81008cdcf48ebc5af4cdba914cdb358.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/aefc7de3a54c2d0f92387d9bcf92ec85.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/cdd1db7f8f4e5c0e3c97cd9c2c6f4ccc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/ce1622c6a4f48eaa3bdbca34c8056288.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/d432e20359c7ef836c4209a5c37060ef.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/da10171e7d48551fb01af815526558fb.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180305/f64b756af3d0d5c60726bef32d4292bd.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/04eb809580cdadb5f0487d95eabf6aa1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/1622e1fe1e67585b02562641c76cde9a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/163dce7e179cf7084cb24884d9e822b9.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/1d414d3948d7bfd4eb5683fa2535cdf1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/20d1b8992e44c3306109ac5ac6a0f7bf.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/2ad906bd04242663f876d5075c6e0c2b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/41bf306fc41a5bab38d53c9ef48e875a.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/45a6eec60cdd2abd3bd5d9b7c749af4c.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/4e3049b022f3776e821762ca1a03bed6.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/51b8a5f39c533fc7833af7d421729a61.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/53b36d4a36c5601fc5faeae8864622d5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/53fdadf288b8ef387e6d56f142d997a0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/559b3f71f513860cd69801a6b7beff69.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/565fdb3e4e0d2c7eac71efe2c18554cc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/5f3db22470a358d6bc4139f6e285c270.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/70d055ceecfeab1b2c00640d56259b21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/7f6553b41317486d337e5bf81382b7b4.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/8088598a57d92dd508c04613e9e93d6e.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/a136f58009e94476a48385b38895f0d8.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/a6f7e6fbb5bc6ced5716029b713397b6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/a80bdf66956fca461bc3eb16e6a3007f.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/ae6d9a2bc62dbc787858f0b2b03cd0fb.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/b0f92d83cb1744ff5e25f65883d58752.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/b37bcc816a703594f530c515277db6fa.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/b4dfc859f4addd22e2a12db78d63af7f.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/b52e9f7fb47c131ce5fb66cc380e8529.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/be2dfa8acbe613fd0b15d1eaf7853311.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/c0c14f42817ffd5f20f90bdd882f378f.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/cec08665ae297b813cf24edfc79f238b.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/d172afddaccc8e18880900d7f6b1ae58.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/df8f794ce159cfa7a798c6466e71f230.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/e88b53ef9830c40a603f55694acb7b94.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/e961c0e8e64096492eade3e6fbc7dad3.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/eac87a2ea51fca4440d054679882cb7b.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/f1a23f3ab0dd1cc6665e067b232ebea1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/card/20180306/fa20234c130a1a6802f1a0a60f107b1f.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/coupon/20180321/7729776760097594.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/coupon/20180321/8368418349884451.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/coupon/20180322/8759978047106416.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/coupon/20180323/3060802021995187.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/W6qfTVYT9E.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/images/eRsiQ71aoi.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/1167895790189504.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/1650152654387056.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/2016410110052675.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/2097708099987358.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/2695731347426772.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/2940511225722730.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/3126347356475890.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/3551563596818596.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/3909847670700401.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/3962183628696948.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/4089488263241947.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/4680185052566230.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/5988075237721205.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/7570260107051582.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/9256344411987812.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/9631904321722687.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/9652678152080626.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180317/9777984997723253.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180318/2911778866313398.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180318/4242877296637744.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180318/5236001327168197.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180318/5424393070861697.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180318/5555569017305971.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180318/7124053355772049.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180318/9529899720102550.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180318/9581907006911934.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/reputation/20180319/5460234327707440.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180313/WX20180224-182610@2x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180313/WechatIMG19.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/042b69ba080944a2a7f814527fbf9924.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/05eaeb101d9221495f9ee84ef8aeeb16.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/08c04ca0c68d88cee5e55af253fa66f8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/0d04a30cd0741b66e80fd8a31abeccf8.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/0dede2c1d32d39006c4cc44d9058c6f1.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/0e5d35902316f1b5ea52a758e7f12a4c.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/102f2ee7d37598cbe6a423781b9e9d51.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/10ac19aaa2404130b8352d88979a5cd2.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/122cf9be00fb7ec33f4a31d463383e69.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/12fb8fb5cbf1cb439b24ab62ab3bf918.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/1b20e5f54725902b2a7de0115ea71607.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/1b404ddacc91de28a5961324c5271801.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/1c12b34dc3e443cbc384e58c90b5778d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/22f7c11d3d780dffef123d99362f3e38.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/260d817c3a27129ab86499d2cea11fcc.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/27b2209d9697e4ae459d9f5c82e9c6ac.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/29da9138bf0f2d6b88d1d19ed779adfa.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/2a81f77a223f9f1ba5ff2f53d7d6cd5f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/2c4e80f8923e101aa7f365ea03fa1bc3.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/34153e699b2361ac7e2b101f36c1bddf.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/349bbb9585a9523380e1e65f1fbe4bf5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/34df82be2a287662bc94a6adcd1a3b92.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/3b0b7cd4faf4a62d53e87a8a9f739706.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/3bfc7ffd12da32891e5c7c6f3ba789e1.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/3da036ed38165d59c25a0212b77942c2.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/4207473e563ab1c13c5ecea93b8029a7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/421a15da6359b221ed84c875f04080f6.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/4271f959f237c1516d7a8b90f2a32861.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/43601980bcc4a1d02cb13f9a1ad58658.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/438cc0e924be908e993ae551d1e9c698.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/44e0f9584da34374c0a637ac11d3d93d.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/4517d5d03e3b92a4d738cf2d7fc188dc.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/46fe27858676536d5aae87040aad8718.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/4a6429791a2f3c792d909e205593eb87.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/530fad834548318324b4ae0c56a67b1a.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/59d7da4f06492540fde8b963e42234b0.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/5f86ce90e12f08bdd4a8f0f8253eef2c.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/60559f65aafaa603bfd3cbdf2c7a4959.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/61c6b833727a2f8f9702a0d8634a1785.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/629d3606123e0e8e5f7607003b58c36a.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/6875946e2bf5b687b576de9ff700f3e2.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/6a88c870e9fb0f3af5c9a6dc44529e35.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/6c1d74c282bbd96c21fac95765ecd917.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/6ca77c9b0ab74fc6946cf9f2178a146e.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/6de13300f57dda000c3364904a13f87a.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/71df046bbafb79f8d48c71b0f532cdfd.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/76d2416cae8f27042f0e0a418bdc2d57.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/77bf38fdd6d230ae0b10b3a6898de81b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/78539c34bb12b70c68f0523c3a248a8c.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/7c4c79ffeb88ef17b670de473ae1b988.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/7cd6cc09ffbc4b00ae0a1c423acff5e8.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/807fb71440376bd6e73650c219e51a5f.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/80a61a627cb33576cc7f18c20b801256.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/81c5706101cb54bf54fd25890fb56b79.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/822ae2fc9660eb1bc327f9510b98e0bc.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/8609a9b2e93ff059e51bed3738df1f37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/89d751f7e889219a86be9398628b24df.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/8f967db61ce74f4ce4ab22d9167ba012.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/924e1926ac13fa3921d1304c4bcf21d0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/9441f0fd780741c2748778801d07276d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/98751bb4a7097e848eee469dbd81955a.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/9c6980f9dd08848a8d5a4e1e39dc1e84.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/9cb3c611e3c5a536345ef9f1966e84c3.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/9f1df63826f88191aadbb5edbc41da95.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/9f3737cb401c19a444ccc6cdeb8843f3.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/a0e3bacbb0f79b695dcae4dab9507716.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/a22c1afd3a5323ce04b18ff4f759eb52.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/a249dfbe1264d842cc0ab70fc0f5b308.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/a3c4a91e7f498131c7f4494a5489740f.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/a6541a76e2eebb30f6cd35e46750a5c5.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/aa20ef24b50ad4f2c8f35345e24e5d7d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/ad4261a8d0436ebf7d305d5c97f0861c.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/ad91a22837151ec7cd111ad777bd41d1.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/afb464e7be5f765a89c80d9c97893f5d.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/b45002e5160c6479995b8e523cb2ee81.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/b7f710f99d61911e5366b4db3298d14a.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/b832c6f27fc242fef1dab7eb1db73835.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/b88f2598a561b1400f819d100747c6b6.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/c3fd9cb4fbb063e2235719fa5b313855.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/c68aa1d83820243af283089a65039274.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/c6edba04b679fe5f8d6ba177fea89108.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/cead3f50591a4d69ec3f3cd34bcb567d.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/cf4796c4d6e45c6dac6f19a8121ff319.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/cf708f2f50e614a5c6cd3ea018201da3.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/d70947aac7865e1e09944db4031c72bc.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/d777c59ef5bbb9838943dc67694e405f.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/d94b7445254d53783481d1d2cb5c25af.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/db1e49bec202fe73466b8f7f1b2d430a.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/dfcf2237501fbe626aeb6d880df98c50.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/e3e2b79d83edc53a8bc5e09c34793626.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/e6eea84a290de708368c048e30bf25d1.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/e8d99602a56409e344f5139a14da0044.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/eba411bcdf285b0a9dfe1b50c4fb3b57.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/ec23cc24adbeeff7a19152c7773c9d42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/eedc72ca26fb3c546c28dddc6c131893.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/ef17e7065d0c9396063902b23c3a8e7d.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/efe0b441dcbf50fc57b75f1a9778bf16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/f082d57cc42b0de674d6ce9072fdd9cc.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/f7d72b95c3ab753f7b740772495e026d.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/f9cf9656bb841168a03d7b68e0662476.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/fcd242933518fdaed1b9fe4690176196.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180318/fe874c93435c9760af0ebd3670456966.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180319/19353daeb1983351fc5dc66b8a9b380f.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180319/1b479525cca8c3ccc0405364ff04a008.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180319/22ee66d6285f65e84eb8e93754e687fb.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180319/336631b720ca263a4eec7c0719942e4b.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180319/65ad11a582412e97eb2083ad44f06bd1.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180319/6ac831d1b676350cfcdd9204ce9a6d88.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180319/a150378f1b8d6f7b209e2b0777447e34.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180319/a1a6b49461c8822a2a42e9844a47d86d.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180319/af51b8d06b8654ea5c98dffd6b464fa5.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/upload/20180319/d588aa52d317acc8d10c5a776e5fd78d.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/MemberGroupProduct.php" afterPath="$PROJECT_DIR$/app/Model/MemberGroupProduct.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BannerController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BannerController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductCategoryController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductCategoryController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Service/MemberGroupProductService.php" afterPath="$PROJECT_DIR$/app/Service/MemberGroupProductService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Service/ProductWarehouseService.php" afterPath="$PROJECT_DIR$/app/Service/ProductWarehouseService.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Store/BannerStore.php" afterPath="$PROJECT_DIR$/app/Store/BannerStore.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Store/CardStore.php" afterPath="$PROJECT_DIR$/app/Store/CardStore.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Store/CategoryStore.php" afterPath="$PROJECT_DIR$/app/Store/CategoryStore.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Store/MemberGroupProductStore.php" afterPath="$PROJECT_DIR$/app/Store/MemberGroupProductStore.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Store/ProductCategoryStore.php" afterPath="$PROJECT_DIR$/app/Store/ProductCategoryStore.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.php" afterPath="$PROJECT_DIR$/config/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/admin/js/banner.js" afterPath="$PROJECT_DIR$/public/admin/js/banner.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/admin/js/card.js" afterPath="$PROJECT_DIR$/public/admin/js/card.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/admin/js/productCategory.js" afterPath="$PROJECT_DIR$/public/admin/js/productCategory.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/banner/add.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/banner/add.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/banner/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/banner/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/banner/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/banner/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/card/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/card/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productCategory/add.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productCategory/add.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productCategory/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productCategory/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productCategory/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productCategory/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productWarehouse/add.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productWarehouse/add.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/productWarehouse/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/productWarehouse/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.php" afterPath="$PROJECT_DIR$/routes/api.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,28 +244,7 @@
     <favorites_list name="haofeng30" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
-              <caret line="771" column="87" lean-forward="false" selection-start-line="771" selection-start-column="87" selection-end-line="771" selection-end-column="87" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="banner.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/admin/js/banner.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-841">
-              <caret line="26" column="46" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="26" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -55,10 +257,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$limitBuyStore</find>
-      <find>limit.bu</find>
-      <find>form-edit</find>
-      <find>limit.buy</find>
       <find>editI</find>
       <find>product_warehouse_id</find>
       <find>update</find>
@@ -80,14 +278,17 @@
       <find>'phone' =&gt;</find>
       <find>textarea</find>
       <find>whereIn</find>
-      <find>$article</find>
       <find>insert</find>
       <find>ge</find>
       <find>$articleCategory</find>
       <find>Hui-article</find>
+      <find>api</find>
+      <find>changeStatus</find>
+      <find>$article</find>
+      <find>offset</find>
+      <find>$productCategoryLists</find>
     </findStrings>
     <replaceStrings>
-      <replace>{{ asset</replace>
       <replace>asset('/hfadmin/js/</replace>
       <replace>{{ asset('</replace>
       <replace>') }}&quot;&gt;&lt;/script&gt;</replace>
@@ -117,6 +318,7 @@
       <replace />
       <replace>$couponRecording</replace>
       <replace>$distribution</replace>
+      <replace>$ad</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/public/admin/lib/webuploader-0.1.5</dir>
@@ -130,57 +332,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/admin/tearwork/add.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/tearwork/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Model/Teamwork.php" />
-        <option value="$PROJECT_DIR$/app/Store/TeamworkStore.php" />
-        <option value="$PROJECT_DIR$/resources/lang/zh-CN/validation.php" />
-        <option value="$PROJECT_DIR$/public/admin/js/common.js" />
-        <option value="$PROJECT_DIR$/resources/views/admin/limitBuy/add.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/teamwork/add.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/LimitBuyController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/TeamworkController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/limitBuy/index.blade.php" />
-        <option value="$PROJECT_DIR$/public/admin/js/teamwork.js" />
-        <option value="$PROJECT_DIR$/public/admin/js/limitBuy.js" />
-        <option value="$PROJECT_DIR$/resources/views/admin/limitBuy/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/teamwork/edit.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/teamwork/index.blade.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CorderController.php" />
-        <option value="$PROJECT_DIR$/app/Model/Coupon.php" />
-        <option value="$PROJECT_DIR$/public/admin/thumbJq/js/custom_up_img.js" />
-        <option value="$PROJECT_DIR$/public/admin/js/assess.js" />
-        <option value="$PROJECT_DIR$/resources/views/admin/coupon/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/Store/MemberStore.php" />
-        <option value="$PROJECT_DIR$/app/Model/couponRecording.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/coupon/issue.blade.php" />
-        <option value="$PROJECT_DIR$/app/Store/CouponStore.php" />
-        <option value="$PROJECT_DIR$/public/admin/js/coupon.js" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CouponRecordingController.php" />
-        <option value="$PROJECT_DIR$/app/Model/CouponRecording.php" />
-        <option value="$PROJECT_DIR$/app/Model/MemberCoupon.php" />
-        <option value="$PROJECT_DIR$/app/Service/CouponService.php" />
-        <option value="$PROJECT_DIR$/app/Store/MemberCouponStore.php" />
-        <option value="$PROJECT_DIR$/app/Store/CouponRecordingStore.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/MemberCouponController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/MemberController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/member/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/CouponController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/memberCoupon/index.blade.php" />
-        <option value="$PROJECT_DIR$/public/css/common.css" />
-        <option value="$PROJECT_DIR$/resources/views/admin/couponRecording/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/coupon/add.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/coupon/index.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Model/Distribution.php" />
         <option value="$PROJECT_DIR$/app/Store/DistributionStore.php" />
         <option value="$PROJECT_DIR$/app/Service/DistributionService.php" />
         <option value="$PROJECT_DIR$/app/Model/MemberGroupProduct.php" />
-        <option value="$PROJECT_DIR$/app/Store/MemberGroupProductStore.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/DistributionController.php" />
         <option value="$PROJECT_DIR$/public/admin/js/distribution.js" />
         <option value="$PROJECT_DIR$/resources/views/admin/distribution/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Store/BannerStore.php" />
+        <option value="$PROJECT_DIR$/public/admin/js/card.js" />
+        <option value="$PROJECT_DIR$/resources/views/admin/card/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Store/CardStore.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/V1/CardController.php" />
+        <option value="$PROJECT_DIR$/app/Model/Ad.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Store/AdStore.php" />
+        <option value="$PROJECT_DIR$/public/admin/js/ad.js" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/AdController.php" />
+        <option value="$PROJECT_DIR$/public/admin/thumbJq/js/custom_up_img2.js" />
+        <option value="$PROJECT_DIR$/resources/views/admin/ad/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/ad/add.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/ad/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/V1/MemberGroupProductController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/banner/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/banner/add.blade.php" />
+        <option value="$PROJECT_DIR$/public/admin/js/banner.js" />
+        <option value="$PROJECT_DIR$/resources/views/admin/banner/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/BannerController.php" />
+        <option value="$PROJECT_DIR$/storage/logs/laravel.log" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/V1/BannerController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/V1/UploadController.php" />
+        <option value="$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/c52c0bb7174c27deee46da55e922881c/Message/MessageTemp/36ce5e6989a847d97e42a97f07818a37/File/list.html" />
+        <option value="$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/c52c0bb7174c27deee46da55e922881c/Message/MessageTemp/36ce5e6989a847d97e42a97f07818a37/File/default.html" />
+        <option value="$PROJECT_DIR$/app/Service/ProductWarehouseService.php" />
+        <option value="$PROJECT_DIR$/app/Service/MemberGroupProductService.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Store/MemberGroupProductStore.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/V1/CategoryController.php" />
+        <option value="$PROJECT_DIR$/app/Store/CategoryStore.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/V1/ProductCategoryController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/productCategory/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/productCategory/add.blade.php" />
+        <option value="$PROJECT_DIR$/public/admin/js/productCategory.js" />
+        <option value="$PROJECT_DIR$/app/Store/ProductCategoryStore.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductCategoryController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/productCategory/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/V1/ProductController.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/V1/AdController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/productWarehouse/add.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/productWarehouse/edit.blade.php" />
       </list>
     </option>
   </component>
@@ -200,10 +402,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
-    <option name="height" value="806" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -239,7 +440,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,31 +450,14 @@
             <path>
               <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
               <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
-              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
-              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="haofeng30" type="b2602c69:ProjectViewProjectNode" />
-              <item name="haofeng30" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,11 +475,11 @@
       <recent name="$PROJECT_DIR$/public/admin/lib/ueditor/1.4.3" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$USER_HOME$/Desktop" />
+      <recent name="$USER_HOME$/Documents" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api/V1" />
+      <recent name="$PROJECT_DIR$/public/admin/thumbJq/js" />
       <recent name="$PROJECT_DIR$/public/admin/js" />
-      <recent name="$PROJECT_DIR$/resources/views/admin" />
-      <recent name="$PROJECT_DIR$/app/Model" />
-      <recent name="$PROJECT_DIR$/app/Store" />
-      <recent name="$PROJECT_DIR$/app/Service" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -358,27 +541,40 @@
       <workItem from="1522122084103" duration="801000" />
       <workItem from="1522208397522" duration="3531000" />
       <workItem from="1522244525411" duration="89000" />
+      <workItem from="1522316151538" duration="3656000" />
+      <workItem from="1522335840196" duration="1400000" />
+      <workItem from="1522384677441" duration="11233000" />
+      <workItem from="1522563674404" duration="1855000" />
+      <workItem from="1522760081804" duration="4110000" />
+      <workItem from="1523173020537" duration="724000" />
+      <workItem from="1523173815480" duration="152000" />
+      <workItem from="1523176009645" duration="4945000" />
+      <workItem from="1523244675788" duration="28000" />
+      <workItem from="1523254817914" duration="1972000" />
+      <workItem from="1523346471529" duration="1968000" />
+      <workItem from="1523501092340" duration="11355000" />
+      <workItem from="1523764417587" duration="191000" />
+      <workItem from="1523773874509" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="457389000" />
+    <option name="totallyTimeSpent" value="500980000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25250357" sideWeight="0.49576783" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19527897" sideWeight="0.49576783" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22389127" sideWeight="0.50423217" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -433,343 +629,309 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Service/ProductWarehouseService.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/ad/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="138" column="9" lean-forward="true" selection-start-line="120" selection-start-column="8" selection-end-line="138" selection-end-column="9" />
+        <state relative-caret-position="383">
+          <caret line="51" column="46" lean-forward="false" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="86" column="75" lean-forward="true" selection-start-line="82" selection-start-column="8" selection-end-line="86" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Store/CardStore.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/layouts/thumb.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Store/CouponStore.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/ad/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="136">
+          <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/couponRecording/add.blade.php" />
-    <entry file="file://$PROJECT_DIR$/app/Model/Coupon.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/CardThumb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/CardContent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/CardCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Card.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/CouponRecording.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="65" lean-forward="false" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CouponRecordingController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/V1/MemberGroupProductController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
-          <caret line="24" column="50" lean-forward="false" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/js/coupon.js">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/banner/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="220" column="27" lean-forward="true" selection-start-line="220" selection-start-column="27" selection-end-line="220" selection-end-column="27" />
+        <state relative-caret-position="617">
+          <caret line="101" column="22" lean-forward="true" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/coupon/issue.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/AdController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+        <state relative-caret-position="365">
+          <caret line="53" column="101" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="101" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/memberCoupon/add.blade.php" />
-    <entry file="file://$PROJECT_DIR$/app/Service/CouponService.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/ad/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="89" column="59" lean-forward="false" selection-start-line="89" selection-start-column="59" selection-end-line="89" selection-end-column="59" />
+        <state relative-caret-position="31">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/MemberCoupon.php">
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_3.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="32" />
+        <state relative-caret-position="415">
+          <caret line="1139" column="9" lean-forward="false" selection-start-line="1139" selection-start-column="9" selection-end-line="1139" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Store/CouponRecordingStore.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/BannerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="127" column="9" lean-forward="true" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
+        <state relative-caret-position="410">
+          <caret line="151" column="68" lean-forward="false" selection-start-line="151" selection-start-column="68" selection-end-line="151" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Member.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/banner/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="34" />
+        <state relative-caret-position="368">
+          <caret line="30" column="64" lean-forward="false" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/MemberController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/banner/add.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Store/MemberStore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="95" column="99" lean-forward="false" selection-start-line="95" selection-start-column="85" selection-end-line="95" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/MemberCouponController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Store/MemberGroupStore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="115" column="22" lean-forward="true" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Store/MemberCouponStore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="130" column="24" lean-forward="false" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/member/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/member/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/member/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="41" column="51" lean-forward="false" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/memberCoupon/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="12" column="48" lean-forward="false" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="158" column="4" lean-forward="false" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/couponRecording/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CouponController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="311" column="11" lean-forward="true" selection-start-line="311" selection-start-column="11" selection-end-line="311" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/coupon/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="75" column="52" lean-forward="false" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/coupon/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminDistributionController.php" />
-    <entry file="file://$PROJECT_DIR$/app/Model/Distribution.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Store/DistributionStore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/MemberGroupProduct.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="19" column="38" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Store/MemberGroupProductStore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="52" column="133" lean-forward="false" selection-start-line="52" selection-start-column="115" selection-end-line="52" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/distribution/add.blade.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/article/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/productWarehouse/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="25" lean-forward="true" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/article/add.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="41" column="40" lean-forward="true" selection-start-line="41" selection-start-column="40" selection-end-line="41" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Service/DistributionService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="30" column="26" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/js/article.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="50" column="58" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/js/distribution.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/distribution/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="49" column="37" lean-forward="true" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/DistributionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/admin/js/assess.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="771" column="87" lean-forward="false" selection-start-line="771" selection-start-column="87" selection-end-line="771" selection-end-column="87" />
-          <folding />
+        <state relative-caret-position="560">
+          <caret line="35" column="64" lean-forward="false" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/admin/js/banner.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-841">
-          <caret line="26" column="46" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="26" selection-end-column="46" />
-          <folding />
+        <state relative-caret-position="434">
+          <caret line="125" column="12" lean-forward="false" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="12" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/admin/js/ad.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="647">
+          <caret line="112" column="53" lean-forward="false" selection-start-line="109" selection-start-column="12" selection-end-line="112" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="22" column="18" lean-forward="false" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/img_crop_to_file.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="825" column="9" lean-forward="false" selection-start-line="825" selection-start-column="9" selection-end-line="825" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/uploadwxaa4a912213ca4b6f.o6zAJsxWbDk9s-dYN4fksg8Jm-zY.der0TOJekRm138993b893758fd6a518352c6cb501248.png" />
+    <entry file="file://$PROJECT_DIR$/public/upload/wxaa4a912213ca4b6f.o6zAJsxWbDk9s-dYN4fksg8Jm-zY.der0TOJekRm138993b893758fd6a518352c6cb501248.png" />
+    <entry file="file://$PROJECT_DIR$/public/upload/wxaa4a912213ca4b6f.o6zAJsxWbDk9s-dYN4fksg8Jm-zY.gg5YG8FebLUg38993b893758fd6a518352c6cb501248.png" />
+    <entry file="file://$PROJECT_DIR$/public/upload/wxaa4a912213ca4b6f.o6zAJsxWbDk9s-dYN4fksg8Jm-zY.GT3QT2x1rDpRc9e324ff4a6d4c4771261ddb16f9f6dd.jpeg" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/V1/BannerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/upload/wxaa4a912213ca4b6f.o6zAJsxWbDk9s-dYN4fksg8Jm-zY.yUpvRPcS98Zb532a07f1b2d07a55497a488dcf07bf11.png" />
+    <entry file="file://$PROJECT_DIR$/public/upload/wxaa4a912213ca4b6f.o6zAJsxWbDk9s-dYN4fksg8Jm-zY.QIamuSoTITdS25e681e7386773d78d43ec254273a61c.png" />
+    <entry file="file://$PROJECT_DIR$/public/upload/wxaa4a912213ca4b6f.o6zAJsxWbDk9s-dYN4fksg8Jm-zY.X053QMP16eFT4c300b0bb8e879f7ecf260896d5c1134.silk" />
+    <entry file="file://$USER_HOME$/Desktop/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/c52c0bb7174c27deee46da55e922881c/Message/MessageTemp/36ce5e6989a847d97e42a97f07818a37/File/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/c52c0bb7174c27deee46da55e922881c/Message/MessageTemp/36ce5e6989a847d97e42a97f07818a37/File/default.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1600">
+          <caret line="94" column="58" lean-forward="true" selection-start-line="94" selection-start-column="58" selection-end-line="94" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/V1/UploadController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Service/ProductWarehouseService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="325" column="5" lean-forward="false" selection-start-line="325" selection-start-column="5" selection-end-line="325" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/V1/ProductCategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Store/CategoryStore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="102" column="5" lean-forward="false" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Service/MemberGroupProductService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="137" column="28" lean-forward="false" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Store/MemberGroupProductStore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="191" column="7" lean-forward="true" selection-start-line="191" selection-start-column="7" selection-end-line="191" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/productCategory/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="37" column="33" lean-forward="false" selection-start-line="36" selection-start-column="32" selection-end-line="37" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Store/ProductCategoryStore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="72" column="73" lean-forward="false" selection-start-line="72" selection-start-column="73" selection-end-line="72" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/ProductCategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/productCategory/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/admin/js/productCategory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-124">
+          <caret line="79" column="54" lean-forward="true" selection-start-line="79" selection-start-column="54" selection-end-line="79" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/productCategory/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="31" column="48" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/productWarehouse/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="39" column="28" lean-forward="false" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/productWarehouse/add.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="36" column="48" lean-forward="false" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/V1/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/V1/AdController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/reputation/20180317/1167895790189504.png" />
+    <entry file="file://$PROJECT_DIR$/public/coupon/20180321/8368418349884451.png" />
   </component>
   <component name="masterDetails">
     <states>

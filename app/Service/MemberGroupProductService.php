@@ -132,7 +132,11 @@ class MemberGroupProductService
         } else {
             return self::$memberGroupProductStore->insert($data);
         }
+    }
 
-
+    // 获取数据列表信息(每次10条)
+    public function getAllByApi($where = '', $pageSize = 10)
+    {
+        return self::$memberGroupProductStore->getAllByApi($where, $pageSize);
     }
 }

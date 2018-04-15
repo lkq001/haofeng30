@@ -71,15 +71,9 @@
                                     data-order="{{ $v->order_by }}">{{ $v->order_by }}</td>
                                 <td>
                                     @if($v->status == 1)
-                                        未上架
+                                        已启用
                                     @elseif($v->status == 2)
-                                        已上架
-                                    @elseif($v->status == 3)
-                                        已下架
-                                    @elseif($v->status == 4)
-                                        已失效
-                                    @elseif($v->status == 5)
-                                        缺货
+                                        已禁用
                                     @else
                                         其他
                                     @endif
@@ -93,16 +87,16 @@
                                         <button id="changeStatus" class="btn btn-secondary size-S radius"
                                                 data-id="{{ $v->id }}"
                                                 data-url="{{ route('admin.card.status') }}"
-                                                data-status="{{ $v->status }}">下架
+                                                data-status="{{ $v->status }}">启用
                                         </button>
                                     @else
                                         <button id="changeStatus" class="btn btn-warning size-S radius"
                                                 data-id="{{ $v->id }}"
                                                 data-url="{{ route('admin.card.status') }}"
-                                                data-status="{{ $v->status }}">上架
+                                                data-status="{{ $v->status }}">禁用
                                         </button>
-
                                     @endif
+
                                     <button id="destroy" class="btn btn-danger size-S radius" data-id="{{ $v->id }}"
                                             data-url="{{ route('admin.card.destroy') }}">删除
                                     </button>

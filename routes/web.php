@@ -42,6 +42,28 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware' => 'admi
     });
 
     /**
+     * 后台菜单管理
+     */
+    Route::group(['prefix' => '/ad'], function () {
+        // 菜单列表
+        Route::get('/index', 'AdController@index')->name('admin.ad.index');
+        // 添加数据
+        Route::post('/store', 'AdController@store')->name('admin.ad.store');
+        // 添加页面
+        Route::get('/add', 'AdController@add')->name('admin.ad.add');
+        // 查询指定ID数据(id)
+        Route::get('/edit', 'AdController@edit')->name('admin.ad.edit');
+        // 修改数据(id)
+        Route::post('/update', 'AdController@update')->name('admin.ad.update');
+        // 删除数据(id)
+        Route::delete('/destroy', 'AdController@destroy')->name('admin.ad.destroy');
+        // 修改状态
+        Route::post('/status', 'AdController@status')->name('admin.ad.status');
+        // 修改排序
+        Route::post('/order', 'AdController@order')->name('admin.ad.order');
+    });
+
+    /**
      * 产品组管理
      */
     Route::group(['prefix' => '/product/group'], function () {

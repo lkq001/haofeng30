@@ -11,7 +11,8 @@ class BannerStore
 
     public function __construct(
         Banner $banner
-    ){
+    )
+    {
         self::$banner = $banner;
     }
 
@@ -132,6 +133,12 @@ class BannerStore
     public function getAllCardgoryListExceptStatusFalse()
     {
         return self::$banner->where('status', 1)->get();
+    }
+
+    // 获取微信小程序幻灯图片
+    public function getBannerData()
+    {
+        return self::$banner->where('pid', 3)->where('status', 1)->get();
     }
 
 }

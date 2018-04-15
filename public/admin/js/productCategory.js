@@ -50,7 +50,6 @@ $(function () {
         // 数据指定
         $("#editModel input[name='id']").val(info.id);
         $("#editModel input[name='name']").val(info.name);
-        $("#editModel").find("option[value = '" + info.pid + "']").attr("selected", "selected");
 
         $('#editModel').modal('show');
     });

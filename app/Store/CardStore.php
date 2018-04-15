@@ -174,7 +174,25 @@ class CardStore
             return false;
         }
 
-
         return self::$card->whereIn('id', $ids)->save(['status' => $status]);
+    }
+
+    /**
+     * 获取宅配卡信息(API)
+     *
+     * @param string $where
+     * @return mixed
+     * author 李克勤
+     */
+    public function getCardData($where = '')
+    {
+        if ($where) {
+            return self::$card->where($where)->where('status', 1)->with(['getOneThumb' => function ($query) {
+                $query->where('is_index', 1)->where('status', 1);
+            }])->orderBy('order_by', 'DESC')->get();
+        }
+        return self::$card->where('status', 1)->with(['getOneThumb' => function ($query) {
+            $query->where('is_index', 1)->where('status', 1);
+        }])->orderBy('order_by', 'DESC')->get();
     }
 }

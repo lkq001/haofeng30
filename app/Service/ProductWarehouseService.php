@@ -324,5 +324,4 @@ class ProductWarehouseService
         }
         return $getAll;
     }
-
 }

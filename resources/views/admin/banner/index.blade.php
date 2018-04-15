@@ -2,7 +2,6 @@
 @section('title', '幻灯片管理')
 
 @section('content')
-    {{--@include('admin.warehouse.edit')--}}
     <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
         <span class="c-gray en">&gt;</span>
         幻灯片管理

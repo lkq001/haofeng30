@@ -70,7 +70,7 @@ class ProductCategoryStore
      */
     public function getAll($where = null)
     {
-        return self::$productCategory->orderBy('order_by', 'DESC')->get()->groupBy('pid');
+        return self::$productCategory->orderBy('order_by', 'DESC')->get();
     }
 
     public function status($id, $status)
@@ -132,4 +132,13 @@ class ProductCategoryStore
         return self::$productCategory->count();
     }
 
+
+    // api 查询数据信息
+    public function getAllByApi($where = [])
+    {
+        if($where) {
+            return self::$productCategory->where($where)->get(['id', 'name']);
+        }
+        return self::$productCategory->get(['id', 'name']);
+    }
 }

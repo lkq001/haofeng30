@@ -25,8 +25,11 @@ $(function () {
             var url = $(form).attr('action');
             // 获取提交方式
             var type = $(form).attr('method');
+            // 跳转链接
+            var jumpUrl = $(form).attr('data-jump');
+
             // ajax 提交
-            storeSubmit(data, url, type);
+            storeSubmit(data, url, type, true, jumpUrl);
         }
     });
 
@@ -86,7 +89,7 @@ $(function () {
     })
 
     // 执行修改
-    $("#form-category-edit").validate({
+    $("#form-edit").validate({
         rules: {
             name: {
                 required: true,
@@ -120,9 +123,10 @@ $(function () {
             var url = $(form).attr('action');
             // 获取提交方式
             var type = $(form).attr('method');
-
+            // 跳转链接
+            var jumpUrl = $(form).attr('data-jump');
             // ajax 提交
-            updateSubmit(data, url, type);
+            updateToSubmit(data, url, type, jumpUrl);
         }
     });
 

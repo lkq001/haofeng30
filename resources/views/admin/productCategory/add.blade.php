@@ -17,21 +17,6 @@
                             <input type="text" class="input-text" value="" placeholder="" id="name" name="name">
                         </div>
                     </div>
-                    <div class="row cl">
-                        <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>上级分类：</label>
-                        <div class="formControls col-xs-8 col-sm-8">
-                            <span class="select-box">
-                                <select name="pid" class="select">
-                                    <option value="0">顶级分类</option>
-                                    @if($productCategoryLists[0])
-                                        @foreach($productCategoryLists[0] as $key => $value)
-                                            <option value="{{ $value->id }}">{{ $value->name }}</option>
-                                        @endforeach
-                                    @endif
-                                </select>
-                            </span>
-                        </div>
-                    </div>
 
                     <div class="row cl">
                         <label class="form-label col-xs-4 col-sm-3">分类排序：</label>

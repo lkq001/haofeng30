@@ -102,5 +102,4 @@ class CategoryStore
         return self::$category->where('id', $id)->delete();
     }
 
-
 }

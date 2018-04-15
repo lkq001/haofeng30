@@ -64,7 +64,7 @@ $(function () {
         // 获取状态
         var status = that.attr('data-status');
         // ajax 提交
-        statusProductSubmit(id, url, status, that, 1);
+        statusSubmit(id, url, status, that, 1);
     });
 
     // 获取修改数据
